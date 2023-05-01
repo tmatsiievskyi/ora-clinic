@@ -1,0 +1,19 @@
+{
+  "common.main": "Home",
+  "common.complex": "Complex",
+  "common.service": "Services",
+  "common.price": "Prices",
+  "common.employee": "Employees",
+  "common.discount": "Sale",
+  "common.about": "About Us",
+  "common.locale.uk-UA": "Ua",
+  "common.locale.en": "En",
+  "common.name": "ORA",
+  "common.appointment": "Appointment",
+  "common.title.start": "Medical centre",
+  "common.title.finish": "polyclinic created according to the European model.",
+  "common.about.shortDesc": "We guarantee the appropriate qualification and certification of personnel. Our medical services meet European standards.",
+  "complex.category.all": "All",
+  "complex.category.male": "Male",
+  "complex.category.female": "Female"
+}

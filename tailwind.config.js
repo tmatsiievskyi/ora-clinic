@@ -13,6 +13,7 @@ module.exports = {
         lightShade: "#f6f6f7",
         dark: "#26292f",
         semiDarkTr: "rgba(38, 41, 47, 0.2)",
+        grey: "#556669",
       },
       fontFamily: {
         oswald: ["var(--font-oswald)", ...fontFamily.sans],

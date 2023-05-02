@@ -18,7 +18,7 @@ const Home: NextPage<IMainProps> = (props) => {
   return (
     <div className="h-full">
       <MainInit discounts={discounts} />
-      <MainItems />
+      <MainItems employees={employees} />
     </div>
   );
 };

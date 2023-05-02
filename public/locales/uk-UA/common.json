@@ -22,6 +22,13 @@
   "common.item.price": "Ціна:",
   "common.currency.grn": "грн.",
   "common.description": "Опис",
+  "common.employees.inOra": "Лікарі у медичному центрі",
+
+  "common.lastName.Valilschikova": "Валілщкова",
+  "common.firstName.Irina": "Ірина",
+  "common.surname.Abilfazivna": "Абілфазівна",
+
+  "common.position.allergistPulmonologist": "Алерголог-Пульмонолог",
 
   "complex.category.all": "Всі категорії",
   "complex.category.male": "для Чоловіків",

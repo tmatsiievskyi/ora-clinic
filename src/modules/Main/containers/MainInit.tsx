@@ -79,7 +79,7 @@ export const MainInit = ({
               {discounts.map((item) => {
                 return (
                   <SliderItem key={item._id.toString()}>
-                    <div className="py-2 [&>p]:mb-6 overflow-y-hidden">
+                    <div className="py-2 [&>p]:mb-8 overflow-y-hidden">
                       <p>{item.title}</p>
                       <p className="text-base">{item.description}</p>
                       <div className="flex justify-between items-end">

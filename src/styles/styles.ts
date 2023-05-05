@@ -1,6 +1,11 @@
 export const styles = {
   navText: "font-helveticLight text-base text-dark",
-  paragraph: "font-helveticLight text-base",
-  heading4: "font-helveticLight text-2xl",
+  paragraph: "font-helveticThin text-base",
+  heading3:
+    "font-helveticThin text-[24px] leading-[34px]  sm:text-[34px] sm:leading-[38px]",
+  heading4: "font-helveticThin text-2xl",
   numberText: "font-oswald ",
+  linkHover: `[&.active]:before:block [&.active]:before:absolute [&.active]:before:bottom-[1px] [&.active]:before:left-0 [&.active]:before:w-full [&.active]:before:h-[1px] [&.active]:before:bg-primary [&.active]:relative [&.active]:inline-block
+  before:block before:absolute before:bottom-[2px] before:left-1/2 before:w-0 before:h-[1px] before:bg-primary relative inline-block
+ hover:before:w-full hover:before:left-0 before:ease-in before:duration-300`,
 };

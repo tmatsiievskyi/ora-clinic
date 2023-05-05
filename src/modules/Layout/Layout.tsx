@@ -38,7 +38,7 @@ export const Layout = ({ children }: { children: JSX.Element }) => {
   return (
     <div
       className={`bg-lightShade h-full px-2 ${helveticThin.variable}
-    ${helveticLight.variable}
+      ${helveticLight.variable}
      ${helveticRegular.variable}
      ${helveticBold.variable}
      ${oswald.variable}`}
@@ -49,7 +49,7 @@ export const Layout = ({ children }: { children: JSX.Element }) => {
       <main
         className={`h-[calc(100%-90px)] overflow-y-scroll
         rounded-lg
-       
+        font-helveticLight
         `}
       >
         {children}

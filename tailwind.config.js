@@ -18,8 +18,10 @@ module.exports = {
       fontFamily: {
         oswald: ["var(--font-oswald)", ...fontFamily.sans],
         inter: ["var(--font-inter)", ...fontFamily.sans],
+        helveticThin: ["var(--font-helveticThin)"],
         helveticLight: ["var(--font-helveticLight)"],
         helveticRegular: ["var(--font-helveticRegular)"],
+        helveticBold: ["var(--font-helveticBold)"],
       },
     },
   },

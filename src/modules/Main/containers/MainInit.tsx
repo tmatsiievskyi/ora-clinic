@@ -17,6 +17,25 @@ export const MainInit = ({
   const { t } = useTranslation("common");
   const controls = useAnimationControls();
 
+  const sentence = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  const letter = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
   const animVar: Variants = {
     hidden: {
       opacity: 0,
@@ -36,10 +55,10 @@ export const MainInit = ({
     px-2 py-2  min-h-full rounded-lg 
     before:content-[''] before:absolute before:w-full before:h-full before:bg-semiDarkTr before:right-0 before:top-0 before:z-10 before:rounded-lg`}
     >
-      <div className="relative z-10 font-helveticLight text-4xl text-light overflow-hidden">
+      <div className="relative z-10 font-helveticThin  text-3xl md:text-4xl text-light overflow-hidden">
         <m.p variants={animVar} initial="hidden" custom={1} animate={controls}>
           {t("common.title.start")}{" "}
-          <span className="font-helveticLight text-primary font-thin">
+          <span className="font-helveticThin text-primary font-thin">
             {t("common.name")}
           </span>
         </m.p>{" "}
@@ -53,7 +72,8 @@ export const MainInit = ({
           {t("common.title.finish")}
         </m.p>
       </div>
-      <div className="relative z-20 flex justify-between items-end">
+
+      <div className="relative z-20 mt-6 flex flex-col sm:flex-row sm:justify-between sm:items-end">
         <m.div
           variants={animVar}
           initial="hidden"
@@ -61,9 +81,9 @@ export const MainInit = ({
           animate={controls}
           className={`w-full flex-col sm:mr-4 justify-between text-light  sm:max-w-[350px] ${styles.heading4}`}
         >
-          <p className="text-primary">{t("common.about")}:</p>
+          <p className="text-primary text-3xl">{t("common.about")}:</p>
           <p className={`${styles.paragraph}`}>{t("common.about.shortDesc")}</p>
-          <hr className="my-3" />
+          <hr className="my-1 sm:my-3" />
           <p className={`${styles.paragraph}`}>{t("common.about.shortDesc")}</p>
         </m.div>
 
@@ -73,13 +93,13 @@ export const MainInit = ({
             initial="hidden"
             custom={6}
             animate={controls}
-            className="max-h-[180px] min-w-[350px] bg-primary text-light font-helveticLight text-2xl rounded-lg"
+            className="mt-2 max-h-[180px] min-w-full sm:min-w-[350px] border-primary bg-primary/70 border text-light font-helveticThin text-2xl rounded-lg"
           >
             <Slider>
               {discounts.map((item) => {
                 return (
                   <SliderItem key={item._id.toString()}>
-                    <div className="py-2 [&>p]:mb-6 overflow-y-hidden">
+                    <div className="py-2 [&>p]:mb-8 overflow-y-hidden">
                       <p>{item.title}</p>
                       <p className="text-base">{item.description}</p>
                       <div className="flex justify-between items-end">
@@ -98,19 +118,6 @@ export const MainInit = ({
                   </SliderItem>
                 );
               })}
-              {/* <SliderItem>
-                <div
-                  className={`flex flex-col justify-between h-full py-3 px-1 ${styles.heading6}}`}
-                >
-                  <p>
-                    Знижка на консультації при записі до нашого сімейного лікаря
-                  </p>
-                  <div className="flex justify-between">
-                    <span className={`${styles.numberText}}`}>10%</span>
-                    <Button type="light" text="common.appointment" />
-                  </div>
-                </div>
-              </SliderItem> */}
             </Slider>
           </m.div>
         )}

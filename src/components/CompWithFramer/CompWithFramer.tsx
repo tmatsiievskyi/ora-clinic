@@ -14,6 +14,7 @@ export const CompWithFramer = ({
   from,
   delay,
   duration,
+  key,
 }: ICompWithFramerProps) => {
   const controls = useAnimation();
   const [scope, animate] = useAnimate();
@@ -23,7 +24,7 @@ export const CompWithFramer = ({
     if (isInView) {
       controls.start("visible");
     }
-  }, [isInView, controls]);
+  }, [isInView, controls, key]);
 
   const compVariants: { [keys: string]: Variants } = {
     left: {
@@ -55,6 +56,32 @@ export const CompWithFramer = ({
       hidden: {
         width: "50%",
         opacity: 0,
+      },
+    },
+    opacity: {
+      visible: {
+        opacity: 1,
+        transition: { duration: duration, delay: delay, type: "tween" },
+      },
+      hidden: {
+        opacity: 0,
+      },
+    },
+    scale: {
+      visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+          duration: duration,
+          delay: delay,
+          type: "spring",
+          stiffness: 90,
+          bounce: 0.25,
+        },
+      },
+      hidden: {
+        opacity: 0,
+        scale: 0.8,
       },
     },
   };

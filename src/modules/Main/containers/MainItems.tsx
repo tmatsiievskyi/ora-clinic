@@ -111,14 +111,21 @@ export const MainItems = ({
                   </Link>
                 </div>
               </div>
-
-              <Image
-                height={1000}
-                width={1000}
-                src={`/img${activeEmployee.imgUrl}`}
-                alt="Doctor Image"
-                className="absolute top-0 left-0 w-full h-full object-cover z-20 object-top"
-              />
+              <CompWithFramer
+                className="h-full w-full absolute t-0 l-0"
+                from="scale"
+                delay={0.3}
+                duration={0.5}
+                key={activeEmployee._id.toString()}
+              >
+                <Image
+                  height={1000}
+                  width={1000}
+                  src={`/img${activeEmployee.imgUrl}`}
+                  alt="Doctor Image"
+                  className="absolute top-0 left-0 w-full h-full object-cover z-20 object-top"
+                />
+              </CompWithFramer>
             </div>
           </CompWithFramer>
         )}

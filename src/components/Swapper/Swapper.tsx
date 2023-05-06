@@ -22,9 +22,7 @@ export const Swapper = ({ children }: ISwapperProps) => {
     );
   }, []);
 
-  const onClickHandler = () => {
-    console.log("asd");
-  };
+  const onClickHandler = () => {};
 
   return (
     <m.div ref={sliderRef} className="h-full cursor-grab, flex overflow-hidden">

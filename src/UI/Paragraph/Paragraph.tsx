@@ -5,7 +5,7 @@ export const Paragraph = ({
   children,
   className,
 }: {
-  children: DefaultTFuncReturn | string;
+  children: DefaultTFuncReturn | string | JSX.Element;
   className?: string;
 }) => {
   return (

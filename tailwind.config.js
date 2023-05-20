@@ -10,7 +10,7 @@ module.exports = {
         primary: "#d36ce3",
         primaryLight: "#E098EB",
         light: "#ffffff",
-        lightShade: "#f6f6f7",
+        lightShade: "#F4F6FF",
         dark: "#26292f",
         semiDarkTr: "rgba(38, 41, 47, 0.2)",
         grey: "#556669",

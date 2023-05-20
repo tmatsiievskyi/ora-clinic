@@ -1,8 +1,7 @@
 export const styles = {
   navText: "font-helveticLight text-base text-dark",
   paragraph: "font-helveticThin text-base",
-  heading3:
-    "font-helveticThin text-[24px] leading-[34px]  sm:text-[34px] sm:leading-[38px]",
+  heading3: "font-helveticThin text-xl  sm:text-3xl",
   heading4: "font-helveticThin text-2xl",
   numberText: "font-oswald ",
   linkHover: `[&.active]:before:block [&.active]:before:absolute [&.active]:before:bottom-[1px] [&.active]:before:left-0 [&.active]:before:w-full [&.active]:before:h-[1px] [&.active]:before:bg-primary [&.active]:relative [&.active]:inline-block

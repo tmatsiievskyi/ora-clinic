@@ -17,25 +17,6 @@ export const MainInit = ({
   const { t } = useTranslation("common");
   const controls = useAnimationControls();
 
-  const sentence = {
-    hidden: { opacity: 1 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delay: 0.5,
-        staggerChildren: 0.08,
-      },
-    },
-  };
-
-  const letter = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  };
-
   const animVar: Variants = {
     hidden: {
       opacity: 0,

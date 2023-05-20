@@ -40,22 +40,8 @@ export const Swapper = ({ children }: ISwapperProps) => {
         }}
       >
         {children.map((item, index) => {
-          return (
-            <Fragment key={index}>{item}</Fragment>
-            // < key={index}>
-            //   {item}
-            // </>
-          );
+          return <Fragment key={index}>{item}</Fragment>;
         })}
-        {/* {Children.map(children, (child) => {
-          return cloneElement(
-            child,
-            {
-              onClick: onClickHandler,
-            },
-            null,
-          );
-        })} */}
       </m.div>
     </m.div>
   );

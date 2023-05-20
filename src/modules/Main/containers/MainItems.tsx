@@ -19,7 +19,6 @@ export const MainItems = ({
 }) => {
   const { t } = useTranslation("common");
   const [employeeIndex, setEmployeeIndex] = useState(0);
-  const controls = useAnimationControls();
   let activeEmployee = employees && employees[employeeIndex];
 
   const updateIndex = (newIndex: number) => {
@@ -35,8 +34,8 @@ export const MainItems = ({
   };
 
   return (
-    <div className="min-h-full mt-2 rounded-lg grid grid-rows-6 grid-cols-10 gap-2 [&>div]:rounded-lg ">
-      <div className="col-span-10 md:col-span-5 lg:col-span-6 row-span-1">
+    <div className="min-h-full  mt-2 rounded-lg grid grid-rows-6 grid-cols-10 gap-2 [&>div]:rounded-lg ">
+      <div className="col-span-10 md:col-span-5 lg:col-span-7 row-span-1">
         <CompWithFramer
           delay={0.7}
           duration={1}
@@ -54,7 +53,7 @@ export const MainItems = ({
         </CompWithFramer>
       </div>
 
-      <div className="min-h-[600px] bg-lightShade my-2 md:my-0 col-span-10 md:col-span-5 lg:col-span-4 row-span-5 md:row-span-6 relative rounded-lg overflow-hidden">
+      <div className="min-h-[600px] bg-lightShade my-2 md:my-0 col-span-10 md:col-span-5 lg:col-span-3 row-span-5 md:row-span-6 relative rounded-lg overflow-hidden">
         {activeEmployee && (
           <CompWithFramer
             delay={1.5}
@@ -130,7 +129,7 @@ export const MainItems = ({
           </CompWithFramer>
         )}
       </div>
-      <div className="bg-lightShade col-span-10 md:col-span-5 lg:col-span-6 row-span-1 md:row-span-4">
+      <div className="bg-lightShade col-span-10 md:col-span-5 lg:col-span-7 row-span-1 md:row-span-4">
         {services && (
           <CompWithFramer
             delay={1.2}
@@ -169,7 +168,7 @@ export const MainItems = ({
           </CompWithFramer>
         )}
       </div>
-      <div className="bg-lightShade md:mt-0  col-span-10 md:col-span-5 lg:col-span-6 row-span-1 ">
+      <div className="bg-lightShade md:mt-0  col-span-10 md:col-span-5 lg:col-span-7 row-span-1 ">
         <Link href="/service">
           <CompWithFramer
             delay={0.7}

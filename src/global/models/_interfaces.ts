@@ -6,12 +6,33 @@ interface MongoResult {
   updatedAt: Date;
 }
 
+export enum EDepartment {
+  allergist = "allergist",
+  gynecologist = "gynecologist",
+  surgeon = "surgeon",
+  dermatologist = "dermatologist",
+  endocrinologist = "endocrinologist",
+  gastro = "gastro",
+  cardiologist = "cardiologist",
+  usd = "usd",
+  ent = "ent",
+  neurologist = "neurologist",
+  ophthalmologist = "ophthalmologist",
+  psychotherapist = "psychotherapist",
+  familyDoc = "familyDoc",
+  dentist = "dentist",
+  urologist = "urologist",
+}
+
 export interface IEmployeeModel extends MongoResult {
   firstName: string;
   lastName: string;
   surname: string;
   imgUrl: string;
+  smImgUrl: string;
   position: string;
+  department: EDepartment;
+  illness?: string[];
   index: number;
 }
 

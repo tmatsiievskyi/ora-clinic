@@ -47,15 +47,17 @@ export const Layout = ({ children }: { children: JSX.Element }) => {
         <Header />
       </div>
       <main
-        className={`h-[calc(100%-90px)] overflow-y-scroll
+        className={`h-[calc(100%-40px)] md:h-[calc(100%-90px)] overflow-y-scroll
         rounded-lg
         font-helveticLight
         `}
       >
         {children}
       </main>
-      <div className="h-[60px]">
-        <Footer />
+      <div className="h-[10px] md:h-[60px]">
+        <div className="hidden md:block">
+          <Footer />
+        </div>
       </div>
     </div>
   );

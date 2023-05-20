@@ -6,7 +6,10 @@ export const ArrowRight = ({
   classNameWrapper,
 }: IArrowProps) => {
   return (
-    <div onClick={() => onClick()} className={classNameWrapper}>
+    <div
+      onClick={onClick ? () => onClick() : undefined}
+      className={classNameWrapper}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -32,10 +35,7 @@ export const ArrowLeft = ({
 }: IArrowProps) => {
   return (
     <div
-      //   onClick={() => {
-      //     updateIndex(employeeIndex + 1);
-      //   }}
-      onClick={() => onClick()}
+      onClick={onClick ? () => onClick() : undefined}
       className={classNameWrapper}
     >
       <svg
@@ -44,9 +44,7 @@ export const ArrowLeft = ({
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        // className={`w-14 h-14 text-lightShade`}
         className={classNameArrow}
-        onClick={() => onClick()}
       >
         <path
           strokeLinecap="round"

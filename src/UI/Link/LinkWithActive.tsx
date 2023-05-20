@@ -14,10 +14,8 @@ export const LinkWithActive = ({
   return (
     <Link
       href={href}
-      className={`${active ? "active" : null} 
-        font-helveticLight [&.active]:font-helveticRegular ${
-          styles.linkHover
-        } ${className}`}
+      className={`${className} ${active ? "active" : null} 
+        font-helveticThin [&.active]:font-helveticLight ${styles.linkHover} `}
     >
       {t(`${i18nKey}`)}
     </Link>

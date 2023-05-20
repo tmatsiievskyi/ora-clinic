@@ -23,6 +23,7 @@
   "common.currency.grn": "грн.",
   "common.description": "Опис",
   "common.employees.inOra": "Лікарі у медичному центрі",
+  "common.employees.inOraShort": "Лікарі",
   "common.service.inOra": "Послуги у медичному центрі",
   "common.about.note1": "Ми гарантуємо відповідну кваліфікацію та сертифікацію персоналу. Наші медичні послуги відповідають європейським стандартам, а обладнання – сучасним вимогам.",
   "common.about.note2": "Ми використовуємо сучасну апаратуру для ультразвукової діагностики, електро- та ЕХО-кардіографії. Медичний центр «Ора» співпрацює з діагностичними і лікувальними центрами Львова, Києва, Запоріжжя, Чернівців, Кракова.",
@@ -31,10 +32,29 @@
   "common.ourPratners": "Наші партнери",
 
   "Valilschikova": "Валілщкова",
+  "Zadvornyh": "Задоних",
+
   "Irina": "Ірина",
+
   "Abilfazivna": "Абілфазівна",
 
-  "common.position.allergistPulmonologist": "Алерголог-Пульмонолог",
+  "about.start.643de66f65d1bd3016084227": "Лікар-терапевт, пульмонолог, алерголог аспірант кафедри Харківського медичного університету проводить прийом пацієнтів з такими захворюваннями:",
+  "about.end.643de66f65d1bd3016084227": "Лікар постійно приймає участь в міжнародних та всеукраїнських конференціях. Являється неоднаразовим лідером Київської школи молекулярної діагностики УШМАІ.",
+
+  "illness.alergicalRenit": "алергічний реніт",
+  "illness.alergicalCon": "алергічний кон‘юнктивіт",
+  "illness.bronhAstm": "бронхіальна астма",
+  "illness.obstructBronh": "обструктивний бронхіт;",
+  "illness.afterCovid": "стани після перенесеного ковіду;",
+  "illness.kropyvyanka": "кропив‘янка",
+  "illness.alergicalEzofag": "алергічний езофагіт",
+  "illness.cardioIssue": "кардіологічні скарги;",
+  "illness.foodIssue": "проблеми з харчуванням",
+  "illness.afterFoodIssue": "порушення травлення(дисперсія, дисфагія)",
+  "illness.pnevmoDiff": "пневмонії різної етіології",
+  "illness.xozl": "хронічне обструктивне захворювання легень(ХОЗЛ)",
+
+  "common.position.allergist": "Алерголог",
 
   "complex.category.all": "Всі категорії",
   "complex.category.male": "для Чоловіків",
@@ -55,6 +75,12 @@
   "complex.shortDescription.female30_optimal": "Короткий опис комплексного обстеження для жінок до 30",
 
   "complex.priceFamilyDoctor": "Для задекларованих у сімейного лікаря:",
+
+  "employee.tab.profile": "Профіль",
+  "employee.tab.skills": "Навики",
+  "employee.tab.contact": "Контакти",
+
+  "position.allergistPulmonologist": "Алерголог-Пульмонолог",
 
   "subService.category.usd": "УЗД",
   "subService.category.dentist": "Стоматолог",
@@ -105,8 +131,9 @@
   "services.title.complex": "Комплексні обстеження",
   "services.title.gastro": "Гастроскопія",
   "services.title.usd": "УЗД Обстеження",
+  "services.title.surgeon": "Хірург",
   "services.title.gynecologist": "Гінекологія",
-  "services.title.dentist": "Стоматологія",
+  "services.title.dentist": "Стоматолог",
   "services.title.familyDoc": "Сімейний лікар",
   "services.title.neurologist": "Невропатолог",
   "services.title.allergist": "Алерголог",
@@ -143,6 +170,31 @@
   "services.description.urologist": "Уролог опис",
   "services.shortDesc.complex": "У професійному контексті це часто буває, що приватні або корпоративні клієнти Corder публікацію, які будуть зроблені і представлені з фактичний зміст все ще не готовий. Подумайте про прес- блозі, що наповнилися змістом погодинна в день буде жити. Однак рецензенти схильні відволікатися на зрозумілій змісту, скажімо, випадкового тексту, скопійованого з газети або в інтернеті., Швидше за все, зосередитися на тексті, не звертаючи уваги на макет і його елементів. Крім того, випадковий текст ризикує бути ненавмисно гумористичні або образливим, неприйнятним ризиком в корпоративному середовищі. Lorem Ipsum і його численні варіанти були використані з початку 1960 -х років, і цілком імовірно, починаючи з шістнадцятого століття.",
   "services.shortDesc.lab": "У професійному контексті це часто буває, що приватні або корпоративні клієнти Corder публікацію, які будуть зроблені і представлені з фактичний зміст все ще не готовий. Подумайте про прес- блозі, що наповнилися змістом погодинна в день буде жити. Однак рецензенти схильні відволікатися на зрозумілій змісту, скажімо, випадкового тексту, скопійованого з газети або в інтернеті., Швидше за все, зосередитися на тексті, не звертаючи уваги на макет і його елементів. Крім того, випадковий текст ризикує бути ненавмисно гумористичні або образливим, неприйнятним ризиком в корпоративному середовищі. Lorem Ipsum і його численні варіанти були використані з початку 1960 -х років, і цілком імовірно, починаючи з шістнадцятого століття.",
+
+  "employee.title.all": "Всі Лікарі",
+  "employee.title.lab": "Лабораторія",
+  "employee.title.complex": "Комплексні обстеження",
+  "employee.title.gastro": "Гастроскопія",
+  "employee.title.usd": "УЗД Обстеження",
+  "employee.title.surgeon": "Хірург",
+  "employee.title.gynecologist": "Гінекологія",
+  "employee.title.dentist": "Стоматологія",
+  "employee.title.familyDoc": "Сімейний лікар",
+  "employee.title.neurologist": "Невропатолог",
+  "employee.title.ophthalmologist": "Офтальмолог",
+  "employee.title.psychologist": "Психолог",
+  "employee.title.allergist": "Алерголог",
+  "employee.title.vertebrologist": "Вертебролог",
+  "employee.title.dermatologist": "Дерматолог",
+  "employee.title.nutritionist": "Дієтолог",
+  "employee.title.endocrinologist": "Ендокринолог",
+  "employee.title.cardiologist": "Кардіолог",
+  "employee.title.ent": "ЛОР",
+  "employee.title.oculist": "Окуліст",
+  "employee.title.psychotherapist": "Фізіотерапевт",
+  "employee.title.deafologist": "Сурдолог",
+  "employee.title.traumatologist": "Травматолог",
+  "employee.title.urologist": "Уролог",
 
   "common.someText": "Тут якийсь текст"
 }

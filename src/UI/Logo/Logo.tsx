@@ -6,7 +6,7 @@ export const Logo = () => {
     <Image
       src={oraLogo}
       alt="Ora clinic logo"
-      style={{ width: "auto", height: "100%" }}
+      style={{ width: "auto", height: "50px" }}
     />
   );
 };

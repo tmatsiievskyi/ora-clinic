@@ -1,4 +1,5 @@
 export const styles = {
+  container: "max-w-[1500px]",
   navText: "font-helveticLight text-base text-dark",
   paragraph: "font-helveticThin text-base",
   heading3: "font-helveticThin text-xl  sm:text-3xl",

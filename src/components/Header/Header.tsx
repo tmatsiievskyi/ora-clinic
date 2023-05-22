@@ -9,8 +9,8 @@ import { LngSelect } from "@/components/LngSelect";
 
 export const Header = () => {
   return (
-    <header className=" py-1 w-full h-full">
-      <div className={`flex flex-row h-full`}>
+    <header className="w-full h-full">
+      <div className={`flex items-center flex-row h-full`}>
         <div className="sm:hidden flex justify-end items-center">
           <div>
             <NavMobile navItems={navItems} />
@@ -18,10 +18,7 @@ export const Header = () => {
         </div>
         <Nav navItems={navItems} />
         <div className="flex items-center">
-          <div className="mr-2">
-            {" "}
-            <LngSelect />
-          </div>
+          <LngSelect />
 
           {/* <Button type="primary" text="common.appointment" /> */}
         </div>

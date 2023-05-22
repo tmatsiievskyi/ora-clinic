@@ -3,6 +3,7 @@ import { motion as m, Variants, useAnimationControls } from "framer-motion";
 
 import { ArrowLeft } from "@/UI/Arrows";
 import { ISidebarProps } from "./_interfaces";
+import { PageTitle } from "../PageTitle";
 
 export const Sidebar = ({
   title,
@@ -53,12 +54,7 @@ export const Sidebar = ({
       <aside className="flex-shrink-0 w-full h-full over overflow-scroll no-scrollbar">
         <div className="py-2 flex flex-col justify-between  md:py-4 sticky top-[-1px] border-b border-lightShade z-30 bg-light">
           <div className="relative md:mt-0 flex flex-col text-center justify-center items-center bg-light/40 rounded-lg text-dark">
-            <p className="text-2xl md:text-2xl max-w-[67px] md:max-w-[140px] leading-8 font-helveticThin">
-              {t(`${title}`)}
-            </p>
-            <p className="text-primary text-3xl md:text-4xl leading-5 mt-2 font-normal">
-              {t("common.name")}
-            </p>
+            <PageTitle title={title} className="" />
           </div>
           <div
             onClick={() => onArrowClick()}

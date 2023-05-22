@@ -43,11 +43,11 @@ export const Layout = ({ children }: { children: JSX.Element }) => {
      ${helveticBold.variable}
      ${oswald.variable}`}
     >
-      <div className="h-[30px]">
+      <div className="h-[40px]">
         <Header />
       </div>
       <main
-        className={`h-[calc(100%-40px)] md:h-[calc(100%-90px)] overflow-y-scroll
+        className={`h-[calc(100%-50px)] md:h-[calc(100%-100px)] overflow-y-scroll
         rounded-lg
         font-helveticLight
         `}

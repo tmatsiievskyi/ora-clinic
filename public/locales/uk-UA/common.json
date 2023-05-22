@@ -1,6 +1,7 @@
 {
   "common.main": "Головна",
   "common.complex": "Комплексні Обстеження",
+  "common.complex.item": "Комплексне Обстеження:",
   "common.service": "Послуги",
   "common.price": "Ціни",
   "common.employee": "Лікарі",
@@ -72,7 +73,17 @@
   "complex.female40+_optimal.label": "Жінки 40+ \"Оптимальний\"",
   "complex.female40+_full.label": "Жінки 40+ \"Повний\"",
 
-  "complex.shortDescription.female30_optimal": "Короткий опис комплексного обстеження для жінок до 30",
+  "complex.female30_optimal.description": "Короткий опис комплексного обстеження для жінок до 30",
+  "complex.female30_full.description": "Короткий опис комплексного обстеження для жінок до 30",
+  "complex.female40_optimal.description": "Короткий опис комплексного обстеження для жінок до 40",
+  "complex.female40_full.description": "Короткий опис комплексного обстеження для жінок до 40",
+  "complex.female40+_optimal.description": "Короткий опис комплексного обстеження для жінок до 40+",
+  "complex.female40+_full.description": "Короткий опис комплексного обстеження для жінок до 40+",
+  "complex.male30_optimal.description": "Короткий опис комплексного обстеження для чоловіків до 30",
+  "complex.male30_full.description": "Короткий опис комплексного обстеження для чоловіків до 30",
+
+  "complex.male40_optimal.description": "Короткий опис комплексного обстеження для жінок до 30",
+  "complex.male40_full.description": "Короткий опис комплексного обстеження для жінок до 30",
 
   "complex.priceFamilyDoctor": "Для задекларованих у сімейного лікаря:",
 

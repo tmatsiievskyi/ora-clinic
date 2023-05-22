@@ -47,28 +47,48 @@ export const EmployeeProfile = ({
 
   return (
     <div className="w-full h-full">
-      <div className=" h-80  flex justify-between pr-2 md:pr-36 bg-gradient-to-r rounded-bl-lg from-grey to-lightShade to-90% relative">
+      <div className="h-80  bg-gradient-to-r rounded-bl-lg from-grey to-lightShade to-90% ">
         <div
-          className={`${styles.heading3} text-light mt-2 ml-2 md:mt-4 md:ml-4`}
+          className={`${styles.container} h-full flex justify-between mr-auto relative`}
         >
-          {lastName && (
-            <AnimatedTextCharacter i18nKey={lastName} type="right" />
-          )}
-          {firstName && (
-            <AnimatedTextCharacter i18nKey={firstName} type="right" />
-          )}
-          {surname && <AnimatedTextCharacter i18nKey={surname} type="right" />}
+          <div
+            className={`${styles.heading3} text-light mt-2 ml-2 md:mt-4 md:ml-4`}
+          >
+            {lastName && (
+              <AnimatedTextCharacter
+                // className=" flex-nowrap"
+                i18nKey={lastName}
+                type="right"
+              />
+            )}
+            {firstName && (
+              <AnimatedTextCharacter
+                // className=" flex-nowrap"
+                i18nKey={firstName}
+                type="right"
+              />
+            )}
+            {surname && (
+              <AnimatedTextCharacter
+                // className=" flex-nowrap"
+                i18nKey={surname}
+                type="right"
+              />
+            )}
+          </div>
+          <Image
+            height={1000}
+            width={1000}
+            src={`/img${imgUrl}`}
+            alt="Doctor Image"
+            priority
+            className="w-[60%] sm:w-auto  h-auto object-cover object-top rounded-lg"
+          />
         </div>
-        <Image
-          height={1000}
-          width={1000}
-          src={`/img${imgUrl}`}
-          alt="Doctor Image"
-          priority
-          className="w-[auto] ml-auto mr-auto  h-80 object-cover object-top rounded-lg"
-        />
       </div>
-      <div className="p-2 md:p-4 rounded-lg h-[calc(100%-20rem)]  md:h-[calc(100%-18rem)] overflow-scroll no-scrollbar">
+      <div
+        className={`${styles.container} p-2 md:p-4 rounded-lg flex-1  md:h-[calc(100%-20rem)] overflow-scroll no-scrollbar`}
+      >
         <p className={`${styles.heading3}`}>{t(`position.${position}`)}</p>
         <div className=" mb-6 mt-3 flex justify-center">
           {tabs.map((tab) => (

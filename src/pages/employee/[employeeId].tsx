@@ -5,12 +5,8 @@ import type {
   GetStaticPathsContext,
 } from "next";
 import { PageWrapper } from "@/components/PageWrapper";
-import { Title } from "@/UI/Title";
-import { EmployeeItem } from "@/modules/Employee/containers";
-import { useTranslation } from "next-i18next";
 import {
   getEmployeeById,
-  getEmployeeDepartments,
   getAllEmployees,
   getGroupedEmployee,
 } from "@/global/api/employee-api";
@@ -22,7 +18,6 @@ const EmployeeById: NextPage<IEmployeeProps> = ({
   employee,
   groupedEmployees,
 }) => {
-  const { t } = useTranslation("common");
   return (
     <PageWrapper>
       <>
@@ -73,6 +68,12 @@ export const getStaticProps: GetStaticProps<IEmployeeProps> = async (
   const reqForGroupedEmployees = await getGroupedEmployee();
   const { data: employee } = reqForEmployee;
   const { data: groupedEmployees } = reqForGroupedEmployees;
+
+  if (!employee || !groupedEmployees) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {

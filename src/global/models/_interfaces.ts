@@ -48,7 +48,7 @@ export interface IServiceModel extends MongoResult {
   description: string;
   shortDescription: string;
   imgUrl: string;
-  employee?: Types.ObjectId[];
+  employee?: Types.ObjectId[] | IEmployeeModel[];
   subService?: Types.ObjectId[];
 }
 

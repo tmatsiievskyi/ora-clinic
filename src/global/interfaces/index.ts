@@ -1,5 +1,9 @@
 import { IGroupedEmployees } from "@/global/api/_interfaces";
-import { IComplexModel, IEmployeeModel } from "@/global/models/_interfaces";
+import {
+  IComplexModel,
+  IEmployeeModel,
+  IServiceModel,
+} from "@/global/models/_interfaces";
 
 export interface IEmployeesProps {
   employee: IEmployeeModel | null;
@@ -18,4 +22,9 @@ export interface IComplexesProps {
 
 export interface IComplexProps {
   complex: IComplexModel | null;
+}
+
+export interface IServiceProps {
+  services: IServiceModel[] | null;
+  service: IServiceModel | null;
 }

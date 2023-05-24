@@ -1,17 +1,15 @@
 import { PageWrapper } from "@/components/PageWrapper";
-import { getAllService } from "@/global/api/service-api";
+import { getAllService, getFirstService } from "@/global/api/service-api";
+import { IServiceProps } from "@/global/interfaces";
 import { IDiscountModel, IServiceModel } from "@/global/models/_interfaces";
+import { ServiceContainer } from "@/modules/Service/containers";
 import type { GetStaticProps, NextPage, GetStaticPropsContext } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-interface IServiceProps {
-  services: IServiceModel[] | null;
-}
-
-const Service: NextPage<IServiceProps> = ({ services }) => {
+const Service: NextPage<IServiceProps> = ({ services, service }) => {
   return (
     <PageWrapper>
-      <p>Service</p>
+      <ServiceContainer services={services} service={service} />
     </PageWrapper>
   );
 };
@@ -19,14 +17,22 @@ const Service: NextPage<IServiceProps> = ({ services }) => {
 export const getStaticProps: GetStaticProps<IServiceProps> = async ({
   locale,
 }: GetStaticPropsContext) => {
-  const reqForDiscounts = await getAllService();
+  const reqForServices = await getAllService();
+  const reqForService = await getFirstService();
+  const { data: services } = reqForServices;
+  const { data: service } = reqForService;
 
-  const { data: services } = reqForDiscounts;
+  if (!service || !services) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {
       ...(await serverSideTranslations(locale ?? "uk-UA", ["common"])),
       services: services ? JSON.parse(JSON.stringify(services)) : null,
+      service: service ? JSON.parse(JSON.stringify(service)) : null,
     },
   };
 };

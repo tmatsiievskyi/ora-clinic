@@ -6,6 +6,7 @@ import { useTranslation } from "next-i18next";
 import { styles } from "@/styles/styles";
 import { EmployeeProfile } from "./EmployeeProfile";
 import Link from "next/link";
+import { EmployeeComponent } from "@/components/EmployeeComplonent";
 
 export const EmployeeContainer = ({
   groupedEmployees,
@@ -69,29 +70,13 @@ export const EmployeeContainer = ({
                               href={`/employee/${_id}`}
                               className="flex items-center"
                             >
-                              <Image
-                                height={1000}
-                                width={1000}
-                                src={`/img${smImgUrl}`}
-                                alt="Doctor Image"
-                                priority
-                                className={`w-[auto] ${
-                                  isSideBarOpen ? "mx-2" : "mx-[10px]"
-                                } h-[60px] object-cover object-top bg-gradient-to-br from-grey to-lightShade to-80% rounded-full`}
+                              <EmployeeComponent
+                                imgUrl={`/img${smImgUrl}`}
+                                firstName={firstName}
+                                lastName={lastName}
+                                surname={surname}
+                                position={position}
                               />
-                              {isSideBarOpen && (
-                                <span className="font-helveticThin text-dark min-w-[200px]">
-                                  <p>{t(`${lastName}`)}</p>
-                                  <p>
-                                    {t(`${firstName}`)} {t(`${surname}`)}
-                                  </p>
-                                  <p className="hidden bg-primary text-center rounded-lg font-helveticLight break-all  ">
-                                    <span className=" text-light p-2">
-                                      {t(`position.${position}`)}
-                                    </span>
-                                  </p>
-                                </span>
-                              )}
                             </Link>
                           </span>
                         </li>

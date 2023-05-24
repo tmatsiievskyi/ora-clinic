@@ -62,7 +62,7 @@ export const ServiceContainer = ({
                               index + 1 < employee.length ? "mb-2" : "mb-0"
                             }`}
                           >
-                            <Link href={`employee/${item._id}`}>
+                            <Link href={`/employee/${item._id}`}>
                               <EmployeeComponent
                                 imgUrl={`/img${item.smImgUrl}`}
                                 firstName={item.firstName}

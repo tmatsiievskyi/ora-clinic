@@ -6,4 +6,6 @@ export interface IDisclosureProps {
   buttonClassNames?: string;
   listClassNames?: string;
   showPrice?: boolean;
+  buttonEl?: JSX.Element;
+  listItemClassNames?: string;
 }

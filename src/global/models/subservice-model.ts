@@ -9,6 +9,7 @@ const SubServiceSchema = new Schema<ISubServiceModel>({
   description: { type: String, required: false },
   price: { type: Number, required: true },
   searchTags: { type: [String], required: false },
+  index: { type: Number, required: true },
 });
 
 SubServiceSchema.set("timestamps", true);

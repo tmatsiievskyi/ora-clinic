@@ -1,4 +1,4 @@
-import { FC, Fragment } from "react";
+import { FC } from "react";
 import { Disclosure, Transition } from "@headlessui/react";
 import { useTranslation } from "next-i18next";
 import { motion } from "framer-motion";
@@ -12,6 +12,8 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
   buttonClassNames,
   listClassNames,
   showPrice,
+  buttonEl,
+  listItemClassNames,
 }) => {
   const { t } = useTranslation();
 
@@ -24,7 +26,7 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
               <Disclosure.Button
                 className={`flex w-full justify-between items-center rounded-lg ${buttonClassNames}`}
               >
-                <span>{t(`${buttonText}`)}</span>
+                {buttonEl ? buttonEl : t(`${buttonText}`)}
                 {open ? (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -61,13 +63,14 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
                 {items.map((item) => {
                   const { _id, label, price } = item;
                   return (
-                    <li key={_id}>
-                      <span>{t(`${group}.${label}`)}</span>
+                    <li key={_id} className={listItemClassNames}>
+                      <span>{t(`${label}`)}</span>
                       {showPrice && (
                         <span>
-                          {" - "}
-                          {price}
-                          {t("common.currency.grn")}
+                          <span className="text-primary font-oswald text-xl">
+                            {price}
+                          </span>{" "}
+                          <span>{t("common.currency.grn")}</span>
                         </span>
                       )}
                     </li>

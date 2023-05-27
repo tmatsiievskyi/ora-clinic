@@ -1,4 +1,4 @@
-import { IEmployeeModel } from "../models/_interfaces";
+import { IEmployeeModel, ISubServiceModel } from "../models/_interfaces";
 
 export interface IResp<T> {
   data: T;
@@ -9,5 +9,10 @@ export interface IResp<T> {
 
 export interface IGroupedEmployees {
   data: IEmployeeModel[];
+  _id: string;
+}
+
+export interface IGroupedSubService {
+  data: ISubServiceModel[];
   _id: string;
 }

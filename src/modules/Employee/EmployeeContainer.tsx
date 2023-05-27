@@ -3,7 +3,6 @@ import { Sidebar } from "@/components/Sidebar2";
 import Image from "next/image";
 import { IEmployeeContainerProps } from "./_interfaces";
 import { useTranslation } from "next-i18next";
-import { styles } from "@/styles/styles";
 import { EmployeeProfile } from "./EmployeeProfile";
 import Link from "next/link";
 import { EmployeeComponent } from "@/components/EmployeeComplonent";
@@ -13,7 +12,6 @@ export const EmployeeContainer = ({
   employee,
 }: IEmployeeContainerProps) => {
   const { t } = useTranslation("common");
-  const { position, imgUrl, firstName, lastName, surname } = employee || {};
   const [isSideBarOpen, setIsSideBarOpen] = useState(true);
 
   const handleSideBarOpen = () => {

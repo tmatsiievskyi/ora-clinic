@@ -67,6 +67,7 @@ export interface ISubServiceModel extends MongoResult {
   description?: string;
   price: number;
   searchTags?: string[];
+  index: number;
 }
 
 export interface IComplexModel extends MongoResult {

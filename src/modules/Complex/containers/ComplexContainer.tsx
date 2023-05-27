@@ -21,7 +21,7 @@ export const ComplexContainer = ({
       <div className="pt-2 px-2">
         <PageTitle title="common.complex" className="w-[280px] md:w-[340px] " />
       </div>
-      <div className="flex flex-col dm:flex-row mt-2 px-2">
+      <div className="flex flex-col md:flex-row mt-2 px-2">
         <m.div
           initial={{ x: "100%", opacity: "0" }}
           whileInView={{ x: "0%", opacity: "1" }}

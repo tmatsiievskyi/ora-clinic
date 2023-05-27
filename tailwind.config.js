@@ -2,6 +2,8 @@
 
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
+// d36ce3
+
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}", "!./node_modules"],
   theme: {

@@ -26,7 +26,6 @@ const navVariants = {
   open: {
     opacity: 1,
     y: 0,
-    x: 0,
     transition: {
       duration: 0.5,
       type: "spring",
@@ -36,7 +35,7 @@ const navVariants = {
   },
   closed: {
     opacity: 0,
-    x: "-200%",
+    y: "-200%",
     transition: {
       duration: 0.5,
       type: "spring",

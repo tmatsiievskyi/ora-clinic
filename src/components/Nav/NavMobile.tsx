@@ -134,7 +134,7 @@ export const NavMobile: FC<{ navItems: INavItem[] }> = ({ navItems }) => {
               );
             })}
           </ul>
-          <div className="max-h-[100px] mt-6">
+          <div className="max-h-[100px] mt-6 w-full">
             <Footer />
           </div>
         </div>

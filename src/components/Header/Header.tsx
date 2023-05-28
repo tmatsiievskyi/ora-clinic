@@ -19,15 +19,7 @@ export const Header = () => {
         <Nav navItems={navItems} />
         <div className="flex items-center">
           <LngSelect />
-
-          {/* <Button type="primary" text="common.appointment" /> */}
         </div>
-
-        {/* <div className="w-24">
-          <Link href="/">
-            <Logo />
-          </Link>
-        </div> */}
       </div>
     </header>
   );

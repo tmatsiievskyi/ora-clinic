@@ -24,7 +24,7 @@ export const navItems: INavItem[] = [
 
   {
     title: "price",
-    href: "/sub-service",
+    href: "/price",
   },
 
   {

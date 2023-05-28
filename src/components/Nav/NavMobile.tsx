@@ -27,20 +27,20 @@ const navVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 1,
       type: "spring",
-      stiffness: 80,
-      bounce: 0.1,
+      stiffness: 70,
+      bounce: 0.05,
     },
   },
   closed: {
     opacity: 0,
     y: "-200%",
     transition: {
-      duration: 0.5,
+      duration: 1,
       type: "spring",
-      stiffness: 80,
-      bounce: 0.1,
+      stiffness: 70,
+      bounce: 0.05,
     },
   },
 };

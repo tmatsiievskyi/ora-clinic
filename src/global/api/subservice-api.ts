@@ -89,7 +89,7 @@ export const getGroupedSubService = async (): Promise<
       {
         $match: {
           category: {
-            $nin: ["сonsultations", "analyses"],
+            $nin: ["сonsultations", "analyses", "examination"],
           },
         },
       },

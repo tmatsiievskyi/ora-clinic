@@ -24,7 +24,6 @@ const subServiceHandler = async (req: NextApiRequest, res: NextApiResponse) => {
         },
       ]);
       res.status(200).send(result);
-      console.log(result);
     } catch (e) {
       const message = getErrorMessage(e);
       return res.status(500).json({

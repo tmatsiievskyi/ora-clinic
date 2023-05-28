@@ -17,7 +17,6 @@ export const SubServiceContainer = ({
   groupedSubServices,
 }: ISubServiceContainerProps) => {
   const { t } = useTranslation("common");
-  const [isSideBarOpen, setIsSideBarOpen] = useState(true);
   const [query, setQuery] = useState("");
   const debouncedQuery = useDebounce(query, 300);
   const { data: searchedSubSer } = useSWR<IGroupedSubService[] | null>(
@@ -28,11 +27,6 @@ export const SubServiceContainer = ({
     },
   );
 
-  console.log(searchedSubSer, groupedSubServices);
-
-  const handleSideBarOpen = () => {
-    setIsSideBarOpen((prev) => !prev);
-  };
   return (
     <div className="h-full overflow-scroll no-scrollbar">
       <div className="pt-2 px-2">
@@ -45,7 +39,11 @@ export const SubServiceContainer = ({
         transition={{ duration: "0.75", ease: "easeOut" }}
         className={`flex justify-center flex-col ${styles.container} px-2 w-full ml-auto mr-auto`}
       >
-        <form className="py-6 flex space-x-4" action="#">
+        <form
+          className="py-6 flex space-x-4 "
+          action="#"
+          onSubmit={(e) => e.preventDefault()}
+        >
           <div className="flex-1 min-w-0">
             <label htmlFor="search" className="sr-only">
               Search
@@ -59,7 +57,7 @@ export const SubServiceContainer = ({
                 name="search"
                 id="search"
                 className="text-dark border-slate-200 border-[2px] focus-visible:border-primary focus-visible:outline-none text-lg placeholder:text-dark-accent-3 bg-light  block w-full pl-10 pr-1 py-1 rounded-lg"
-                placeholder="Search"
+                placeholder={t("common.search") || "Search"}
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />

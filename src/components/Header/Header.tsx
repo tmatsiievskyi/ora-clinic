@@ -10,7 +10,7 @@ import { LngSelect } from "@/components/LngSelect";
 export const Header = () => {
   return (
     <header className="w-full h-full">
-      <div className={`flex items-center flex-row h-full`}>
+      <div className={`flex items-center flex-row h-full relative`}>
         <div className="sm:hidden flex justify-end items-center">
           <div>
             <NavMobile navItems={navItems} />

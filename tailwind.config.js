@@ -2,15 +2,13 @@
 
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
-// d36ce3
-
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}", "!./node_modules"],
   theme: {
     extend: {
       colors: {
         primary: "#d36ce3",
-        primaryLight: "#E098EB",
+        primaryLight: "#d8b4fe",
         light: "#ffffff",
         lightShade: "#F4F6FF",
         dark: "#475569",

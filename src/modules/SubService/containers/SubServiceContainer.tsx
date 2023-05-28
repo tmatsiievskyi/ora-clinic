@@ -40,7 +40,7 @@ export const SubServiceContainer = ({
         className={`flex justify-center flex-col ${styles.container} px-2 w-full ml-auto mr-auto`}
       >
         <form
-          className="py-6 flex space-x-4 "
+          className="py-6 pb-4 flex space-x-4 "
           action="#"
           onSubmit={(e) => e.preventDefault()}
         >

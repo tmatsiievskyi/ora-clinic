@@ -5,6 +5,11 @@ import Link from "next/link";
 import { useOnClickOutside } from "@/global/hooks";
 import { useTranslation } from "next-i18next";
 import { INavItem } from "@/global/data";
+import { Logo } from "@/UI/Logo";
+import { Footer } from "../Footer";
+import { styles } from "@/styles/styles";
+import { useRouter } from "next/router";
+import { LinkWithActive } from "@/UI/Link";
 
 const path01Variants = {
   open: { d: "M3.06061 2.99999L21.0606 21" },
@@ -18,8 +23,27 @@ const path02Variants = {
 };
 
 const navVariants = {
-  open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, x: "-100%" },
+  open: {
+    opacity: 1,
+    y: 0,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      type: "spring",
+      stiffness: 80,
+      bounce: 0.1,
+    },
+  },
+  closed: {
+    opacity: 0,
+    x: "-200%",
+    transition: {
+      duration: 0.5,
+      type: "spring",
+      stiffness: 80,
+      bounce: 0.1,
+    },
+  },
 };
 
 export const NavMobile: FC<{ navItems: INavItem[] }> = ({ navItems }) => {
@@ -28,6 +52,8 @@ export const NavMobile: FC<{ navItems: INavItem[] }> = ({ navItems }) => {
   const path01Controls = useAnimation();
   const path02Controls = useAnimation();
   const navRef = useRef(null);
+  const router = useRouter();
+  const { asPath } = router;
 
   const handleClickOutside = () => {
     if (!isOpen) return;
@@ -68,32 +94,50 @@ export const NavMobile: FC<{ navItems: INavItem[] }> = ({ navItems }) => {
         </svg>
       </button>
       <motion.nav
-        className="flex py-1 min-w-[200px] justify-between 
-        items-center bg-light ml-1 
-        absolute z-10 top-[50px] left-0 rounded-lg"
+        className="flex min-w-[200px] justify-between 
+        items-center bg-light/95 
+        absolute z-50 top-[40px] left-0 rounded-lg w-full p-2 py-4 pb-2"
         initial="closed"
         animate={isOpen ? "open" : "closed"}
         variants={navVariants}
         transition={{ duration: "0.45", ease: "easeOut" }}
       >
-        <div className="flex flex-col w-full items-center py-2">
-          <div className="w-24 mb-4">
-            <Link href="/">{/* <Logo /> */}</Link>
+        <div className="flex flex-col w-full items-center justify-between h-full">
+          <div className="mb-4">
+            <Logo className="h-[100px] w-auto mb-4" />
           </div>
-          <ul className={`list-none sm:flex  items-center flex-1`}>
+          <ul className={`list-none flex flex-col items-start flex-1 w-full`}>
             {navItems.map((item, index) => {
               return (
                 <li
                   key={item.title}
-                  className={`font-comfortaa text-lg cursor-pointer ${
+                  className={`font-comfortaa 
+                  ${
+                    asPath.includes(item.title) ||
+                    (asPath === "/" && item.title === "main")
+                      ? `${styles.gradientR} text-light`
+                      : ""
+                  }
+                  w-full rounded-lg p-1 text-xl cursor-pointer text-dark ${
                     index === navItems.length - 1 ? "mb-0" : "mb-4"
                   }`}
                 >
-                  <Link href={item.href}>{t(`common.${item.title}`)}</Link>
+                  <Link
+                    href={item.href}
+                    onClick={(e) => {
+                      onClick();
+                      router.push(`${item.href}`);
+                    }}
+                  >
+                    {t(`common.${item.title}`)}
+                  </Link>
                 </li>
               );
             })}
           </ul>
+          <div className="max-h-[100px] mt-6">
+            <Footer />
+          </div>
         </div>
       </motion.nav>
     </div>

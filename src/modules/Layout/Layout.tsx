@@ -53,7 +53,7 @@ export const Layout = ({ children }: { children: JSX.Element }) => {
         <Header />
       </div>
       <main
-        className={`h-[calc(100svh-50px)] md:h-[calc(100%svh-100px)] no-scrollbar overflow-y-scroll
+        className={`h-[calc(100svh-50px)] md:h-[calc(100svh-100px)] no-scrollbar overflow-y-scroll
         rounded-lg
         font-comfortaa
         `}

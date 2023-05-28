@@ -8,9 +8,6 @@ import { PageTitle } from "../PageTitle";
 export const Sidebar = ({
   title,
   children,
-  classNameBox,
-  classNameLink,
-  activeItem,
   handleOpen,
   isOpen,
 }: ISidebarProps) => {
@@ -48,13 +45,15 @@ export const Sidebar = ({
   return (
     <div
       className={`absolute top-0 z-20 ease-in rounded-l-lg duration-300  ${
-        isOpen ? "w-[280px] sm:w-[340px]" : "w-[90px] "
-      }  sm:static  overflow-hidden flex h-full bg-light border-r border-lightShade`}
+        isOpen
+          ? "min-w-[280px] w-[280px] sm:w-[340px]"
+          : "min-w-[90px] w-[90px]"
+      }  md:static  overflow-hidden flex h-full bg-light border-r border-lightShade`}
     >
       <aside className="flex-shrink-0 w-full h-full over overflow-scroll no-scrollbar">
         <div className="py-2 flex flex-col justify-between  md:py-4 sticky top-[-1px] border-b border-lightShade z-30 bg-light">
           <div className="relative md:mt-0 flex flex-col text-center justify-center items-center bg-light/40 rounded-lg text-dark">
-            <PageTitle title={title} className="" />
+            <PageTitle title={title} className="w-[280px] md:w-[340px] " />
           </div>
           <div
             onClick={() => onArrowClick()}

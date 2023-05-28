@@ -20,9 +20,9 @@ export const EmployeeProfile = ({
   const content = () => {
     if (activeTab === "profile") {
       return (
-        <div className=" text-dark">
-          <p className="mb-2">{t(`about.start.${_id}`)}</p>
-          <p>{t(`about.end.${_id}`)}</p>
+        <div className=" text-dark break-word">
+          <p className="mb-2 break-word">{t(`about.start.${_id}`)}</p>
+          <p className="break-word">{t(`about.end.${_id}`)}</p>
         </div>
       );
     }
@@ -76,21 +76,25 @@ export const EmployeeProfile = ({
               />
             )}
           </div>
+          {/* <div className="w-[50%] relative"> */}
           <Image
             height={1000}
             width={1000}
             src={`/img${imgUrl}`}
             alt="Doctor Image"
             priority
-            className="w-[60%] sm:w-auto  h-auto object-cover object-top rounded-lg"
+            className=" w-auto absolute right-0 bottom-0 h-full object-cover object-top rounded-lg"
           />
+          {/* </div> */}
         </div>
       </div>
       <div
         className={`${styles.container} p-2 md:p-4 rounded-lg flex-1  md:h-[calc(100%-20rem)] overflow-scroll no-scrollbar`}
       >
-        <p className={`${styles.heading3}`}>{t(`position.${position}`)}</p>
-        <div className=" mb-6 mt-3 flex justify-center">
+        <p className={`${styles.heading3} break-all`}>
+          {t(`position.${position}`)}
+        </p>
+        <div className="mb-6 mt-3 flex justify-center">
           {tabs.map((tab) => (
             <button
               key={tab.name}
@@ -99,7 +103,7 @@ export const EmployeeProfile = ({
                   ? "border-primary text-dark"
                   : "border-transparent text-gray-400"
               }
-            mr-4 ease-in duration-300 whitespace-nowrap py-1 md:py-2 px-1 border-b-2 font-medium text-base font-comfortaa`}
+            mr-2 md:mr-4 ease-in duration-300 whitespace-nowrap py-1 md:py-2 px-1 border-b-2 font-medium text-sm md:text-base font-comfortaa`}
               onClick={() => setActiveTab(tab.name)}
             >
               {t(`employee.tab.${tab.name}`)}

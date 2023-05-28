@@ -37,8 +37,8 @@ export const MainItems = ({
     <div className="min-h-full  mt-2 rounded-lg grid grid-rows-6 grid-cols-10 gap-2 [&>div]:rounded-lg ">
       <div className="col-span-10 md:col-span-5 lg:col-span-7 row-span-1">
         <CompWithFramer
-          delay={0.7}
-          duration={1}
+          delay={0.8}
+          duration={0.8}
           from="left"
           className="bg-light h-full w-full rounded-lg p-2"
         >
@@ -56,8 +56,8 @@ export const MainItems = ({
       <div className="min-h-[600px] bg-lightShade my-2 md:my-0 col-span-10 md:col-span-5 lg:col-span-3 row-span-5 md:row-span-6 relative rounded-lg overflow-hidden">
         {activeEmployee && (
           <CompWithFramer
-            delay={1.5}
-            duration={1}
+            delay={0.8}
+            duration={0.8}
             from="right"
             className="h-full w-full rounded-lg"
           >
@@ -132,8 +132,8 @@ export const MainItems = ({
       <div className="bg-lightShade col-span-10 md:col-span-5 lg:col-span-7 row-span-1 md:row-span-4">
         {services && (
           <CompWithFramer
-            delay={1.2}
-            duration={1}
+            delay={0.8}
+            duration={0.8}
             from="left"
             className="bg-light h-full w-full rounded-lg p-2"
           >
@@ -171,8 +171,8 @@ export const MainItems = ({
       <div className="bg-lightShade md:mt-0  col-span-10 md:col-span-5 lg:col-span-7 row-span-1 ">
         <Link href="/service">
           <CompWithFramer
-            delay={0.7}
-            duration={1}
+            delay={0.4}
+            duration={0.8}
             from="left"
             className="h-full w-full rounded-lg bg-light p-2"
           >

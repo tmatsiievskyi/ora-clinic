@@ -20,7 +20,7 @@ export const Footer = () => {
         <Logo className="h-[50px] w-auto" />
       </div>
       <div className="h-full">
-        <ul className="font-comfortaa text-right text-dark [&>li]:leading-[14px] [&>li]:text-sm flex flex-col justify-between h-full">
+        <ul className="font-comfortaa max-w-[180px] md:max-w-[500px] text-right text-dark [&>li]:leading-[14px] [&>li]:text-sm flex flex-col justify-between h-full">
           <li className="mb-2 md:mb-1">
             м. Дрогобич,{" "}
             <span className=" inline-block">вул. Івана Франка, 4</span>

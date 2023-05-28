@@ -21,7 +21,7 @@ export const ComplexContainer = ({
       <div className="pt-2 px-2">
         <PageTitle title="common.complex" className="w-[280px] md:w-[340px] " />
       </div>
-      <div className="flex flex-col dm:flex-row mt-2 px-2">
+      <div className="flex flex-col md:flex-row mt-2 px-2">
         <m.div
           initial={{ x: "100%", opacity: "0" }}
           whileInView={{ x: "0%", opacity: "1" }}
@@ -31,7 +31,7 @@ export const ComplexContainer = ({
         >
           <div className="px-2 md:px-0 mb-2">
             <ul className="mr-4  grid grid-cols-3 lg:grid-cols-1">
-              <li className={`text-dark font-helveticLight row-span-2`}>
+              <li className={`text-dark font-comfortaa row-span-2`}>
                 <LinkWithActive
                   href={"/complex"}
                   i18nKey={"complex.category.all"}
@@ -79,11 +79,11 @@ export const ComplexContainer = ({
                             className="w-full h-full object-cover rounded-lg absolute top-0 left-0 group-hover:scale-125 ease-in-out duration-1000"
                           />
                           <div
-                            className="p-2 text-light font-helveticLight min-h-[25%] bg-dark/20 w-full rounded-lg 
+                            className="p-2 text-light font-comfortaa min-h-[25%] bg-dark/20 w-full rounded-lg 
             relative z-10 flex flex-col justify-between group-hover:bg-primary/70 group-hover:min-h-[25%] ease-in-out duration-1000"
                           >
                             {label && (
-                              <p className="break-all font-helveticLight text-xl">
+                              <p className="break-all font-comfortaa text-xl">
                                 {t(`${label}`)}
                               </p>
                             )}

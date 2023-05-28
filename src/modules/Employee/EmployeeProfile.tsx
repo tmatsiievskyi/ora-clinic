@@ -99,14 +99,14 @@ export const EmployeeProfile = ({
                   ? "border-primary text-dark"
                   : "border-transparent text-gray-400"
               }
-            mr-4 ease-in duration-300 whitespace-nowrap py-1 md:py-2 px-1 border-b-2 font-medium text-base font-helveticLight`}
+            mr-4 ease-in duration-300 whitespace-nowrap py-1 md:py-2 px-1 border-b-2 font-medium text-base font-comfortaa`}
               onClick={() => setActiveTab(tab.name)}
             >
               {t(`employee.tab.${tab.name}`)}
             </button>
           ))}
         </div>
-        <div className="font-helveticLight">{content()}</div>
+        <div className="font-comfortaa">{content()}</div>
       </div>
     </div>
   );

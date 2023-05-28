@@ -1,7 +1,6 @@
 import { PageWrapper } from "@/components/PageWrapper";
 import type { GetStaticProps, NextPage, GetStaticPropsContext } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
 import {
   getFirstEmployee,
   getGroupedEmployee,
@@ -13,8 +12,6 @@ const Employee: NextPage<IEmployeesProps> = ({
   employee,
   groupedEmployees,
 }) => {
-  const { t } = useTranslation("common");
-
   return (
     <PageWrapper>
       <>

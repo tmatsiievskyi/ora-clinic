@@ -1,8 +1,12 @@
-import { IGroupedEmployees } from "@/global/api/_interfaces";
+import {
+  IGroupedEmployees,
+  IGroupedSubService,
+} from "@/global/api/_interfaces";
 import {
   IComplexModel,
   IEmployeeModel,
   IServiceModel,
+  ISubServiceModel,
 } from "@/global/models/_interfaces";
 
 export interface IEmployeesProps {
@@ -27,4 +31,9 @@ export interface IComplexProps {
 export interface IServiceProps {
   services: IServiceModel[] | null;
   service: IServiceModel | null;
+}
+
+export interface ISubServiceProps {
+  subService: ISubServiceModel | null;
+  groupedSubServices: IGroupedSubService[] | null;
 }

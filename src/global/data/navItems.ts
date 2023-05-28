@@ -6,27 +6,29 @@ export const navItems: INavItem[] = [
     href: "/",
   },
   {
-    title: "complex",
-    href: "/complex",
-  },
-  {
-    title: "service",
-    href: "/service",
-  },
-  {
-    title: "price",
-    href: "/sub-service",
+    title: "about",
+    href: "/about",
   },
   {
     title: "employee",
     href: "/employee",
   },
   {
-    title: "discount",
-    href: "/discount",
+    title: "service",
+    href: "/service",
   },
   {
-    title: "about",
-    href: "/about",
+    title: "complex",
+    href: "/complex",
+  },
+
+  {
+    title: "price",
+    href: "/sub-service",
+  },
+
+  {
+    title: "discount",
+    href: "/discount",
   },
 ];

@@ -12,16 +12,16 @@ export const EmployeeItem = ({ employee, departments }: IEmployeeItemProps) => {
     <div className="h-full rounded-lg ">
       <div className="flex">
         <div className="w-1/2">
-          <div className="text-lg font-helveticLight text-dark [&>i]:text-primary [&>i]:block">
+          <div className="text-lg font-comfortaa text-dark [&>i]:text-primary [&>i]:block">
             <Title className="mb-2 text-dark">{t(`${lastName}`)}</Title>
             <Title className="mb-2 text-dark">{t(`${firstName}`)}</Title>
             <Title className="mb-2 text-dark">{t(`${surname}`)}</Title>
-            <p className=" bg-primary text-center rounded-lg font-helveticThin text-xl break-all">
+            <p className=" bg-primary text-center rounded-lg font-comfortaa text-xl break-all">
               <span className=" text-light p-2">
                 {t(`common.position.${position}`)}
               </span>
             </p>
-            <ul className="font-helveticThin text-dark text-lg my-4">
+            <ul className="font-comfortaa text-dark text-lg my-4">
               {illness?.map((item, index) => {
                 return (
                   <li key={index}>

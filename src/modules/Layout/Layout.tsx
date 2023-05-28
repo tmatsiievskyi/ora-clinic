@@ -43,7 +43,7 @@ const comfortaa = Comfortaa({
 export const Layout = ({ children }: { children: JSX.Element }) => {
   return (
     <div
-      className={`bg-lightShade h-full px-2 ${helveticThin.variable}
+      className={`bg-lightShade h-[100svh]  px-2 ${helveticThin.variable}
       ${helveticLight.variable}
      ${helveticRegular.variable}
      ${helveticBold.variable}
@@ -53,18 +53,18 @@ export const Layout = ({ children }: { children: JSX.Element }) => {
         <Header />
       </div>
       <main
-        className={`h-[calc(100%-50px)] md:h-[calc(100%-100px)] overflow-y-scroll
+        className={`h-[calc(100svh-50px)] no-scrollbar overflow-y-scroll
         rounded-lg
         font-comfortaa
         `}
       >
         {children}
       </main>
-      <div className="h-[10px] md:h-[60px]">
+      {/* <div className="h-[10px] md:h-[60px]">
         <div className="hidden md:block">
           <Footer />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

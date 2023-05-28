@@ -29,9 +29,11 @@ export const ComplexContainer = ({
           transition={{ duration: "0.75", ease: "easeOut" }}
           className="flex flex-col lg:flex-row max-w-[1500px] w-full ml-auto mr-auto"
         >
-          <div className="px-2 md:px-0 mb-2">
-            <ul className="mr-4  grid grid-cols-3 lg:grid-cols-1">
-              <li className={`text-dark font-comfortaa row-span-2`}>
+          <div className="px-2 md:px-0 mb-2 min-w-[150px]">
+            <ul className="mr-0 md:mr-4 grid grid-cols-3 lg:grid-cols-1">
+              <li
+                className={`text-dark mr-2 md:mr-0 font-comfortaa row-span-2`}
+              >
                 <LinkWithActive
                   href={"/complex"}
                   i18nKey={"complex.category.all"}

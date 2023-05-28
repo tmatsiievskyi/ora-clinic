@@ -41,18 +41,18 @@ export const ServiceContainer = ({
               className={`flex flex-col-reverse  md:flex-row ${styles.container} ml-auto mr-auto`}
             >
               <div className="w-full mt-2 md:mt-0 md:w-1/2 pr-4">
-                <p className="font-comfortaa text-xl leading-7">
+                <p className="font-helveticThin text-xl leading-7">
                   {t(`${label}`)}
                 </p>
                 <div className="divide-y h-[1px] bg-gray-200 my-2"></div>
-                <p className="text-base text-dark font-comfortaa">
+                <p className="text-base text-dark font-helveticLight">
                   {t(`${description}`)}
                 </p>
                 <div className="divide-y h-[1px] bg-gray-200 my-2"></div>
 
                 {employee && (
                   <>
-                    <p className="font-comfortaa text-xl">Лікарі:</p>
+                    <p className="font-helveticThin text-xl">Лікарі:</p>
                     <ul>
                       {employee.map((item, index) => {
                         return (
@@ -93,7 +93,7 @@ export const ServiceContainer = ({
         </div>
         <m.div
           onClick={() => setShowAll(true)}
-          className="font-comfortaa py-1 text-center text-xl my-2 border-gray-600 border-[0.5px] rounded-lg cursor-pointer"
+          className="font-helveticLight py-1 text-center text-xl my-2 border-gray-600 border-[0.5px] rounded-lg cursor-pointer"
         >
           {t("common.showAllServices")}
         </m.div>
@@ -136,7 +136,7 @@ export const ServiceContainer = ({
                     <p
                       className={`${
                         item._id === (service && service._id) ? "active" : null
-                      }  text-dark [&.active]:text-light font-comfortaa text-2xl`}
+                      }  text-dark [&.active]:text-light font-helveticLight text-2xl`}
                     >
                       {t(`${item.label}`)}
                     </p>
@@ -191,7 +191,7 @@ export const ServiceContainer = ({
               <>
                 <p
                   onClick={() => setShowAll(true)}
-                  className="font-comfortaa my-3 text-center text-3xl"
+                  className="font-helveticThin my-3 text-center text-3xl"
                 >
                   {t("common.allService")}
                 </p>
@@ -232,7 +232,7 @@ export const ServiceContainer = ({
                               className="w-full h-full object-cover rounded-lg absolute top-0 left-0"
                             />
                             <div
-                              className="p-2 text-light text-xl font-comfortaa min-h-[25%] bg-dark/50 w-full rounded-lg 
+                              className="p-2 text-light text-xl font-helveticLight min-h-[25%] bg-dark/50 w-full rounded-lg 
             relative z-10 flex flex-col justify-between group-hover:bg-primary/70 group-hover:min-h-[25%] ease-in-out duration-1000"
                             >
                               <span>{t(item.label)}</span>

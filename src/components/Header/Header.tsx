@@ -6,6 +6,7 @@ import { navItems } from "@/global/data/navItems";
 import Link from "next/link";
 // import { Button } from "@/components/Button";
 import { LngSelect } from "@/components/LngSelect";
+import { Logo } from "@/UI/Logo";
 
 export const Header = () => {
   return (
@@ -19,6 +20,7 @@ export const Header = () => {
         <Nav navItems={navItems} />
         <div className="flex items-center">
           <LngSelect />
+          {/* <Logo className="hidden sm:block h-[30px] w-auto" /> */}
         </div>
       </div>
     </header>

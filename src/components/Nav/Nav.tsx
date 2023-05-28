@@ -3,6 +3,7 @@ import { useTranslation } from "next-i18next";
 import { INavItem } from "@/global/data";
 import { LinkWithActive } from "@/UI/Link";
 import { useRouter } from "next/router";
+import { styles } from "@/styles/styles";
 
 export const Nav: FC<{ navItems: INavItem[] }> = ({ navItems }) => {
   const { t } = useTranslation("common");
@@ -15,14 +16,21 @@ export const Nav: FC<{ navItems: INavItem[] }> = ({ navItems }) => {
           return (
             <li
               key={item.title}
-              className={` cursor-pointer ${
-                index === navItems.length - 1 ? "mr-0" : "mr-4"
-              }`}
+              className={` cursor-pointer rounded-lg ${
+                index === navItems.length - 1 ? "mr-0" : "mr-2 lg:mr-4"
+              }
+              
+              `}
             >
               <LinkWithActive
                 className="font-comfortaa text-dark text-sm"
                 href={item.href}
-                active={asPath === item.href ? true : false}
+                active={
+                  asPath.includes(item.title) ||
+                  (asPath === "/" && item.title === "main")
+                    ? true
+                    : false
+                }
                 i18nKey={t(`common.${item.title}`)}
               />
             </li>

@@ -1,22 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Sidebar } from "@/components/Sidebar2";
 import Image from "next/image";
 import { IEmployeeContainerProps } from "./_interfaces";
 import { useTranslation } from "next-i18next";
 import { EmployeeProfile } from "./EmployeeProfile";
 import Link from "next/link";
-import { EmployeeComponent } from "@/components/EmployeeComplonent";
+import { useDeviceSize } from "@/global/hooks";
 
 export const EmployeeContainer = ({
   groupedEmployees,
   employee,
 }: IEmployeeContainerProps) => {
   const { t } = useTranslation("common");
-  const [isSideBarOpen, setIsSideBarOpen] = useState(true);
+  const [isSideBarOpen, setIsSideBarOpen] = useState(false);
+  const [width] = useDeviceSize();
 
   const handleSideBarOpen = () => {
     setIsSideBarOpen((prev) => !prev);
   };
+
+  useEffect(() => {
+    if (!width) return;
+
+    if (width > 640) {
+      setIsSideBarOpen(true);
+    } else {
+      setIsSideBarOpen(false);
+    }
+  }, [width]);
 
   return (
     <div className="h-full flex relative rounded-lg">
@@ -68,13 +79,29 @@ export const EmployeeContainer = ({
                               href={`/employee/${_id}`}
                               className="flex items-center"
                             >
-                              <EmployeeComponent
-                                imgUrl={`/img${smImgUrl}`}
-                                firstName={firstName}
-                                lastName={lastName}
-                                surname={surname}
-                                position={position}
+                              <Image
+                                height={1000}
+                                width={1000}
+                                src={`/img${smImgUrl}`}
+                                alt="Doctor Image"
+                                priority
+                                className={`w-[auto] ${
+                                  isSideBarOpen ? "mx-2" : "mx-[10px]"
+                                } h-[60px] object-cover object-top bg-gradient-to-br from-grey to-lightShade to-80% rounded-full`}
                               />
+                              {isSideBarOpen && (
+                                <span className="font-helveticThin text-dark min-w-[200px]">
+                                  <p>{t(`${lastName}`)}</p>
+                                  <p>
+                                    {t(`${firstName}`)} {t(`${surname}`)}
+                                  </p>
+                                  <p className="hidden bg-primary text-center rounded-lg font-helveticLight break-all  ">
+                                    <span className=" text-light p-2">
+                                      {t(`position.${position}`)}
+                                    </span>
+                                  </p>
+                                </span>
+                              )}
                             </Link>
                           </span>
                         </li>
@@ -86,7 +113,7 @@ export const EmployeeContainer = ({
             })}
         </>
       </Sidebar>
-      <div className="h-full w-full ml-[90px] sm:ml-0 rounded-lg">
+      <div className="h-full w-full pl-[90px]  md:pl-0 rounded-lg">
         <EmployeeProfile employee={employee} />
       </div>
     </div>

@@ -9,7 +9,6 @@ import { Logo } from "@/UI/Logo";
 import { Footer } from "../Footer";
 import { styles } from "@/styles/styles";
 import { useRouter } from "next/router";
-import { LinkWithActive } from "@/UI/Link";
 
 const path01Variants = {
   open: { d: "M3.06061 2.99999L21.0606 21" },

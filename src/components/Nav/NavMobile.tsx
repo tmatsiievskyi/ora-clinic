@@ -94,7 +94,7 @@ export const NavMobile: FC<{ navItems: INavItem[] }> = ({ navItems }) => {
       </button>
       <motion.nav
         className="flex min-w-[200px] justify-between 
-        items-center bg-light/95 
+        items-center bg-lightShade 
         absolute z-50 top-[40px] left-0 rounded-lg w-full p-2 py-4 pb-2"
         initial="closed"
         animate={isOpen ? "open" : "closed"}

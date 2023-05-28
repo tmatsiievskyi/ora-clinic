@@ -43,7 +43,7 @@ export const MainItems = ({
           className="bg-light h-full w-full rounded-lg p-2"
         >
           <div className="flex flex-col h-full justify-between">
-            <p className="text-dark font-helveticThin text-5xl xl:text-7xl mb-2">
+            <p className="text-dark font-comfortaa text-5xl xl:text-7xl mb-2">
               {t("common.someText")}
             </p>
             <p className="text-dark  text-xl leading-3">
@@ -61,7 +61,7 @@ export const MainItems = ({
             from="right"
             className="h-full w-full rounded-lg"
           >
-            <div className="h-full bg-gradient-to-br from-grey to-lightShade relative p-2 z-30 flex flex-col justify-end rounded-lg font-helveticThin text-xl md:text-2xl">
+            <div className="h-full bg-gradient-to-br from-grey to-lightShade relative p-2 z-30 flex flex-col justify-end rounded-lg font-comfortaa text-xl md:text-2xl">
               <div className="relative w-full h-full flex items-center justify-between">
                 <ArrowLeft
                   onClick={() => updateIndex(employeeIndex - 1)}
@@ -101,7 +101,7 @@ export const MainItems = ({
 
                 <div className="relative mt-2 md:mt-0 flex items-center justify-center flex-col text-center z-30 bg-light/40 rounded-lg text-dark">
                   <Link href="/employee">
-                    <p className="text-2xl xl:text-3xl font-helveticThin ">
+                    <p className="text-2xl xl:text-3xl font-comfortaa ">
                       {t("common.employees.inOra")}
                     </p>
                     <p className="text-primary text-3xl md:text-4xl leading-5 mt-2  font-normal">
@@ -144,7 +144,7 @@ export const MainItems = ({
                     className="h-full pb-2 px-2 md:mt-0 min-h-[400px] md:min-h-full w-[300px] md:w-[350px] lg:w-[400px] cursor-grab mr-2 relative z-40 rounded-lg flex items-end"
                     key={service._id.toString()}
                   >
-                    <div className="flex p-2 pt-4 z-30 overflow-hidden w-full bg-dark/30 rounded-lg font-helveticThin leading-7  text-3xl text-light">
+                    <div className="flex p-2 pt-4 z-30 overflow-hidden w-full bg-dark/30 rounded-lg font-comfortaa leading-7  text-3xl text-light">
                       <Link
                         key={service._id.toString()}
                         href={`/service/${service._id}`}
@@ -177,7 +177,7 @@ export const MainItems = ({
             className="h-full w-full rounded-lg bg-light p-2"
           >
             <div className="h-full flex  items-center justify-center flex-col text-center text-dark">
-              <p className="text-2xl  xl:text-3xl font-helveticThin">
+              <p className="text-2xl  xl:text-3xl font-comfortaa">
                 {t("common.service.inOra")}
               </p>
               <p className="text-primary text-3xl md:text-4xl leading-5 mt-2  font-normal">

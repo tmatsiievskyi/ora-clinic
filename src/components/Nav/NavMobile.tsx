@@ -85,7 +85,7 @@ export const NavMobile: FC<{ navItems: INavItem[] }> = ({ navItems }) => {
               return (
                 <li
                   key={item.title}
-                  className={`font-helveticLight text-lg cursor-pointer ${
+                  className={`font-comfortaa text-lg cursor-pointer ${
                     index === navItems.length - 1 ? "mb-0" : "mb-4"
                   }`}
                 >

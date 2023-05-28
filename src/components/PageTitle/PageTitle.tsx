@@ -13,10 +13,10 @@ export const PageTitle = ({
 
   return (
     <div className={`${className} `}>
-      <p className="text-xl md:text-2xl md:leading-6 font-helveticThin">
+      <p className="text-xl text-slate-600 md:text-2xl md:leading-6 font-comfortaa">
         {t(`${title}`)}
       </p>
-      <p className="text-primary text-2xl md:text-3xl mb:mt-2 font-helveticThin">
+      <p className="text-primary text-2xl md:text-3xl mb:mt-2 font-comfortaa">
         {titlePrimary ? t(`${titlePrimary}`) : t("common.name")}
       </p>
     </div>

@@ -33,7 +33,7 @@ export const EmployeeContainer = ({
                   <h4
                     className={`${
                       isSideBarOpen ? "justify-start" : "justify-center"
-                    } bg-lightShade sm:pl-2 flex items-center py-1 font-helveticLight text-base`}
+                    } bg-lightShade sm:pl-2 flex items-center py-1 font-comfortaa text-base`}
                   >
                     <Image
                       src={`/img/svg/${item._id}.svg`}
@@ -46,7 +46,7 @@ export const EmployeeContainer = ({
                       <span>{t(`services.title.${item._id}`)}</span>
                     )}
                   </h4>
-                  <ul className="font-helveticThin">
+                  <ul className="font-comfortaa">
                     {item.data.map((employee, index) => {
                       const {
                         _id,

@@ -45,7 +45,7 @@ export const EmployeeContainer = ({
             } rounded-lg overflow-hidden ease-in duration-300`}
           >
             <Sidebar
-              classNameLink="font-helveticThin min-w-[130px] text-base text-dark overflow-x-hidden ml-2"
+              classNameLink="font-comfortaa min-w-[130px] text-base text-dark overflow-x-hidden ml-2"
               classNameBox="flex flex-col rounded-lg rounded-lg  border-primaryLight"
               activeItem={department || "all"}
               items={sideBarData}
@@ -81,12 +81,12 @@ export const EmployeeContainer = ({
                     />
                   </div>
                   <div className="mt-1 flex-1 flex flex-col justify-between">
-                    <div className="break-all text-center text-dark font-helveticLight text-lg pr-2">
+                    <div className="break-all text-center text-dark font-comfortaa text-lg pr-2">
                       <p>{t(`${lastName}`)}</p> <span>{t(`${firstName}`)}</span>{" "}
                       <span>{t(`${surname}`)}</span>
                     </div>
                     <div className="mt-2">
-                      <p className="text-base bg-primary text-center rounded-lg font-helveticThin mb:text-xl break-all  ">
+                      <p className="text-base bg-primary text-center rounded-lg font-comfortaa mb:text-xl break-all  ">
                         <span className=" text-light p-2">
                           {t(`common.position.${position}`)}
                         </span>

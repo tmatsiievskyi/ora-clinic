@@ -65,7 +65,7 @@ export const ComplexItemContainer = ({
         </div>
         <div className="basis-3/5 md:px-0 md:pl-2 h-full">
           <div className="flex flex-col h-full">
-            <p className="font-helveticLight text-dark mt-2 md:mt-0 mb-2 md:mb-4 leading-5">
+            <p className="font-comfortaa text-dark mt-2 md:mt-0 mb-2 md:mb-4 leading-5">
               {t(`${description}`)}
             </p>
 

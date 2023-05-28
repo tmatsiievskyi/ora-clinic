@@ -23,7 +23,7 @@ export const MainAbout = () => {
             <Title>{t("common.title.start")}</Title>
             <span>
               <Title className="inline text-primary">{t("common.name")}</Title>
-              <span className="font-helveticThin text-[24px] leading-[34px]  sm:text-[34px] sm:leading-[38px]">
+              <span className="font-comfortaa text-[24px] leading-[34px]  sm:text-[34px] sm:leading-[38px]">
                 {""} ?
               </span>
             </span>

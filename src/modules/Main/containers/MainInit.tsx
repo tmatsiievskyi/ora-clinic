@@ -36,10 +36,10 @@ export const MainInit = ({
     px-2 py-2  min-h-full rounded-lg 
     before:content-[''] before:absolute before:w-full before:h-full before:bg-semiDarkTr before:right-0 before:top-0 before:z-10 before:rounded-lg`}
     >
-      <div className="relative z-10 font-helveticThin  text-3xl md:text-4xl text-light overflow-hidden">
+      <div className="relative z-10 font-comfortaa  text-3xl md:text-4xl text-light overflow-hidden">
         <m.p variants={animVar} initial="hidden" custom={1} animate={controls}>
           {t("common.title.start")}{" "}
-          <span className="font-helveticThin text-primary font-thin">
+          <span className="font-comfortaa text-primary font-thin">
             {t("common.name")}
           </span>
         </m.p>{" "}
@@ -74,7 +74,7 @@ export const MainInit = ({
             initial="hidden"
             custom={6}
             animate={controls}
-            className="mt-2 max-h-[180px] min-w-full sm:min-w-[350px] border-primary bg-primary/70 border text-light font-helveticThin text-2xl rounded-lg"
+            className="mt-2 max-h-[180px] min-w-full sm:min-w-[350px] border-primary bg-primary/70 border text-light font-comfortaa text-2xl rounded-lg"
           >
             <Slider>
               {discounts.map((item) => {

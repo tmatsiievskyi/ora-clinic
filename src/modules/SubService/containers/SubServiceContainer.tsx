@@ -45,20 +45,20 @@ export const SubServiceContainer = ({
         transition={{ duration: "0.75", ease: "easeOut" }}
         className={`flex justify-center flex-col ${styles.container} px-2 w-full ml-auto mr-auto`}
       >
-        <form className="py-8 flex space-x-4" action="#">
+        <form className="py-6 flex space-x-4" action="#">
           <div className="flex-1 min-w-0">
             <label htmlFor="search" className="sr-only">
               Search
             </label>
-            <div className="relative shadow-sm border-0 border-b-dark-accent-2 rounded-none border-b-[1px] ">
-              <div className="absolute bg-light inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <SearchIcon className="h-4 w-4 text-dark-accent-3" />
+            <div className="relative rounded-lg  ">
+              <div className="absolute inset-y-0 left-0 pl-0 flex items-center pointer-events-none">
+                <SearchIcon className="h-8 w-8 text-slate-300" />
               </div>
               <input
                 type="search"
                 name="search"
                 id="search"
-                className="text-dark placeholder:text-dark-accent-3 focus:ring-transparent border-none bg-light focus:border-transparent block w-full pl-10 sm:text-sm rounded-md"
+                className="text-dark border-slate-200 border-[2px] focus-visible:border-primary focus-visible:outline-none text-lg placeholder:text-dark-accent-3 bg-light  block w-full pl-10 pr-1 py-1 rounded-lg"
                 placeholder="Search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
@@ -115,7 +115,7 @@ export const SubServiceContainer = ({
             <h4
               className={`${
                 isSideBarOpen ? "justify-start" : "justify-center"
-              } bg-lightShade sm:pl-2 flex items-center py-1 font-helveticLight text-base`}
+              } bg-lightShade sm:pl-2 flex items-center py-1 font-comfortaa text-base`}
             >
               <Image
                 src={`/img/svg/${item._id}.svg`}
@@ -128,7 +128,7 @@ export const SubServiceContainer = ({
                 <span>{t(`services.title.${item._id}`)}</span>
               )}
             </h4>
-            <ul className="font-helveticThin">
+            <ul className="font-comfortaa">
               {item.data.map((subService, index) => {
                 const { _id, label, price } = subService;
                 return (
@@ -142,12 +142,12 @@ export const SubServiceContainer = ({
                         href={`/employee/${_id}`}
                         className="flex items-center min-w-full justify-between"
                       >
-                        <span className="font-helveticLight">
+                        <span className="font-comfortaa">
                           {label}
                         </span>
                         <span className=" font-oswald text-primary">
                           {price}
-                          <span className="font-helveticLight text-sm text-dark ml-1">
+                          <span className="font-comfortaa text-sm text-dark ml-1">
                             {t("common.currency.grn")}
                           </span>
                         </span>

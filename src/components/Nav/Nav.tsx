@@ -20,7 +20,7 @@ export const Nav: FC<{ navItems: INavItem[] }> = ({ navItems }) => {
               }`}
             >
               <LinkWithActive
-                className="font-helveticLight text-dark text-sm"
+                className="font-comfortaa text-dark text-sm"
                 href={item.href}
                 active={asPath === item.href ? true : false}
                 i18nKey={t(`common.${item.title}`)}

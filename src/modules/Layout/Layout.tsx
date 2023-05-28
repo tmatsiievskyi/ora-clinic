@@ -1,16 +1,16 @@
 import localFont from "next/font/local";
 import { Header } from "../../components/Header";
 import { Footer } from "@/components/Footer";
-import { Roboto, Oswald } from "next/font/google";
+import { Roboto, Oswald, Comfortaa } from "next/font/google";
 
 const helveticThin = localFont({
   src: "../../../public/fonts/HelveticaNeueCyr-Thin.ttf",
-  variable: "--font-helveticThin",
+  variable: "--font-comfortaa",
 });
 
 const helveticLight = localFont({
   src: "../../../public/fonts/HelveticaNeueCyr-Light.ttf",
-  variable: "--font-helveticLight",
+  variable: "--font-comfortaa",
 });
 
 const helveticRegular = localFont({
@@ -34,6 +34,12 @@ const roboto = Roboto({
   weight: ["100", "700"],
 });
 
+const comfortaa = Comfortaa({
+  subsets: ["cyrillic", "latin"],
+  variable: "--font-comfortaa",
+  weight: ["300"],
+});
+
 export const Layout = ({ children }: { children: JSX.Element }) => {
   return (
     <div
@@ -41,7 +47,7 @@ export const Layout = ({ children }: { children: JSX.Element }) => {
       ${helveticLight.variable}
      ${helveticRegular.variable}
      ${helveticBold.variable}
-     ${oswald.variable}`}
+     ${oswald.variable} ${roboto.variable} ${comfortaa.variable}`}
     >
       <div className="h-[40px]">
         <Header />
@@ -49,7 +55,7 @@ export const Layout = ({ children }: { children: JSX.Element }) => {
       <main
         className={`h-[calc(100%-50px)] md:h-[calc(100%-100px)] overflow-y-scroll
         rounded-lg
-        font-helveticLight
+        font-comfortaa
         `}
       >
         {children}

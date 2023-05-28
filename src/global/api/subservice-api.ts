@@ -104,8 +104,6 @@ export const getGroupedSubService = async (): Promise<
       },
     ]);
 
-    console.log(result);
-
     return {
       data: result,
       status: 200,

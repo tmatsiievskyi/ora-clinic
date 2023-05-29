@@ -12,7 +12,7 @@ export const Contacts = () => {
         <div className="mb-2 grid gap-0 grid-cols-3 max-w-[320px] ml-auto mr-auto">
           <a
             href="https://www.facebook.com/ora.medcentr"
-            className={`flex justify-center flex-col items-center rounded-lg`}
+            className={`flex font-comfortaa  justify-center flex-col items-center rounded-lg`}
             target="_blank"
           >
             {/* <div className=""> */}
@@ -21,7 +21,7 @@ export const Contacts = () => {
           </a>
           <a
             href="https://instagram.com/ora_medcentr"
-            className={`flex justify-center flex-col items-center rounded-lg`}
+            className={`flex font-comfortaa  justify-center flex-col items-center rounded-lg`}
             target="_blank"
           >
             {/* <div className=""> */}
@@ -37,7 +37,7 @@ export const Contacts = () => {
 
           <a
             href="https://www.tiktok.com/@ora_medcentr"
-            className={`flex justify-center flex-col items-center rounded-lg`}
+            className={`flex font-comfortaa justify-center flex-col items-center rounded-lg`}
             target="_blank"
           >
             <Image

@@ -79,7 +79,7 @@ export const ServiceContainer = ({
                   </>
                 )}
               </div>
-              <div className="w-full md:w-1/2 relative min-h-[400px]">
+              <div className="w-full md:w-1/2 relative min-h-[250px] md:min-h-[400px]">
                 <Image
                   src={`/img${service.imgUrl}.jpg`}
                   width={1000}

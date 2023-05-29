@@ -9,4 +9,5 @@ export const styles = {
   before:block before:absolute before:bottom-[2px] before:left-1/2 before:w-0 before:h-[1px] before:bg-primary relative inline-block
  hover:before:w-full hover:before:left-0 before:ease-in before:duration-300`,
   gradientR: "bg-gradient-to-r from-primaryLight to-lightShade",
+  gradientL: "bg-gradient-to-l from-primaryLight to-lightShade",
 };

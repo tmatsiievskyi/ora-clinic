@@ -6,9 +6,9 @@ import { useOnClickOutside } from "@/global/hooks";
 import { useTranslation } from "next-i18next";
 import { INavItem } from "@/global/data";
 import { Logo } from "@/UI/Logo";
-import { Footer } from "../Footer";
 import { styles } from "@/styles/styles";
 import { useRouter } from "next/router";
+import { Contacts } from "../Contacts";
 
 const path01Variants = {
   open: { d: "M3.06061 2.99999L21.0606 21" },
@@ -133,8 +133,8 @@ export const NavMobile: FC<{ navItems: INavItem[] }> = ({ navItems }) => {
               );
             })}
           </ul>
-          <div className="max-h-[100px] mt-6 w-full">
-            <Footer />
+          <div className=" mt-6 w-full">
+            <Contacts />
           </div>
         </div>
       </motion.nav>

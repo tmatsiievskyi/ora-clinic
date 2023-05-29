@@ -53,7 +53,7 @@ export const MainItems = ({
         </CompWithFramer>
       </div>
 
-      <div className="min-h-[600px] bg-lightShade my-2 md:my-0 col-span-10 md:col-span-5 lg:col-span-3 row-span-5 md:row-span-6 relative rounded-lg overflow-hidden">
+      <div className="min-h-[600px] bg-lightShade my-0 md:my-0 col-span-10 md:col-span-5 lg:col-span-3 row-span-5 md:row-span-6 relative rounded-lg overflow-hidden">
         {activeEmployee && (
           <CompWithFramer
             delay={0.5}

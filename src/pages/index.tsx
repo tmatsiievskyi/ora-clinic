@@ -1,6 +1,11 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import type { GetStaticProps, NextPage, GetStaticPropsContext } from "next";
-import { MainAbout, MainInit, MainItems } from "@/modules/Main/containers";
+import {
+  MainAbout,
+  MainInit,
+  MainItems,
+  MainContacts,
+} from "@/modules/Main/containers";
 import { getAllEmployees } from "@/global/api/employee-api";
 import { getAllDiscounts } from "@/global/api/discount-api";
 import {
@@ -24,6 +29,7 @@ const Home: NextPage<IMainProps> = (props) => {
       <MainInit discounts={discounts} />
       <MainItems employees={employees} services={services} />
       <MainAbout />
+      <MainContacts />
     </div>
   );
 };

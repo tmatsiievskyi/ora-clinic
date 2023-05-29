@@ -16,6 +16,26 @@ export const MainAbout = () => {
   return (
     <div className="flex-col  mt-2 rounded-lg">
       <div className="bg-light grid gap-2 grid-cols-2 p-2 rounded-lg">
+        <div className="h-full col-span-2 md:col-span-1">
+          <CompWithFramer
+            className="h-full"
+            from="width"
+            delay={1}
+            duration={1}
+          >
+            <Image
+              src={docImage}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "70% 50%",
+                borderRadius: "9px",
+              }}
+              alt="ora image"
+            />
+          </CompWithFramer>
+        </div>
         <div className=" col-span-2 md:col-span-1">
           <div>
             <Title>{t("common.why")}</Title>
@@ -50,30 +70,10 @@ export const MainAbout = () => {
             </Paragraph>
           </div>
         </div>
-        <div className="h-full col-span-2 md:col-span-1">
-          <CompWithFramer
-            className="h-full"
-            from="width"
-            delay={1}
-            duration={1}
-          >
-            <Image
-              src={docImage}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "70% 50%",
-                borderRadius: "9px",
-              }}
-              alt="ora image"
-            />
-          </CompWithFramer>
-        </div>
       </div>
       <div className="bg-light flex-1 mt-2 rounded-lg p-2">
         <Title>{t("common.ourPratners")}</Title>
-        <div className="flex h-full items-center justify-around pb-6">
+        <div className="flex h-full items-center justify-around pb-2">
           <CompWithFramer from="opacity" delay={0.3} duration={1}>
             <Image
               src={amritaImage}

@@ -99,7 +99,7 @@ export const ServiceContainer = ({
         </m.div>
         <m.div
           ref={sliderRef}
-          className="h-[200px] cursor-grab flex overflow-hidden"
+          className="h-[150px] md:h-[200px] cursor-grab flex overflow-hidden"
         >
           <m.div
             drag="x"

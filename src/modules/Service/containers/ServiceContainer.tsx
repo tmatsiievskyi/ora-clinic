@@ -40,7 +40,7 @@ export const ServiceContainer = ({
             <div
               className={`flex flex-col-reverse  md:flex-row ${styles.container} ml-auto mr-auto`}
             >
-              <div className="w-full mt-2 md:mt-0 md:w-1/2 pr-4">
+              <div className="w-full mt-2 md:mt-0 md:w-1/2 pr-0 md:pr-4">
                 <p className="font-helveticThin text-xl leading-7">
                   {t(`${label}`)}
                 </p>

@@ -89,7 +89,7 @@ export const EmployeeProfile = ({
         </div>
       </div>
       <div
-        className={`${styles.container} p-2 md:p-4 rounded-lg flex-1  md:h-[calc(100%-20rem)] overflow-scroll no-scrollbar`}
+        className={`${styles.container} p-2 md:p-4 rounded-lg flex-1  h-[calc(100%-20rem)] overflow-scroll no-scrollbar`}
       >
         <p className={`${styles.heading3} break-all`}>
           {t(`position.${position}`)}

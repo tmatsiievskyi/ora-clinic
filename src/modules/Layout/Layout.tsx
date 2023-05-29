@@ -43,7 +43,7 @@ const comfortaa = Comfortaa({
 export const Layout = ({ children }: { children: JSX.Element }) => {
   return (
     <div
-      className={`bg-lightShade h-[100svh]  px-2 ${helveticThin.variable}
+      className={`bg-lightShade h-[100svh] overflow-hidden px-2 ${helveticThin.variable}
       ${helveticLight.variable}
      ${helveticRegular.variable}
      ${helveticBold.variable}

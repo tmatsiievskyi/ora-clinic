@@ -16,6 +16,7 @@ export const SubServiceContainer = ({
   subService,
   groupedSubServices,
 }: ISubServiceContainerProps) => {
+  console.log(groupedSubServices);
   const { t } = useTranslation("common");
   const [query, setQuery] = useState("");
   const debouncedQuery = useDebounce(query, 300);

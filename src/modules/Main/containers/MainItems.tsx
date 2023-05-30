@@ -93,7 +93,7 @@ export const MainItems = ({
                     </Link>
                   </div>
                   <AnimatedTextCharacter
-                    i18nKey={`common.position.${activeEmployee.position}`}
+                    i18nKey={`${activeEmployee.position}`}
                     type="right"
                     className="mt-4  text-base md:text-lg break-words"
                   />

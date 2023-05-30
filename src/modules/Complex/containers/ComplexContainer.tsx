@@ -72,7 +72,7 @@ export const ComplexContainer = ({
                       >
                         <div className="relative w-full h-full flex items-end p-2 group overflow-hidden">
                           <Image
-                            src={`/img${imgUrl}.jpg`}
+                            src={`/img${imgUrl}`}
                             width={700}
                             height={700}
                             alt={"service image"}
@@ -85,7 +85,7 @@ export const ComplexContainer = ({
             relative z-10 flex flex-col justify-between group-hover:bg-primary/70 group-hover:min-h-[25%] ease-in-out duration-1000"
                           >
                             {label && (
-                              <p className="break-all font-comfortaa text-xl">
+                              <p className=" break-words font-comfortaa text-xl">
                                 {t(`${label}`)}
                               </p>
                             )}

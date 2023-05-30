@@ -31,7 +31,7 @@ export const getAllDiscounts = async (): Promise<
 > => {
   try {
     await dbConnect();
-    const discounts = await Discount.find({});
+    const discounts = await Discount.find({}).sort({ index: 1 });
     return {
       data: discounts,
       status: 200,

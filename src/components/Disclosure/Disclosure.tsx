@@ -86,6 +86,7 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
                       const { _id, label, price } = item;
                       return (
                         <m.li key={_id} className={`${listItemClassNames}`}>
+                          <span>{_id}</span>
                           <m.span
                             key={_id + label}
                             initial={{ opacity: 0, x: "-100%" }}
@@ -95,6 +96,7 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
                               duration: 0.11 * index,
                               ease: "easeInOut",
                             }}
+                            className="font-comfortaa break-words"
                           >
                             {t(`${label}`)}
                           </m.span>

@@ -63,9 +63,12 @@ export const MainInit = ({
           className={`w-full flex-col sm:mr-4 justify-between text-light  sm:max-w-[350px] ${styles.heading4}`}
         >
           <p className="text-primary text-3xl">{t("common.about")}:</p>
-          <p className={`${styles.paragraph}`}>{t("common.about.shortDesc")}</p>
           <hr className="my-1 sm:my-3" />
-          <p className={`${styles.paragraph}`}>{t("common.about.shortDesc")}</p>
+          <p className={`${styles.paragraph} text-light`}>
+            {t("common.about.shortDesc")}
+          </p>
+          <hr className="my-1 sm:my-3" />
+          {/* <p className={`${styles.paragraph}`}>{t("common.about.shortDesc")}</p> */}
         </m.div>
 
         {discounts && (
@@ -80,15 +83,18 @@ export const MainInit = ({
               {discounts.map((item) => {
                 return (
                   <SliderItem key={item._id.toString()}>
-                    <div className="py-2 [&>p]:mb-8 overflow-y-hidden">
-                      <p>{item.title}</p>
-                      <p className="text-base">{item.description}</p>
+                    <div className="py-2 [&>p]:mb-2 overflow-y-hidden min-h-[180px] flex flex-col justify-between">
+                      <p className="text-lg">{t(`${item.title}`)}</p>
                       <div className="flex justify-between items-end">
-                        <span
-                          className={`${styles.numberText}} text-3xl leading-7`}
-                        >
-                          {item.discountAmount}%
-                        </span>
+                        {item.discountAmount > 0 ? (
+                          <span
+                            className={`${styles.numberText}} text-3xl leading-7`}
+                          >
+                            {item.discountAmount}%
+                          </span>
+                        ) : (
+                          <span></span>
+                        )}
                         <Button type="light">
                           <Link href={`/discount/${item._id}`}>
                             <span>{t("common.moreDetails")}</span>

@@ -106,3 +106,27 @@ export const getComplexById = async (
     };
   }
 };
+
+export const postComplex = async (
+  data: IComplexModel,
+): Promise<IResp<IComplexModel | null>> => {
+  try {
+    await dbConnect();
+
+    const complex = await Complex.create(data);
+
+    return {
+      data: complex,
+      status: 201,
+      success: true,
+    };
+  } catch (e) {
+    const message = getErrorMessage(e);
+    return {
+      data: null,
+      status: 500,
+      success: false,
+      message,
+    };
+  }
+};

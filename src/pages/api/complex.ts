@@ -6,7 +6,6 @@ const complexHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     try {
       const resp = await postComplex(req.body);
-      console.log(resp);
       return res.status(resp.status).json({ data: resp.data });
     } catch (e) {
       const message = getErrorMessage(e);

@@ -8,6 +8,7 @@ const ServiceSchema = new Schema<IServiceModel>({
   imgUrl: { type: String, required: true },
   employee: [{ type: Types.ObjectId, ref: "Employee", required: false }],
   subService: [{ type: Types.ObjectId, ref: "SubService", required: false }],
+  index: { type: Number, required: true },
 });
 
 ServiceSchema.set("timestamps", true);

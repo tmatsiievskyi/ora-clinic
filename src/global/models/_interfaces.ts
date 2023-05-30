@@ -31,9 +31,9 @@ export interface IEmployeeModel extends MongoResult {
   imgUrl: string;
   smImgUrl: string;
   position: string;
-  department: EDepartment;
-  illness?: string[];
+  department: string;
   index: number;
+  illness?: string[];
 }
 
 export interface IDiscountModel extends MongoResult {
@@ -50,6 +50,7 @@ export interface IServiceModel extends MongoResult {
   imgUrl: string;
   employee?: Types.ObjectId[] | IEmployeeModel[];
   subService?: Types.ObjectId[];
+  index: number;
 }
 
 export enum EGroup {

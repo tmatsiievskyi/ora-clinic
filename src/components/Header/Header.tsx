@@ -19,7 +19,14 @@ export const Header = () => {
         </div>
         <Nav navItems={navItems} />
         <div className="flex items-center">
-          <LngSelect />
+          {/* <LngSelect /> */}
+          <a
+            href="https://easyweek.com.ua/ora-medicnii-centr"
+            target="_blank"
+            className="bg-primary rounded-lg text-lightShade p-1 px-2 text-sm font-comfortaa"
+          >
+            Записатись
+          </a>
           {/* <Logo className="hidden sm:block h-[30px] w-auto" /> */}
         </div>
       </div>

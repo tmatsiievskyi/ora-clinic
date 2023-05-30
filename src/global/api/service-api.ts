@@ -10,7 +10,9 @@ export const getAllService = async (): Promise<
 > => {
   try {
     await dbConnect();
-    const result = await Service.find({});
+    const result = await Service.find({
+      label: { $nin: ["services.title.complex"] },
+    }).sort({ index: 1 });
     return {
       data: result,
       status: 200,
@@ -68,6 +70,30 @@ export const getFirstService = async (): Promise<
     return {
       data: service,
       status: 200,
+      success: true,
+    };
+  } catch (e) {
+    const message = getErrorMessage(e);
+    return {
+      data: null,
+      status: 500,
+      success: false,
+      message,
+    };
+  }
+};
+
+export const postService = async (
+  data: IServiceModel,
+): Promise<IResp<IServiceModel | null>> => {
+  try {
+    await dbConnect();
+
+    const service = await Service.create(data);
+
+    return {
+      data: service,
+      status: 201,
       success: true,
     };
   } catch (e) {

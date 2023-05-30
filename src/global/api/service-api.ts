@@ -57,12 +57,7 @@ export const getFirstService = async (): Promise<
   try {
     await dbConnect();
 
-    const service = await Service.findOne(
-      {},
-      {
-        projection: { _id: 0 },
-      },
-    ).populate({
+    const service = await Service.findOne({ index: 0 }).populate({
       path: "employee",
       model: Employee,
     });

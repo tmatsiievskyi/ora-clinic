@@ -43,11 +43,11 @@ export const MainItems = ({
           className="bg-light h-full w-full rounded-lg p-2"
         >
           <div className="flex flex-col h-full justify-between">
-            <p className="text-dark font-comfortaa text-5xl xl:text-7xl mb-2">
-              {t("common.someText")}
+            <p className="text-dark font-comfortaa text-4xl xl:text-7xl mb-2">
+              {t("common.item.title.one")}
             </p>
-            <p className="text-dark  text-xl leading-3">
-              {t("common.someText")}
+            <p className="text-dark  text-xl leading-6">
+              {t("common.item.title.two")}
             </p>
           </div>
         </CompWithFramer>

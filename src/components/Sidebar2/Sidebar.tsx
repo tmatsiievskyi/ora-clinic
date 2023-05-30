@@ -44,7 +44,7 @@ export const Sidebar = ({
 
   return (
     <div
-      className={`absolute top-0 z-20 ease-in rounded-l-lg duration-300  ${
+      className={`absolute top-0 z-30 ease-in rounded-l-lg duration-300  ${
         isOpen
           ? "min-w-[280px] w-[280px] sm:w-[340px]"
           : "min-w-[90px] w-[90px]"

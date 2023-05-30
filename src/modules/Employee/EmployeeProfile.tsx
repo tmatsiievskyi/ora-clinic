@@ -52,7 +52,7 @@ export const EmployeeProfile = ({
           className={`${styles.container} h-full flex justify-between mr-auto relative`}
         >
           <div
-            className={`${styles.heading3} text-light mt-2 ml-2 md:mt-4 md:ml-4`}
+            className={`${styles.heading3} text-light mt-2 ml-2 md:mt-4 md:ml-4 relative z-20`}
           >
             {lastName && (
               <AnimatedTextCharacter
@@ -91,9 +91,7 @@ export const EmployeeProfile = ({
       <div
         className={`${styles.container} p-2 md:p-4 rounded-lg flex-1  h-[calc(100%-20rem)] overflow-scroll no-scrollbar`}
       >
-        <p className={`${styles.heading3} break-all`}>
-          {t(`position.${position}`)}
-        </p>
+        <p className={`${styles.heading3} break-all`}>{t(`${position}`)}</p>
         <div className="mb-6 mt-3 flex justify-center">
           {tabs.map((tab) => (
             <button

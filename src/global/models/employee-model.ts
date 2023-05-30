@@ -9,7 +9,8 @@ const EmployeeSchema = new Schema<IEmployeeModel>({
   smImgUrl: { type: String, required: true },
   position: { type: String, required: true },
   index: { type: Number, required: true },
-  illness: { type: [String], required: true },
+  department: { type: String, required: true },
+  illness: { type: [String], required: false },
 });
 
 EmployeeSchema.set("timestamps", true);

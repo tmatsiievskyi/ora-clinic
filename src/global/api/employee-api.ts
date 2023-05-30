@@ -158,3 +158,27 @@ export const getGroupedEmployee = async (): Promise<
     };
   }
 };
+
+export const postEmployee = async (
+  data: IEmployeeModel,
+): Promise<IResp<IEmployeeModel | null>> => {
+  try {
+    await dbConnect();
+
+    const employee = await Employee.create(data);
+
+    return {
+      data: employee,
+      status: 201,
+      success: true,
+    };
+  } catch (e) {
+    const message = getErrorMessage(e);
+    return {
+      data: null,
+      status: 500,
+      success: false,
+      message,
+    };
+  }
+};

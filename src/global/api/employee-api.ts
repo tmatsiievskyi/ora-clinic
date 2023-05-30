@@ -9,7 +9,7 @@ export const getAllEmployees = async (): Promise<
 > => {
   try {
     await dbConnect();
-    const employees = await Employee.find({});
+    const employees = await Employee.find({}).sort({ index: 1 });
     return {
       data: employees,
       status: 200,
@@ -103,12 +103,7 @@ export const getFirstEmployee = async (): Promise<
   try {
     await dbConnect();
 
-    const employee = await Employee.findOne(
-      {},
-      {
-        projection: { _id: 0, emailVerified: 0 },
-      },
-    );
+    const employee = await Employee.findOne({ index: 0 });
 
     return {
       data: employee,

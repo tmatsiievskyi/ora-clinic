@@ -6,7 +6,7 @@ export const MainContacts = () => {
   const { t } = useTranslation("common");
 
   return (
-    <div className="mt-2 rounded-lg bg-light p-2">
+    <div className="mt-2 rounded-lg bg-light  py-4 pt-2 px-2">
       <Title>{t("common.ourContacts")}</Title>
       <Contacts />
     </div>

@@ -86,13 +86,13 @@ export const getGroupedSubService = async (): Promise<
           index: 1,
         },
       },
-      {
-        $match: {
-          category: {
-            $nin: ["сonsultations", "analyses", "examination"],
-          },
-        },
-      },
+      // {
+      //   $match: {
+      //     category: {
+      //       $nin: ["сonsultations", "analyses", "examination"],
+      //     },
+      //   },
+      // },
       {
         $group: { _id: "$category", data: { $push: "$$ROOT" } },
       },

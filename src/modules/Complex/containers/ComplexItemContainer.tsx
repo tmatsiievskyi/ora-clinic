@@ -49,7 +49,7 @@ export const ComplexItemContainer = ({
       <div className="mt-2 px-2 pb-2 flex-1  flex flex-col md:flex-row">
         <div className="basis-2/5">
           <Image
-            src={`/img${imgUrl}.jpg`}
+            src={`/img${imgUrl}`}
             width={1500}
             height={1500}
             alt={"complex image"}
@@ -70,7 +70,7 @@ export const ComplexItemContainer = ({
             </p>
 
             <div className="flex-grow">
-              <div className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              <div className="grid   gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {
                   <>
                     {analyses && typeof isOpenDisclosure === "boolean" ? (

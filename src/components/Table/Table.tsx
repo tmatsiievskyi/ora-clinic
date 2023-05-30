@@ -28,6 +28,7 @@ export const Table = ({ items, headerItems }: ITableProps) => {
         {items.map((item) => {
           return (
             <div key={item._id} className="mb-1 rounded-lg">
+              <span></span>
               <CustomDisclosure
                 buttonText={item._id}
                 group="subService"

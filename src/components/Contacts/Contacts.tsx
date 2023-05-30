@@ -9,7 +9,7 @@ export const Contacts = () => {
   return (
     <div className="flex-col  mt-2 rounded-lg">
       <div className={`${styles.container} ml-auto mr-auto mt-2`}>
-        <div className="mb-2 grid gap-0 grid-cols-3 max-w-[320px] ml-auto mr-auto">
+        <div className="mb-2 grid gap-0 grid-cols-3 max-w-[200px] ml-auto mr-auto">
           <a
             href="https://www.facebook.com/ora.medcentr"
             className={`flex font-comfortaa  justify-center flex-col items-center rounded-lg`}
@@ -17,7 +17,7 @@ export const Contacts = () => {
           >
             {/* <div className=""> */}
             <Image src={`/img/svg/fb.svg`} width={30} height={30} alt="icon" />
-            <p>Facebook</p>
+            {/* <p>Facebook</p> */}
           </a>
           <a
             href="https://instagram.com/ora_medcentr"
@@ -31,7 +31,7 @@ export const Contacts = () => {
               height={30}
               alt="icon"
             />
-            <p>Instagram</p>
+            {/* <p>Instagram</p> */}
           </a>
           {/* <div className=""> */}
 
@@ -46,7 +46,7 @@ export const Contacts = () => {
               height={30}
               alt="icon"
             />
-            <p>Tiktok</p>
+            {/* <p>Tiktok</p> */}
           </a>
         </div>
       </div>

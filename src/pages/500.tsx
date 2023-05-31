@@ -6,13 +6,13 @@ import { defaultMetaProps } from "@/components/Meta/Meta";
 const Error = () => {
   return (
     <PageWrapper>
-      <p>404</p>
+      <p>500</p>
     </PageWrapper>
   );
 };
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const ogUrl = "https://oramedcentr.com.ua/404";
+  const ogUrl = "https://oramedcentr.com.ua/500";
 
   const meta = {
     ...defaultMetaProps,

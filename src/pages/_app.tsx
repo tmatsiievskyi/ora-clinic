@@ -5,7 +5,7 @@ import { appWithTranslation } from "next-i18next";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <Layout>
+    <Layout {...pageProps}>
       <Component {...pageProps} />
     </Layout>
   );

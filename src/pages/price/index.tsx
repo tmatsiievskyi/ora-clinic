@@ -7,6 +7,7 @@ import {
   getGroupedSubService,
 } from "@/global/api/subservice-api";
 import { SubServiceContainer } from "@/modules/SubService/containers/SubServiceContainer";
+import { defaultMetaProps } from "@/components/Meta/Meta";
 
 const SubService: NextPage<ISubServiceProps> = ({
   subService,
@@ -38,9 +39,19 @@ export const getStaticProps: GetStaticProps<ISubServiceProps> = async ({
     };
   }
 
+  const ogUrl = "https://oramedcentr.com.ua/price";
+
+  const meta = {
+    ...defaultMetaProps,
+    title: "ОРА - Ціни",
+    ogImage: `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
+    ogUrl,
+  };
+
   return {
     props: {
       ...(await serverSideTranslations(locale ?? "uk-UA", ["common"])),
+      meta,
       subService: subService ? JSON.parse(JSON.stringify(subService)) : null,
       groupedSubServices: groupedSubServices
         ? JSON.parse(JSON.stringify(groupedSubServices))

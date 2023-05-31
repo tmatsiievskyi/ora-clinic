@@ -3,8 +3,8 @@ import { getAllComplexes, getComplexGroups } from "@/global/api/complex-api";
 import { IComplexesProps } from "@/global/interfaces";
 import { GetStaticProps, GetStaticPropsContext, NextPage } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
 import { ComplexContainer } from "@/modules/Complex/containers";
+import { defaultMetaProps } from "@/components/Meta/Meta";
 
 const Complex: NextPage<IComplexesProps> = ({ groups, complexes }) => {
   return (
@@ -28,9 +28,19 @@ export const getStaticProps: GetStaticProps<IComplexesProps> = async ({
     };
   }
 
+  const ogUrl = "https://oramedcentr.com.ua/complex";
+
+  const meta = {
+    ...defaultMetaProps,
+    title: "ОРА - Комплексні обстеження",
+    ogImage: `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
+    ogUrl,
+  };
+
   return {
     props: {
       ...(await serverSideTranslations(locale ?? "uk-UA", ["common"])),
+      meta,
       groups: groups ? JSON.parse(JSON.stringify(groups)) : null,
       complexes: complexes ? JSON.parse(JSON.stringify(complexes)) : null,
     },

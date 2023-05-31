@@ -13,6 +13,7 @@ import {
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { EmployeeContainer } from "@/modules/Employee";
 import { IEmployeeProps } from "@/global/interfaces";
+import { defaultMetaProps } from "@/components/Meta/Meta";
 
 const EmployeeById: NextPage<IEmployeeProps> = ({
   employee,
@@ -75,9 +76,19 @@ export const getStaticProps: GetStaticProps<IEmployeeProps> = async (
     };
   }
 
+  const ogUrl = `https://oramedcentr.com.ua/employee/${employeeId}`;
+
+  const meta = {
+    ...defaultMetaProps,
+    title: `ОРА - ${employee.lastName} ${employee.firstName} ${employee.surname}`,
+    ogImage: `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
+    ogUrl,
+  };
+
   return {
     props: {
       ...(await serverSideTranslations(locale ?? "uk-UA", ["common"])),
+      meta,
       employee: employee ? JSON.parse(JSON.stringify(employee)) : null,
       groupedEmployees: groupedEmployees
         ? JSON.parse(JSON.stringify(groupedEmployees))

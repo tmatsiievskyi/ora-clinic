@@ -5,10 +5,10 @@ export const navItems: INavItem[] = [
     title: "main",
     href: "/",
   },
-  {
-    title: "about",
-    href: "/about",
-  },
+  // {
+  //   title: "about",
+  //   href: "/about",
+  // },
   {
     title: "employee",
     href: "/employee",
@@ -27,8 +27,8 @@ export const navItems: INavItem[] = [
     href: "/price",
   },
 
-  {
-    title: "discount",
-    href: "/discount",
-  },
+  // {
+  //   title: "discount",
+  //   href: "/discount",
+  // },
 ];

@@ -95,11 +95,11 @@ export const MainInit = ({
                         ) : (
                           <span></span>
                         )}
-                        {/* <Button type="light">
-                          <Link href={`/discount/${item._id}`}>
+                        <Button type="light">
+                          <Link href={`/discount`}>
                             <span>{t("common.moreDetails")}</span>
                           </Link>
-                        </Button> */}
+                        </Button>
                       </div>
                     </div>
                   </SliderItem>

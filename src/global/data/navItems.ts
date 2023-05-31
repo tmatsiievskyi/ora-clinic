@@ -11,11 +11,11 @@ export const navItems: INavItem[] = [
   // },
   {
     title: "employee",
-    href: "/employee",
+    href: "/employee/643de66f65d1bd3016084227",
   },
   {
     title: "service",
-    href: "/service",
+    href: "/service/6475fe5326bf43d0c8a70f64",
   },
   {
     title: "complex",
@@ -27,8 +27,8 @@ export const navItems: INavItem[] = [
     href: "/price",
   },
 
-  // {
-  //   title: "discount",
-  //   href: "/discount",
-  // },
+  {
+    title: "discount",
+    href: "/discount",
+  },
 ];

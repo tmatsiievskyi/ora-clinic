@@ -86,7 +86,6 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
                       const { _id, label, price } = item;
                       return (
                         <m.li key={_id} className={`${listItemClassNames}`}>
-                          <span>{_id}</span>
                           <m.span
                             key={_id + label}
                             initial={{ opacity: 0, x: "-100%" }}

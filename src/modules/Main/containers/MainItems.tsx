@@ -100,7 +100,7 @@ export const MainItems = ({
                 </div>
 
                 <div className="relative mt-2 md:mt-0 flex items-center justify-center flex-col text-center z-30 bg-light/40 rounded-lg text-dark">
-                  <Link href="/employee">
+                  <Link href="/employee/643de66f65d1bd3016084227">
                     <p className="text-2xl xl:text-3xl font-comfortaa ">
                       {t("common.employees.inOra")}
                     </p>
@@ -169,7 +169,7 @@ export const MainItems = ({
         )}
       </div>
       <div className="bg-lightShade md:mt-0  col-span-10 md:col-span-5 lg:col-span-7 row-span-1 ">
-        <Link href="/service">
+        <Link href="/service/6475fe5326bf43d0c8a70f64">
           <CompWithFramer
             delay={0.5}
             duration={0.6}

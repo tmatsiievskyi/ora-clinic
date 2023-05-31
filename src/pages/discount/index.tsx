@@ -1,3 +1,4 @@
+import { defaultMetaProps } from "@/components/Meta/Meta";
 import { PageWrapper } from "@/components/PageWrapper";
 import { getAllDiscounts } from "@/global/api/discount-api";
 import { IDiscountModel } from "@/global/models/_interfaces";
@@ -23,9 +24,19 @@ export const getStaticProps: GetStaticProps<IDiscountProps> = async ({
 
   const { data: discounts } = reqForDiscounts;
 
+  const ogUrl = "https://oramedcentr.com.ua/discount";
+
+  const meta = {
+    ...defaultMetaProps,
+    title: "ОРА - Знижки",
+    ogImage: `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
+    ogUrl,
+  };
+
   return {
     props: {
       ...(await serverSideTranslations(locale ?? "uk-UA", ["common"])),
+      meta,
       discounts: discounts ? JSON.parse(JSON.stringify(discounts)) : null,
     },
   };

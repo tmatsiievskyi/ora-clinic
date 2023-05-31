@@ -7,6 +7,7 @@ import {
 } from "@/global/api/employee-api";
 import { EmployeeContainer } from "@/modules/Employee";
 import { IEmployeesProps } from "@/global/interfaces";
+import { defaultMetaProps } from "@/components/Meta/Meta";
 
 const Employee: NextPage<IEmployeesProps> = ({
   employee,
@@ -38,9 +39,19 @@ export const getStaticProps: GetStaticProps<IEmployeesProps> = async ({
     };
   }
 
+  const ogUrl = "https://oramedcentr.com.ua/employee";
+
+  const meta = {
+    ...defaultMetaProps,
+    title: "ОРА - Лікарі",
+    ogImage: `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
+    ogUrl,
+  };
+
   return {
     props: {
       ...(await serverSideTranslations(locale ?? "uk-UA", ["common"])),
+      meta,
       employee: employee ? JSON.parse(JSON.stringify(employee)) : null,
       groupedEmployees: groupedEmployees
         ? JSON.parse(JSON.stringify(groupedEmployees))

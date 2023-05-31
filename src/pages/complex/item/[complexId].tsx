@@ -9,6 +9,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { IComplexProps } from "@/global/interfaces";
 import { getAllComplexes, getComplexById } from "@/global/api/complex-api";
 import { ComplexItemContainer } from "@/modules/Complex/containers";
+import { defaultMetaProps } from "@/components/Meta/Meta";
 
 const ComplexItem: NextPage<IComplexProps> = ({ complex }) => {
   return (
@@ -61,9 +62,21 @@ export const getStaticProps: GetStaticProps<IComplexProps> = async (
     };
   }
 
+  const ogUrl = `https://oramedcentr.com.ua/complex/item/${complexId}`;
+
+  const meta = {
+    ...defaultMetaProps,
+    title: `ОРА - Комплексні - ${
+      complex.label.split(".")[1] || "Комплексні Обстеження"
+    }`,
+    ogImage: `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
+    ogUrl,
+  };
+
   return {
     props: {
       ...(await serverSideTranslations(locale ?? "uk-UA", ["common"])),
+      meta,
       complex: complex ? JSON.parse(JSON.stringify(complex)) : null,
     },
   };

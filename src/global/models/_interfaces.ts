@@ -34,6 +34,7 @@ export interface IEmployeeModel extends MongoResult {
   department: string;
   index: number;
   illness?: string[];
+  achievements?: string[];
 }
 
 export interface IDiscountModel extends MongoResult {

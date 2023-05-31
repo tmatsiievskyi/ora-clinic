@@ -77,7 +77,7 @@ export const EmployeeContainer = ({
                           >
                             <Link
                               href={`/employee/${_id}`}
-                              className="flex items-center"
+                              className="flex items-center w-full justify-center"
                             >
                               <Image
                                 height={1000}
@@ -85,9 +85,9 @@ export const EmployeeContainer = ({
                                 src={`/img${smImgUrl}`}
                                 alt="Doctor Image"
                                 priority
-                                className={`w-[auto] ${
+                                className={`${
                                   isSideBarOpen ? "mx-2" : "mx-[10px]"
-                                } h-[60px] object-cover object-top bg-gradient-to-br from-grey to-lightShade to-80% rounded-full`}
+                                } h-[60px] w-[60px]  object-cover object-top bg-gradient-to-br from-grey to-lightShade to-80% rounded-full`}
                               />
                               {isSideBarOpen && (
                                 <span className="font-helveticThin text-dark min-w-[200px]">

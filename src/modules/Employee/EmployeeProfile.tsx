@@ -13,8 +13,16 @@ export const EmployeeProfile = ({
   employee: IEmployeeModel | null;
 }) => {
   const { t } = useTranslation("common");
-  const { position, _id, lastName, firstName, surname, imgUrl, illness } =
-    employee || {};
+  const {
+    position,
+    _id,
+    lastName,
+    firstName,
+    surname,
+    imgUrl,
+    illness,
+    achievements,
+  } = employee || {};
   const [activeTab, setActiveTab] = useState("profile");
 
   const content = () => {
@@ -40,8 +48,18 @@ export const EmployeeProfile = ({
         </ul>
       );
     }
-    if (activeTab === "contact") {
-      return <p>Contact</p>;
+    if (activeTab === "achievements") {
+      return (
+        <ul className=" text-dark  my-4">
+          {achievements?.map((item, index) => {
+            return (
+              <li key={index}>
+                <BadgeCheck className="inline text-primary" /> {t(`${item}`)}
+              </li>
+            );
+          })}
+        </ul>
+      );
     }
   };
 

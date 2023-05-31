@@ -77,7 +77,7 @@ export const MainInit = ({
             initial="hidden"
             custom={6}
             animate={controls}
-            className="mt-2 max-h-[180px] min-w-full sm:min-w-[350px] border-primary bg-primary/70 border text-light font-comfortaa text-2xl rounded-lg"
+            className="mt-2 max-h-[180px] min-w-full sm:min-w-[350px] max-w-[400px] border-primary bg-primary/70 border text-light font-comfortaa text-2xl rounded-lg"
           >
             <Slider>
               {discounts.map((item) => {

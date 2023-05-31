@@ -11,6 +11,7 @@ const EmployeeSchema = new Schema<IEmployeeModel>({
   index: { type: Number, required: true },
   department: { type: String, required: true },
   illness: { type: [String], required: false },
+  achievements: { type: [String], required: false },
 });
 
 EmployeeSchema.set("timestamps", true);

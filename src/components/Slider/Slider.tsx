@@ -29,7 +29,7 @@ export const Slider: FC<ISliderProps> = ({
         onClick={() => {
           updateIndex(activeIndex - 1);
         }}
-        className={`flex items-center justify-center cursor-pointer ${buttonStyle}`}
+        className={`flex items-center z-20 relative justify-center cursor-pointer ${buttonStyle}`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@ export const Slider: FC<ISliderProps> = ({
         onClick={() => {
           updateIndex(activeIndex + 1);
         }}
-        className={`flex items-center justify-center cursor-pointer ${buttonStyle}`}
+        className={`flex items-center z-20 relative justify-center cursor-pointer ${buttonStyle}`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

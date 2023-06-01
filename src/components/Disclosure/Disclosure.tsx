@@ -19,6 +19,8 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
   showPrice,
   buttonEl,
   listItemClassNames,
+  showAdditionalText,
+  additionalText,
 }) => {
   const { t } = useTranslation();
   const controls = useAnimationControls();
@@ -118,6 +120,11 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
                         </m.li>
                       );
                     })}
+                    {showAdditionalText && (
+                      <p className=" text-xs font-comfortaa mt-2">
+                        *{t(`${additionalText}`)}
+                      </p>
+                    )}
                   </Disclosure.Panel>
                 )}
               </AnimatePresence>

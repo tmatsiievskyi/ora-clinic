@@ -83,7 +83,7 @@ export interface IComplexModel extends MongoResult {
   price?: number;
   priceFamilyDoctor?: number;
   analyses: Types.ObjectId[] | ISubServiceModel;
-  examination: Types.ObjectId[];
+  examination: Types.ObjectId[] | ISubServiceModel[];
   consultations: Types.ObjectId[];
   index: number;
 }

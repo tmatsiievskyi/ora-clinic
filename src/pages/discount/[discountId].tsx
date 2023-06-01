@@ -1,6 +1,9 @@
 import { defaultMetaProps } from "@/components/Meta/Meta";
 import { PageWrapper } from "@/components/PageWrapper";
-import { getAllDiscounts } from "@/global/api/discount-api";
+import {
+  getAllDiscounts,
+  getAllDiscountOrderById,
+} from "@/global/api/discount-api";
 import { IDiscountModel } from "@/global/models/_interfaces";
 import type { GetStaticProps, NextPage, GetStaticPropsContext } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -20,14 +23,45 @@ const Discount: NextPage<IDiscountProps> = ({ discounts }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<IDiscountProps> = async ({
-  locale,
-}: GetStaticPropsContext) => {
+export const getStaticPaths = async ({ locales }: GetStaticPropsContext) => {
   const reqForDiscounts = await getAllDiscounts();
+  const { data: discounts } = reqForDiscounts;
+  const paths = locales
+    ? locales.reduce<string[]>((acc, cur) => {
+        discounts &&
+          discounts.forEach((item) => {
+            acc.push(`/${cur}/discount/${item._id}`);
+          });
+        return acc;
+      }, [])
+    : discounts &&
+      discounts.map((item) => ({
+        params: { employeeId: item._id },
+      }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps<IDiscountProps> = async (
+  context: GetStaticPropsContext,
+) => {
+  const { locale, params } = context;
+  const { discountId } = params || {};
+
+  if (!discountId) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const reqForDiscounts = await getAllDiscountOrderById(discountId);
 
   const { data: discounts } = reqForDiscounts;
 
-  const ogUrl = "https://oramedcentr.com.ua/discount";
+  const ogUrl = `https://oramedcentr.com.ua/discount/${discountId}`;
 
   const meta = {
     ...defaultMetaProps,
@@ -35,6 +69,8 @@ export const getStaticProps: GetStaticProps<IDiscountProps> = async ({
     ogImage: `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
     ogUrl,
   };
+
+  discounts?.sort((a, b) => (a._id.toString() === discountId ? -1 : 1));
 
   return {
     props: {

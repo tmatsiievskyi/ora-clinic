@@ -1,6 +1,6 @@
 import { motion as m } from "framer-motion";
 import { Backdrop } from "@/UI/Backdrop";
-import { FC, Fragment, useState } from "react";
+import { FC } from "react";
 import { IModalProps } from "./_interfaces";
 
 const dropIn = {

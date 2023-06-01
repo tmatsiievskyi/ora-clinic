@@ -96,7 +96,7 @@ export const MainInit = ({
                           <span></span>
                         )}
                         <Button type="light">
-                          <Link href={`/discount`}>
+                          <Link href={`/discount/${item._id}`}>
                             <span>{t("common.moreDetails")}</span>
                           </Link>
                         </Button>

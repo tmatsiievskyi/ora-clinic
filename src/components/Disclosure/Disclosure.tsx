@@ -31,8 +31,6 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
     },
   };
 
-  console.log(showAdditionalText);
-
   return (
     <div className="w-full rounded-lg">
       <div className="w-full max-w rounded-lg bg-light p-0">

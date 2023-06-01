@@ -15,8 +15,6 @@ export const EmployeeContainer = ({
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const [width] = useDeviceSize();
 
-  console.log(groupedEmployees);
-
   const handleSideBarOpen = () => {
     setIsSideBarOpen((prev) => !prev);
   };

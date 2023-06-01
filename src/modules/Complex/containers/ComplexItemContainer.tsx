@@ -10,7 +10,9 @@ import { styles } from "@/styles/styles";
 export const ComplexItemContainer = ({
   complex,
 }: {
-  complex: IComplexModel | null;
+  complex: Omit<IComplexModel, "examination"> & {
+    examination: ISubServiceModel[];
+  };
 }) => {
   const {
     imgUrl,
@@ -28,14 +30,10 @@ export const ComplexItemContainer = ({
     null,
   );
 
-  console.log(examination);
-
   const hasColono = examination?.filter(
     (item: ISubServiceModel) =>
       item.label === "subService.examination.label.colonoscopy",
   );
-
-  console.log(hasColono.length);
 
   useEffect(() => {
     if (!width) return;

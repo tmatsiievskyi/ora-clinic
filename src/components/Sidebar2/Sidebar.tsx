@@ -45,8 +45,6 @@ export const Sidebar = ({
     isOpen ? controls.start("left") : controls.start("right");
   };
 
-  console.log(isOpen);
-
   const handleClickOutside = () => {
     if (isOpen) {
       controls.start("left");

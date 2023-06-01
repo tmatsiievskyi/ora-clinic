@@ -6,4 +6,5 @@ export interface ISidebarProps {
   activeItem?: string | string[];
   handleOpen: () => void;
   isOpen: boolean;
+  autoClose: boolean;
 }

@@ -19,6 +19,8 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
   showPrice,
   buttonEl,
   listItemClassNames,
+  showAdditionalText,
+  additionalText,
 }) => {
   const { t } = useTranslation();
   const controls = useAnimationControls();
@@ -28,6 +30,8 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
       hidden: { opacity: 0, x: -20 },
     },
   };
+
+  console.log(showAdditionalText);
 
   return (
     <div className="w-full rounded-lg">
@@ -118,6 +122,11 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
                         </m.li>
                       );
                     })}
+                    {showAdditionalText && (
+                      <p className=" text-xs font-comfortaa mt-2">
+                        *{t(`${additionalText}`)}
+                      </p>
+                    )}
                   </Disclosure.Panel>
                 )}
               </AnimatePresence>

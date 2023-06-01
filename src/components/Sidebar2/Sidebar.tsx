@@ -4,6 +4,8 @@ import { motion as m, Variants, useAnimationControls } from "framer-motion";
 import { ArrowLeft } from "@/UI/Arrows";
 import { ISidebarProps } from "./_interfaces";
 import { PageTitle } from "../PageTitle";
+import { useOnClickOutside } from "@/global/hooks";
+import { useRef } from "react";
 
 export const Sidebar = ({
   title,
@@ -13,6 +15,7 @@ export const Sidebar = ({
 }: ISidebarProps) => {
   const { t } = useTranslation("common");
   const controls = useAnimationControls();
+  const sidebarRef = useRef(null);
 
   const arrowVar: Variants = {
     left: {
@@ -42,8 +45,20 @@ export const Sidebar = ({
     isOpen ? controls.start("left") : controls.start("right");
   };
 
+  console.log(isOpen);
+
+  const handleClickOutside = () => {
+    if (isOpen) {
+      controls.start("left");
+      handleOpen();
+    }
+  };
+
+  useOnClickOutside(sidebarRef, handleClickOutside);
+
   return (
     <div
+      ref={sidebarRef}
       className={`absolute top-0 z-30 ease-in rounded-l-lg duration-300  ${
         isOpen
           ? "min-w-[280px] w-[280px] sm:w-[340px]"

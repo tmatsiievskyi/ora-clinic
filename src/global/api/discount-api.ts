@@ -47,3 +47,25 @@ export const getAllDiscounts = async (): Promise<
     };
   }
 };
+
+export const getAllDiscountOrderById = async (
+  id: string | string[],
+): Promise<IResp<IDiscountModel[] | null>> => {
+  try {
+    await dbConnect();
+    const discounts = await Discount.find({}).sort({ index: 1 });
+    return {
+      data: discounts,
+      status: 200,
+      success: true,
+    };
+  } catch (e) {
+    const message = getErrorMessage(e);
+    return {
+      data: null,
+      status: 500,
+      success: false,
+      message,
+    };
+  }
+};

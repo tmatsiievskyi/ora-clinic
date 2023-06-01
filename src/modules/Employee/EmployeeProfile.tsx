@@ -12,7 +12,7 @@ export const EmployeeProfile = ({
 }: {
   employee: IEmployeeModel | null;
 }) => {
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
   const {
     position,
     _id,
@@ -29,8 +29,12 @@ export const EmployeeProfile = ({
     if (activeTab === "profile") {
       return (
         <div className=" text-dark break-word">
-          <p className="mb-2 break-word">{t(`about.start.${_id}`)}</p>
-          <p className="break-word">{t(`about.end.${_id}`)}</p>
+          {i18n.exists(`about.start.${_id}`) && (
+            <p className="mb-2 break-word">{t(`about.start.${_id}`)}</p>
+          )}
+          {i18n.exists(`about.start.${_id}`) && (
+            <p className="break-word">{t(`about.end.${_id}`)}</p>
+          )}
         </div>
       );
     }
@@ -109,7 +113,7 @@ export const EmployeeProfile = ({
       <div
         className={`${styles.container} p-2 md:p-4 rounded-lg flex-1  h-[calc(100%-20rem)] overflow-scroll no-scrollbar`}
       >
-        <p className={`${styles.heading3} break-all`}>{t(`${position}`)}</p>
+        <p className={`${styles.heading3} break-words`}>{t(`${position}`)}</p>
         <div className="mb-6 mt-3 flex justify-center">
           {tabs.map((tab) => (
             <button

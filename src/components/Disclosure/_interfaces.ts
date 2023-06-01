@@ -8,4 +8,6 @@ export interface IDisclosureProps {
   showPrice?: boolean;
   buttonEl?: JSX.Element;
   listItemClassNames?: string;
+  showAdditionalText?: boolean;
+  additionalText?: string;
 }

@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { IComplexModel } from "@/global/models/_interfaces";
+import { IComplexModel, ISubServiceModel } from "@/global/models/_interfaces";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { useDeviceSize } from "@/global/hooks";
 import { CustomDisclosure } from "@/components/Disclosure";
 import { PageTitle } from "@/components/PageTitle";
+import { styles } from "@/styles/styles";
 
 export const ComplexItemContainer = ({
   complex,
@@ -26,6 +27,15 @@ export const ComplexItemContainer = ({
   const [isOpenDisclosure, setIsOpenDisclosure] = useState<boolean | null>(
     null,
   );
+
+  console.log(examination);
+
+  const hasColono = examination?.filter(
+    (item: ISubServiceModel) =>
+      item.label === "subService.examination.label.colonoscopy",
+  );
+
+  console.log(hasColono.length);
 
   useEffect(() => {
     if (!width) return;
@@ -79,8 +89,9 @@ export const ComplexItemContainer = ({
                         items={analyses}
                         group="subService"
                         defaultOpen={isOpenDisclosure}
-                        buttonClassNames="bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
-                        listClassNames="px-4 pt-4 pb-2 text-sm text-gray-500 font-helveticRegular"
+                        showPrice={false}
+                        listItemClassNames={`grid gap-0 py-1 text-sm text-gray-500 font-comfortaa border-b-[1px] border-lightShade px-2 grid-cols-4 [&>*:nth-child(1)]:col-span-3 [&>*:nth-child(2)]:col-span-1 [&>*:nth-child(2)]:text-right [&>*:nth-child(1)]:flex items-center`}
+                        buttonClassNames={`${styles.gradientR} text-light px-4 py-2 text-left text-sm font-comfortaa`}
                       />
                     ) : null}
                   </>
@@ -88,14 +99,19 @@ export const ComplexItemContainer = ({
                 {
                   <>
                     {examination && typeof isOpenDisclosure === "boolean" ? (
-                      <CustomDisclosure
-                        buttonText="common.examination"
-                        items={examination}
-                        group="subService"
-                        defaultOpen={isOpenDisclosure}
-                        buttonClassNames="bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
-                        listClassNames="px-4 pt-4 pb-2 text-sm text-gray-500 font-helveticRegular"
-                      />
+                      <>
+                        <CustomDisclosure
+                          buttonText="common.examination"
+                          items={examination}
+                          group="subService"
+                          defaultOpen={isOpenDisclosure}
+                          showPrice={false}
+                          listItemClassNames={`grid gap-0 py-1 text-sm text-gray-500 font-comfortaa border-b-[1px] border-lightShade px-2 grid-cols-4 [&>*:nth-child(1)]:col-span-3 [&>*:nth-child(2)]:col-span-1 [&>*:nth-child(2)]:text-right [&>*:nth-child(1)]:flex items-center`}
+                          buttonClassNames={`${styles.gradientR} text-light px-4 py-2 text-left text-sm font-comfortaa`}
+                          showAdditionalText={hasColono.length > 0}
+                          additionalText="complex.gastro.note"
+                        />
+                      </>
                     ) : null}
                   </>
                 }
@@ -107,8 +123,9 @@ export const ComplexItemContainer = ({
                         items={consultations}
                         group="subService"
                         defaultOpen={isOpenDisclosure}
-                        buttonClassNames="bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
-                        listClassNames="px-4 pt-4 pb-2 text-sm text-gray-500 font-helveticRegular"
+                        showPrice={false}
+                        listItemClassNames={`grid gap-0 py-1 text-sm text-gray-500 font-comfortaa border-b-[1px] border-lightShade px-2 grid-cols-4 [&>*:nth-child(1)]:col-span-3 [&>*:nth-child(2)]:col-span-1 [&>*:nth-child(2)]:text-right [&>*:nth-child(1)]:flex items-center`}
+                        buttonClassNames={`${styles.gradientR} text-light px-4 py-2 text-left text-sm font-comfortaa`}
                       />
                     ) : null}
                   </>

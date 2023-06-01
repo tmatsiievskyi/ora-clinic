@@ -222,7 +222,10 @@ export const ServiceContainer = ({
                           key={item._id.toString()}
                           className="min-h-[250px] relative w-full h-full flex items-end p-2 group overflow-hidden cursor-pointer"
                         >
-                          <Link href={`service/${item._id}`} className="w-full">
+                          <Link
+                            href={`/service/${item._id}`}
+                            className="w-full"
+                          >
                             <Image
                               width={350}
                               height={350}
@@ -235,7 +238,9 @@ export const ServiceContainer = ({
                               className="p-2 text-light text-xl font-helveticLight min-h-[25%] bg-dark/50 w-full rounded-lg 
             relative z-10 flex flex-col justify-between group-hover:bg-primary/70 group-hover:min-h-[25%] ease-in-out duration-1000"
                             >
-                              <span>{t(item.label)}</span>
+                              <span className=" break-all">
+                                {t(item.label)}
+                              </span>
                             </div>
                           </Link>
                         </div>

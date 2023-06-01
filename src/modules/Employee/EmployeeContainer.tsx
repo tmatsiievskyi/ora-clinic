@@ -35,6 +35,7 @@ export const EmployeeContainer = ({
         title="common.employees.inOraShort"
         isOpen={isSideBarOpen}
         handleOpen={handleSideBarOpen}
+        autoClose={width > 640 ? false : true}
       >
         <>
           {groupedEmployees &&

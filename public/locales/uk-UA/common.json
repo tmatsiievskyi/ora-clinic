@@ -129,13 +129,13 @@
 
   "Abilfazivna": "Абілфазівна",
 
-  "about.start.643de66f65d1bd3016084227": "Лікар-терапевт, пульмонолог, алерголог аспірант кафедри Харківського медичного університету проводить прийом пацієнтів з такими захворюваннями:",
-  "about.end.643de66f65d1bd3016084227": "Лікар постійно приймає участь в міжнародних та всеукраїнських конференціях. Являється неоднаразовим лідером Київської школи молекулярної діагностики УШМАІ.",
+  "about.start.643de66f65d1bd3016084227": "Лікар-терапевт, пульмонолог, алерголог аспірант кафедри Харківського медичного університету.",
+  "about.end.643de66f65d1bd3016084227": "Стаж роботи 8 років.",
 
-  "illness.alergicalRenit": "алергічний реніт",
-  "illness.alergicalCon": "алергічний кон‘юнктивіт",
-  "illness.bronhAstm": "бронхіальна астма",
-  "illness.obstructBronh": "обструктивний бронхіт;",
+  "illness.alergicalTest": "проведення алергопроб (іспанськими алергенами) та з анестетиками;",
+  "illness.spiro": "спірографія-спірометрія ( визначення обструкції);",
+  "illness.ecgTake": "зняття та розшифровка ЕКГ;",
+  "illness.acit": "володіє методикою молекулярної діагностики та АСІТ.;",
   "illness.afterCovid": "стани після перенесеного ковіду;",
   "illness.kropyvyanka": "кропив‘янка",
   "illness.alergicalEzofag": "алергічний езофагіт",
@@ -291,8 +291,8 @@
 
   "subService.analyses.label.mazok": "Мазок на флору",
   "subService.analyses.label.usdThyroid": "Щитовидна залоза + еластографія",
-  "subService.examination.label.usdBoobs": "молочні залози + еластографія",
-  "subService.examination.label.usdSmallPelvis": "органи малого тазу (матка, придатки та позаматковий простір)",
+  "subService.examination.label.usdBoobs": "УЗД. молочні залози + еластографія",
+  "subService.examination.label.usdSmallPelvis": "УЗД. органи малого тазу (матка, придатки та позаматковий простір)",
   "subService.examination.label.usdEcho": "ЕХО",
   "subService.сonsultations.label.gynecologistFull": "Гінеколог (огляд на кріслі: огляд шийки матки в дзеркалах, бімануальне обстеження (при потребі per rectum), огляд молочних залоз, профогляд (онкопрофогляд))",
   "subService.сonsultations.label.dentistConsultation": "Стоматолог",
@@ -532,6 +532,7 @@
   "services.title.lab": "Лабораторія CSD",
   "services.title.complex": "Комплексні обстеження",
   "services.title.gastro": "Гастроентерологія",
+  "services.title.endoscope": "Ендоскопія",
   "services.title.usd": "УЗД Обстеження",
   "services.title.surgeon": "Хірург",
   "services.title.gynecologist": "Гінекологія",

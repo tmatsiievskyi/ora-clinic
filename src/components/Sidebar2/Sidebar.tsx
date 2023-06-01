@@ -1,4 +1,3 @@
-import { useTranslation } from "next-i18next";
 import { motion as m, Variants, useAnimationControls } from "framer-motion";
 
 import { ArrowLeft } from "@/UI/Arrows";
@@ -12,8 +11,8 @@ export const Sidebar = ({
   children,
   handleOpen,
   isOpen,
+  autoClose,
 }: ISidebarProps) => {
-  const { t } = useTranslation("common");
   const controls = useAnimationControls();
   const sidebarRef = useRef(null);
 
@@ -46,7 +45,7 @@ export const Sidebar = ({
   };
 
   const handleClickOutside = () => {
-    if (isOpen) {
+    if (autoClose && isOpen) {
       controls.start("left");
       handleOpen();
     }

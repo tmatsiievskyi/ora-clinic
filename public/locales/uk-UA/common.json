@@ -291,8 +291,8 @@
 
   "subService.analyses.label.mazok": "Мазок на флору",
   "subService.analyses.label.usdThyroid": "Щитовидна залоза + еластографія",
-  "subService.examination.label.usdBoobs": "молочні залози + еластографія",
-  "subService.examination.label.usdSmallPelvis": "органи малого тазу (матка, придатки та позаматковий простір)",
+  "subService.examination.label.usdBoobs": "УЗД. молочні залози + еластографія",
+  "subService.examination.label.usdSmallPelvis": "УЗД. органи малого тазу (матка, придатки та позаматковий простір)",
   "subService.examination.label.usdEcho": "ЕХО",
   "subService.сonsultations.label.gynecologistFull": "Гінеколог (огляд на кріслі: огляд шийки матки в дзеркалах, бімануальне обстеження (при потребі per rectum), огляд молочних залоз, профогляд (онкопрофогляд))",
   "subService.сonsultations.label.dentistConsultation": "Стоматолог",
@@ -532,6 +532,7 @@
   "services.title.lab": "Лабораторія CSD",
   "services.title.complex": "Комплексні обстеження",
   "services.title.gastro": "Гастроентерологія",
+  "services.title.endoscope": "Ендоскопія",
   "services.title.usd": "УЗД Обстеження",
   "services.title.surgeon": "Хірург",
   "services.title.gynecologist": "Гінекологія",

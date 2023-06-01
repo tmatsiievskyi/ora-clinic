@@ -11,7 +11,7 @@ export const ComplexItemContainer = ({
   complex,
 }: {
   complex: Omit<IComplexModel, "examination"> & {
-    examination: ISubServiceModel[];
+    examination: ISubServiceModel[] | null;
   };
 }) => {
   const {
@@ -30,10 +30,11 @@ export const ComplexItemContainer = ({
     null,
   );
 
-  const hasColono = examination?.filter(
-    (item: ISubServiceModel) =>
-      item.label === "subService.examination.label.colonoscopy",
-  );
+  const hasColono =
+    examination?.filter(
+      (item: ISubServiceModel) =>
+        item.label === "subService.examination.label.colonoscopy",
+    ) || [];
 
   useEffect(() => {
     if (!width) return;

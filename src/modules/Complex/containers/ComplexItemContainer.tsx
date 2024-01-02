@@ -12,6 +12,8 @@ export const ComplexItemContainer = ({
 }: {
   complex: Omit<IComplexModel, "examination"> & {
     examination: ISubServiceModel[] | null;
+    modifiedPrice: number;
+    modifiedFamDocPrice: number;
   };
 }) => {
   const {
@@ -21,8 +23,8 @@ export const ComplexItemContainer = ({
     analyses,
     examination,
     consultations,
-    priceFamilyDoctor,
-    price,
+    modifiedFamDocPrice,
+    modifiedPrice,
   } = complex || {};
   const { t } = useTranslation();
   const [width] = useDeviceSize();
@@ -30,11 +32,11 @@ export const ComplexItemContainer = ({
     null,
   );
 
-  const hasColono =
-    examination?.filter(
-      (item: ISubServiceModel) =>
-        item.label === "subService.examination.label.colonoscopy",
-    ) || [];
+  console.log(label);
+
+  const hasColono = label.includes("40+");
+
+  console.log(hasColono);
 
   useEffect(() => {
     if (!width) return;
@@ -88,7 +90,7 @@ export const ComplexItemContainer = ({
                         items={analyses}
                         group="subService"
                         defaultOpen={isOpenDisclosure}
-                        showPrice={false}
+                        showPrice={true}
                         listItemClassNames={`grid gap-0 py-1 text-sm text-gray-500 font-comfortaa border-b-[1px] border-lightShade px-2 grid-cols-4 [&>*:nth-child(1)]:col-span-3 [&>*:nth-child(2)]:col-span-1 [&>*:nth-child(2)]:text-right [&>*:nth-child(1)]:flex items-center`}
                         buttonClassNames={`${styles.gradientR} text-light px-4 py-2 text-left text-sm font-comfortaa`}
                       />
@@ -104,10 +106,10 @@ export const ComplexItemContainer = ({
                           items={examination}
                           group="subService"
                           defaultOpen={isOpenDisclosure}
-                          showPrice={false}
+                          showPrice={true}
                           listItemClassNames={`grid gap-0 py-1 text-sm text-gray-500 font-comfortaa border-b-[1px] border-lightShade px-2 grid-cols-4 [&>*:nth-child(1)]:col-span-3 [&>*:nth-child(2)]:col-span-1 [&>*:nth-child(2)]:text-right [&>*:nth-child(1)]:flex items-center`}
                           buttonClassNames={`${styles.gradientR} text-light px-4 py-2 text-left text-sm font-comfortaa`}
-                          showAdditionalText={hasColono.length > 0}
+                          showAdditionalText={hasColono}
                           additionalText="complex.gastro.note"
                         />
                       </>
@@ -122,7 +124,7 @@ export const ComplexItemContainer = ({
                         items={consultations}
                         group="subService"
                         defaultOpen={isOpenDisclosure}
-                        showPrice={false}
+                        showPrice={true}
                         listItemClassNames={`grid gap-0 py-1 text-sm text-gray-500 font-comfortaa border-b-[1px] border-lightShade px-2 grid-cols-4 [&>*:nth-child(1)]:col-span-3 [&>*:nth-child(2)]:col-span-1 [&>*:nth-child(2)]:text-right [&>*:nth-child(1)]:flex items-center`}
                         buttonClassNames={`${styles.gradientR} text-light px-4 py-2 text-left text-sm font-comfortaa`}
                       />
@@ -137,7 +139,7 @@ export const ComplexItemContainer = ({
                   {t("complex.priceFamilyDoctor")}
                 </span>{" "}
                 <span className="text-lg text-primary">
-                  {priceFamilyDoctor}{" "}
+                  {modifiedFamDocPrice}{" "}
                 </span>
                 <span className="text-base text-primary">
                   {t("common.currency.grn")}
@@ -145,7 +147,7 @@ export const ComplexItemContainer = ({
               </p>
               <p className="font-oswald text-2xl text-right text-gray-700">
                 <span className="text-xl">{t("common.item.price")}</span>{" "}
-                <span>{price}</span>
+                <span>{modifiedPrice}</span>
                 <span>{t("common.currency.grn")}</span>
               </p>
             </div>

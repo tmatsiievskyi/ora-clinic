@@ -27,6 +27,8 @@ export interface IComplexesProps {
 export interface IComplexProps {
   complex: Omit<IComplexModel, "examination"> & {
     examination: ISubServiceModel[] | null;
+    modifiedPrice: number;
+    modifiedFamDocPrice: number;
   };
 }
 

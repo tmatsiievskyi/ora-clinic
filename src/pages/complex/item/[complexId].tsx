@@ -128,17 +128,6 @@ export const getStaticProps: GetStaticProps<IComplexProps> = async (
     modifiedFamDocPrice,
   };
 
-  console.log({
-    analysesPrice,
-    analysesPriceFamDoc,
-    examinationPrice,
-    examinationPriceFamDoc,
-    consultPrice,
-    consultPriceFamDoc,
-    modifiedPrice,
-    modifiedFamDocPrice,
-  });
-
   const ogUrl = `https://oramedcentr.com.ua/complex/item/${complexId}`;
 
   const meta = {

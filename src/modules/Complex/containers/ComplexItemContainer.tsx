@@ -32,11 +32,7 @@ export const ComplexItemContainer = ({
     null,
   );
 
-  console.log(label);
-
   const hasColono = label.includes("40+");
-
-  console.log(hasColono);
 
   useEffect(() => {
     if (!width) return;

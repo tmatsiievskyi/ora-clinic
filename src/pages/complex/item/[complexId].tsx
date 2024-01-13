@@ -10,6 +10,10 @@ import { IComplexProps } from "@/global/interfaces";
 import { getAllComplexes, getComplexById } from "@/global/api/complex-api";
 import { ComplexItemContainer } from "@/modules/Complex/containers";
 import { defaultMetaProps } from "@/components/Meta/Meta";
+import {
+  complexfamilyDoctorPriceRules,
+  complexPriceRules,
+} from "@/global/utils";
 
 const ComplexItem: NextPage<IComplexProps> = ({ complex }) => {
   return (
@@ -54,6 +58,7 @@ export const getStaticProps: GetStaticProps<IComplexProps> = async (
   }
 
   const reqForComplex = await getComplexById(complexId);
+
   const { data: complex } = reqForComplex;
 
   if (!complex) {
@@ -61,6 +66,67 @@ export const getStaticProps: GetStaticProps<IComplexProps> = async (
       notFound: true,
     };
   }
+
+  const analysesPrice = complex.analyses.reduce((acc, cur) => {
+    return acc + cur.price;
+  }, 0);
+
+  const analysesPriceFamDoc = complex.analyses.reduce((acc, cur) => {
+    if (
+      complexfamilyDoctorPriceRules.analysesToExclude.includes(
+        cur._id.toHexString(),
+      )
+    ) {
+      return acc;
+    }
+    return acc + cur.price;
+  }, 0);
+
+  // Examination
+  const examinationPrice =
+    complex.examination?.reduce((acc, cur) => {
+      if (complexPriceRules.examToExclude.includes(cur._id.toHexString())) {
+        return acc;
+      }
+      return acc + cur.price;
+    }, 0) * 0.9;
+
+  const examinationPriceFamDoc =
+    complex.examination?.reduce((acc, cur) => {
+      if (complexPriceRules.examToExclude.includes(cur._id.toHexString())) {
+        return acc;
+      }
+      return acc + cur.price;
+    }, 0) * 0.8;
+
+  //Consult
+  const consultPrice =
+    complex.consultations?.reduce((acc, cur) => {
+      return acc + cur.price;
+    }, 0) * 0.9;
+
+  const consultPriceFamDoc =
+    complex.consultations.reduce((acc, cur) => {
+      if (
+        complexfamilyDoctorPriceRules.consultationsToExclude.includes(
+          cur._id.toHexString(),
+        )
+      ) {
+        return acc;
+      }
+      return acc + cur.price;
+    }, 0) * 0.8;
+
+  const modifiedPrice = analysesPrice + examinationPrice + consultPrice;
+
+  const modifiedFamDocPrice =
+    analysesPriceFamDoc + examinationPriceFamDoc + consultPriceFamDoc;
+
+  const updatedCompex = {
+    ...JSON.parse(JSON.stringify(complex)),
+    modifiedPrice,
+    modifiedFamDocPrice,
+  };
 
   const ogUrl = `https://oramedcentr.com.ua/complex/item/${complexId}`;
 
@@ -77,7 +143,7 @@ export const getStaticProps: GetStaticProps<IComplexProps> = async (
     props: {
       ...(await serverSideTranslations(locale ?? "uk-UA", ["common"])),
       meta,
-      complex: complex ? JSON.parse(JSON.stringify(complex)) : null,
+      complex: updatedCompex ? JSON.parse(JSON.stringify(updatedCompex)) : null,
     },
   };
 };

@@ -10,6 +10,7 @@ export const getAllComplexes = async (): Promise<
 > => {
   try {
     await dbConnect();
+
     const complexes = await Complex.find({}).sort({ index: 1 });
     return {
       data: complexes,

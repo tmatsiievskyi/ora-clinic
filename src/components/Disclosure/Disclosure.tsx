@@ -100,6 +100,11 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
                             className="font-comfortaa break-words"
                           >
                             {t(`${label}`)}
+                            {label ===
+                              "subService.examination.label.colonoscopy" ||
+                            label === "subService.examination.label.gastroscopy"
+                              ? "*"
+                              : ""}
                           </m.span>
                           {showPrice && (
                             <m.span

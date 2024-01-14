@@ -102,7 +102,7 @@ export const ComplexItemContainer = ({
                           items={examination}
                           group="subService"
                           defaultOpen={isOpenDisclosure}
-                          showPrice={true}
+                          showPrice={false}
                           listItemClassNames={`grid gap-0 py-1 text-sm text-gray-500 font-comfortaa border-b-[1px] border-lightShade px-2 grid-cols-4 [&>*:nth-child(1)]:col-span-3 [&>*:nth-child(2)]:col-span-1 [&>*:nth-child(2)]:text-right [&>*:nth-child(1)]:flex items-center`}
                           buttonClassNames={`${styles.gradientR} text-light px-4 py-2 text-left text-sm font-comfortaa`}
                           showAdditionalText={hasColono}
@@ -120,7 +120,7 @@ export const ComplexItemContainer = ({
                         items={consultations}
                         group="subService"
                         defaultOpen={isOpenDisclosure}
-                        showPrice={true}
+                        showPrice={false}
                         listItemClassNames={`grid gap-0 py-1 text-sm text-gray-500 font-comfortaa border-b-[1px] border-lightShade px-2 grid-cols-4 [&>*:nth-child(1)]:col-span-3 [&>*:nth-child(2)]:col-span-1 [&>*:nth-child(2)]:text-right [&>*:nth-child(1)]:flex items-center`}
                         buttonClassNames={`${styles.gradientR} text-light px-4 py-2 text-left text-sm font-comfortaa`}
                       />

@@ -45,10 +45,10 @@ export const SubServiceContainer = ({
           onSubmit={(e) => e.preventDefault()}
         >
           <div className="flex-1 min-w-0">
-            <label htmlFor="search" className="sr-only">
+            {/* <label htmlFor="search" className="sr-only">
               Search
-            </label>
-            <div className="relative rounded-lg  ">
+            </label> */}
+            {/* <div className="relative rounded-lg  ">
               <div className="absolute inset-y-0 left-0 pl-0 flex items-center pointer-events-none">
                 <SearchIcon className="h-8 w-8 text-slate-300" />
               </div>
@@ -61,7 +61,7 @@ export const SubServiceContainer = ({
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
-            </div>
+            </div> */}
           </div>
         </form>
         {/* <Table /> */}

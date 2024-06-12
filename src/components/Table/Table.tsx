@@ -26,6 +26,7 @@ export const Table = ({ items, headerItems }: ITableProps) => {
       </div>
       <div className={`col-span-4`}>
         {items.map((item) => {
+          console.log(item._id);
           return (
             <div key={item._id} className="mb-1 rounded-lg">
               <span></span>
@@ -49,7 +50,8 @@ export const Table = ({ items, headerItems }: ITableProps) => {
                     />
 
                     <span className="text-xl">
-                      {t(`services.title.${item._id}`)}
+                      {item.localizedName}
+                      {/* {t(`services.title.${item._id}`)} */}
                     </span>
                   </span>
                 }

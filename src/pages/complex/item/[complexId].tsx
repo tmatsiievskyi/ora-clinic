@@ -128,6 +128,18 @@ export const getStaticProps: GetStaticProps<IComplexProps> = async (
     modifiedFamDocPrice,
   };
 
+  // console.log({
+  //   analysesPrice,
+  //   examinationPrice,
+  //   consultPrice,
+  //   sum: analysesPrice + examinationPrice + consultPrice,
+  //   "": "-------",
+  //   analysesPriceFamDoc,
+  //   examinationPriceFamDoc,
+  //   consultPriceFamDoc,
+  //   sum2: analysesPriceFamDoc + examinationPriceFamDoc + consultPriceFamDoc,
+  // });
+
   const ogUrl = `https://oramedcentr.com.ua/complex/item/${complexId}`;
 
   const meta = {

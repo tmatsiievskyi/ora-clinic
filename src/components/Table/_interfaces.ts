@@ -5,5 +5,6 @@ export interface ITableProps {
 
 type data = {
   _id: string;
+  localizedName: string;
   data: any[];
 }[];

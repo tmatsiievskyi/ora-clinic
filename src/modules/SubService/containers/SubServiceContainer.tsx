@@ -27,6 +27,15 @@ export const SubServiceContainer = ({
     },
   );
 
+  const translatedGroupedSubServices = groupedSubServices
+    ?.map((item) => {
+      return {
+        ...item,
+        localizedName: t(`services.title.${item._id}`),
+      };
+    })
+    .sort((a, b) => a.localizedName.localeCompare(b.localizedName));
+
   return (
     <div className="h-full overflow-scroll no-scrollbar">
       <div className="pt-2 px-2">
@@ -65,12 +74,15 @@ export const SubServiceContainer = ({
           </div>
         </form>
         {/* <Table /> */}
-        {query && searchedSubSer && searchedSubSer.length > 0 ? (
+        {/* {query && searchedSubSer && searchedSubSer.length > 0 ? (
           <Table items={searchedSubSer} headerItems={tabs} />
         ) : (
-          groupedSubServices && (
-            <Table items={groupedSubServices} headerItems={tabs} />
+          translatedGroupedSubServices && (
+            <Table items={translatedGroupedSubServices} headerItems={tabs} />
           )
+        )} */}
+        {translatedGroupedSubServices && (
+          <Table items={translatedGroupedSubServices} headerItems={tabs} />
         )}
       </m.div>
     </div>

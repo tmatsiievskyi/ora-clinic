@@ -8,6 +8,8 @@ import {
   Variants,
 } from "framer-motion";
 import { IDisclosureProps } from "./_interfaces";
+import { dollarPrice } from "@/global/data/dollarPrice";
+import { twoPrices } from "@/global/data/startEndPrice";
 
 export const CustomDisclosure: FC<IDisclosureProps> = ({
   buttonText,
@@ -117,9 +119,17 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
                               }}
                             >
                               <span className="text-primary font-oswald text-xl">
-                                {price}
+                                {twoPrices[_id]
+                                  ? `${twoPrices[_id].startPrice}-${price}`
+                                  : price}
                               </span>{" "}
-                              <span>{t("common.currency.grn")}</span>
+                              <span>
+                                {t(
+                                  `common.currency.${
+                                    dollarPrice.includes(_id) ? "usd" : "grn"
+                                  }`,
+                                )}
+                              </span>
                             </m.span>
                           )}
                         </m.li>

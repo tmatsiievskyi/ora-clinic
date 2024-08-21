@@ -26,7 +26,6 @@ export const Table = ({ items, headerItems }: ITableProps) => {
       </div>
       <div className={`col-span-4`}>
         {items.map((item) => {
-          console.log(item._id);
           return (
             <div key={item._id} className="mb-1 rounded-lg">
               <span></span>

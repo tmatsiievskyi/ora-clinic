@@ -56,8 +56,11 @@ export const Contacts = () => {
             <li className="mb-2 md:mb-1">
               <a href="tel:+380981342477">+380 (98) 134-24-77</a>
             </li>
-            <li className="">
+            <li className="mb-2 md:mb-1">
               <a href="tel:+380969454085">+380 (96) 945-40-85</a>
+            </li>
+            <li className="">
+              <a href="tel:+380739417198">+380 (73) 941-71-98</a>
             </li>
             {/* <li>
             <a href="mailto:oramedcentrdr@gmail.com">oramedcentrdr@gmail.com</a>

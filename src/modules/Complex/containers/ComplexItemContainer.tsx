@@ -24,6 +24,8 @@ export const ComplexItemContainer = ({
     examination,
     consultations,
     modifiedFamDocPrice,
+    priceFamilyDoctor,
+    price,
     modifiedPrice,
   } = complex || {};
   const { t } = useTranslation();
@@ -135,7 +137,7 @@ export const ComplexItemContainer = ({
                   {t("complex.priceFamilyDoctor")}
                 </span>{" "}
                 <span className="text-lg text-primary">
-                  {modifiedFamDocPrice}{" "}
+                  {priceFamilyDoctor}{" "}
                 </span>
                 <span className="text-base text-primary">
                   {t("common.currency.grn")}
@@ -143,7 +145,7 @@ export const ComplexItemContainer = ({
               </p>
               <p className="font-oswald text-2xl text-right text-gray-700">
                 <span className="text-xl">{t("common.item.price")}</span>{" "}
-                <span>{modifiedPrice}</span>
+                <span>{price}</span>
                 <span>{t("common.currency.grn")}</span>
               </p>
             </div>

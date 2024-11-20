@@ -25,6 +25,8 @@
   "common.item.price": "Ціна:",
   "common.currency.grn": "грн.",
   "common.currency.usd": "$",
+  "common.currency.euro": "€",
+
   "common.description": "Опис",
   "common.employees.inOra": "Лікарі у медичному центрі",
   "common.employees.inOraShort": "Лікарі",

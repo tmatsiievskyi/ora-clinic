@@ -1,0 +1,16 @@
+export const euroPrice = [
+  "666615904c6fc489c2abff37",
+  "666615ac4c6fc489c2abff39",
+  "666615bf4c6fc489c2abff3b",
+  "666615fe4c6fc489c2abff3d",
+  "6666161b4c6fc489c2abff3f",
+  "666616304c6fc489c2abff41",
+  "66661b2a4c6fc489c2abff6b",
+  "66661db14c6fc489c2abff87",
+  "66661ddf4c6fc489c2abff8b",
+  "66661d134c6fc489c2abff7f",
+  "66661ed34c6fc489c2abff95",
+  "66661efb4c6fc489c2abff97",
+  "66661eb44c6fc489c2abff93",
+  "66661ea34c6fc489c2abff91",
+];

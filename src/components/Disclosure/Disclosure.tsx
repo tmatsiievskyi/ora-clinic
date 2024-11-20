@@ -10,6 +10,7 @@ import {
 import { IDisclosureProps } from "./_interfaces";
 import { dollarPrice } from "@/global/data/dollarPrice";
 import { twoPrices } from "@/global/data/startEndPrice";
+import { euroPrice } from "@/global/data/euroPrice";
 
 export const CustomDisclosure: FC<IDisclosureProps> = ({
   buttonText,
@@ -126,7 +127,11 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
                               <span>
                                 {t(
                                   `common.currency.${
-                                    dollarPrice.includes(_id) ? "usd" : "grn"
+                                    dollarPrice.includes(_id)
+                                      ? "usd"
+                                      : euroPrice.includes(_id)
+                                      ? "euro"
+                                      : "grn"
                                   }`,
                                 )}
                               </span>

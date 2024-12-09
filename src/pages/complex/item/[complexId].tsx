@@ -146,19 +146,17 @@ export const getStaticProps: GetStaticProps<IComplexProps> = async (
 
   console.log(complex.label);
 
-  const {
-    title: seoTitle = "Послуги в МЦ ОРА",
-    description: seoDescription = "Послуги в МЦ ОРА",
-  } =
-    translations._nextI18Next?.initialI18nStore[lng].common.seo[
-      complex.label
-    ] || {};
+  const locData =
+    translations._nextI18Next?.initialI18nStore[lng].common.seo[complex.label];
 
   const meta = {
     ...defaultMetaProps,
-    title: seoTitle ?? 'Комплексні "Комплексні Обстеження" в МЦ ОРА',
-    description:
-      seoDescription ?? 'Комплексні "Комплексні Обстеження" в МЦ ОРА',
+    title: locData?.title
+      ? locData.title
+      : 'Комплексні "Комплексні Обстеження" в МЦ ОРА',
+    description: locData?.description
+      ? locData.description
+      : 'Комплексні "Комплексні Обстеження" в МЦ ОРА',
     ogImage: `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
     ogUrl,
   };

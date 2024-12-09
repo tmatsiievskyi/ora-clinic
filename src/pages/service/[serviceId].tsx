@@ -69,18 +69,15 @@ export const getStaticProps: GetStaticProps<IServiceProps> = async (
 
   const ogUrl = `https://oramedcentr.com.ua/service/${serviceId}`;
 
-  const {
-    title: seoTitle = "Послуги в МЦ ОРА",
-    description: seoDescription = "Послуги в МЦ ОРА",
-  } =
-    translations._nextI18Next?.initialI18nStore[lng].common.seo[
-      service.label
-    ] || {};
+  const locData =
+    translations._nextI18Next?.initialI18nStore[lng].common.seo[service.label];
 
   const meta = {
     ...defaultMetaProps,
-    title: seoTitle ?? "Послуги в МЦ ОРА",
-    description: seoDescription ?? "Послуги в МЦ ОРА",
+    title: locData?.title ? locData.title : "Послуги в МЦ ОРА",
+    description: locData?.description
+      ? locData.description
+      : "Послуги в МЦ ОРА",
     ogImage: `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
     ogUrl,
   };

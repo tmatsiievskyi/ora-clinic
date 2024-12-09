@@ -45,6 +45,9 @@ export const getStaticProps: GetStaticProps<IServiceProps> = async (
   context: GetStaticPropsContext,
 ) => {
   const { locale, params } = context;
+  const lng = locale ?? "uk-UA";
+  const translations = await serverSideTranslations(lng, ["common"]);
+
   const { serviceId } = params || {};
 
   if (!serviceId) {
@@ -66,9 +69,18 @@ export const getStaticProps: GetStaticProps<IServiceProps> = async (
 
   const ogUrl = `https://oramedcentr.com.ua/service/${serviceId}`;
 
+  const {
+    title: seoTitle = "Послуги в МЦ ОРА",
+    description: seoDescription = "Послуги в МЦ ОРА",
+  } =
+    translations._nextI18Next?.initialI18nStore[lng].common.seo[
+      service.label
+    ] || {};
+
   const meta = {
     ...defaultMetaProps,
-    title: `ОРА - Послуги - ${service.label.split(".")[2] || "Послуги"}`,
+    title: seoTitle ?? "Послуги в МЦ ОРА",
+    description: seoDescription ?? "Послуги в МЦ ОРА",
     ogImage: `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
     ogUrl,
   };

@@ -28,19 +28,19 @@ export const getStaticProps: GetStaticProps<IServiceProps> = async ({
     };
   }
 
-  const ogUrl = "https://oramedcentr.com.ua/service";
+  // const ogUrl = "https://oramedcentr.com.ua/service";
 
-  const meta = {
-    ...defaultMetaProps,
-    title: "ОРА - Послуги",
-    ogImage: `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
-    ogUrl,
-  };
+  // const meta = {
+  //   ...defaultMetaProps,
+  //   title: "ОРА - Послуги",
+  //   ogImage: `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
+  //   ogUrl,
+  // };
 
   return {
     props: {
       ...(await serverSideTranslations(locale ?? "uk-UA", ["common"])),
-      meta,
+      // meta,
       services: services ? JSON.parse(JSON.stringify(services)) : null,
       service: service ? JSON.parse(JSON.stringify(service)) : null,
     },

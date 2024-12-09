@@ -5,7 +5,6 @@ import type {
   GetStaticPathsContext,
 } from "next";
 import { PageWrapper } from "@/components/PageWrapper";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { IComplexProps } from "@/global/interfaces";
 import { getAllComplexes, getComplexById } from "@/global/api/complex-api";
 import { ComplexItemContainer } from "@/modules/Complex/containers";
@@ -14,6 +13,7 @@ import {
   complexfamilyDoctorPriceRules,
   complexPriceRules,
 } from "@/global/utils";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const ComplexItem: NextPage<IComplexProps> = ({ complex }) => {
   return (
@@ -49,6 +49,8 @@ export const getStaticProps: GetStaticProps<IComplexProps> = async (
   context: GetStaticPropsContext,
 ) => {
   const { locale, params } = context;
+  const lng = locale ?? "uk-UA";
+  const translations = await serverSideTranslations(lng, ["common"]);
   const { complexId } = params || {};
 
   if (!complexId) {
@@ -142,11 +144,21 @@ export const getStaticProps: GetStaticProps<IComplexProps> = async (
 
   const ogUrl = `https://oramedcentr.com.ua/complex/item/${complexId}`;
 
+  console.log(complex.label);
+
+  const {
+    title: seoTitle = "Послуги в МЦ ОРА",
+    description: seoDescription = "Послуги в МЦ ОРА",
+  } =
+    translations._nextI18Next?.initialI18nStore[lng].common.seo[
+      complex.label
+    ] || {};
+
   const meta = {
     ...defaultMetaProps,
-    title: `ОРА - Комплексні - ${
-      complex.label.split(".")[1] || "Комплексні Обстеження"
-    }`,
+    title: seoTitle ?? 'Комплексні "Комплексні Обстеження" в МЦ ОРА',
+    description:
+      seoDescription ?? 'Комплексні "Комплексні Обстеження" в МЦ ОРА',
     ogImage: `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
     ogUrl,
   };

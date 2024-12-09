@@ -144,7 +144,7 @@ export const getStaticProps: GetStaticProps<IComplexProps> = async (
 
   const ogUrl = `https://oramedcentr.com.ua/complex/item/${complexId}`;
 
-  console.log(complex.label);
+  console.log(complex.label, lng);
 
   const locData =
     translations._nextI18Next?.initialI18nStore[lng].common.seo[complex.label];

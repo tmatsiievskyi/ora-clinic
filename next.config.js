@@ -7,6 +7,14 @@ const nextConfig = {
     ...i18n,
     localeDetection: false,
   },
+  async rewrites() {
+    return [
+      {
+        source: "/sitemap.xml",
+        destination: "/api/sitemap",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

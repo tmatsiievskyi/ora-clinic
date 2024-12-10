@@ -63,6 +63,10 @@ export default function Meta({ props }: { props: MetaProps }) {
       <meta name="twitter:title" content={props.title} />
       <meta name="twitter:description" content={props.description} />
       <meta name="twitter:image" content={props.ogImage} />
+      <meta
+        name="google-site-verification"
+        content="KkinS6gMqW_4dSlo7UislSXWF6HG8d9QoNZgpgEnjtY"
+      />
     </Head>
   );
 }

@@ -69,8 +69,8 @@ export const getStaticProps: GetStaticProps<IServiceProps> = async (
 
   const ogUrl = `https://oramedcentr.com.ua/service/${serviceId}`;
 
-  const locData =
-    translations._nextI18Next?.initialI18nStore[lng].common.seo[service.label];
+  const locData = await translations._nextI18Next?.initialI18nStore[lng].common
+    .seo[service.label];
 
   const meta = {
     ...defaultMetaProps,

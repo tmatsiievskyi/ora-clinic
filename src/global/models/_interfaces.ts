@@ -1,7 +1,7 @@
-import { Types } from "mongoose";
+import { Types, Schema } from "mongoose";
 
 interface MongoResult {
-  _id: Types.ObjectId;
+  _id: string;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -50,7 +50,9 @@ export interface IServiceModel extends MongoResult {
   shortDescription: string;
   imgUrl: string;
   employee?: Types.ObjectId[] | IEmployeeModel[];
-  subService?: Types.ObjectId[];
+  subServices?: Schema.Types.ObjectId[] | ISubServiceModel[];
+  mainItems?: string[];
+  name: string;
   index: number;
 }
 
@@ -65,9 +67,14 @@ export interface ISubServiceModel extends MongoResult {
   label: string;
   category: string;
   subCategory?: string;
+  service?: Schema.Types.ObjectId[] | IServiceModel[];
+  serviceName: string;
   outsource: boolean;
   description?: string;
   price: number;
+  pricePrefix?: string;
+  priceSuffix?: string;
+  archived?: boolean;
   searchTags?: string[];
   index: number;
 }
@@ -89,4 +96,10 @@ export interface IComplexModel extends MongoResult {
   // examination: Types.ObjectId[] | ISubServiceModel[];
   // consultations: Types.ObjectId[];
   index: number;
+}
+
+export interface ILocalModel extends MongoResult {
+  lng: string;
+  key: string;
+  value: string;
 }

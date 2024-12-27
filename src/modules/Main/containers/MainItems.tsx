@@ -34,15 +34,15 @@ export const MainItems = ({
   };
 
   return (
-    <div className="min-h-full  mt-2 rounded-lg grid grid-rows-6 grid-cols-10 gap-2 [&>div]:rounded-lg ">
-      <div className="col-span-10 md:col-span-5 lg:col-span-7 row-span-1">
+    <div className="md:max-h-[850px]  mt-2 rounded-lg grid grid-rows-6 grid-cols-10 gap-2 [&>div]:rounded-lg ">
+      <div className="col-span-10 md:col-span-5 lg:col-span-7 row-span-1 md:row-span-2">
         <CompWithFramer
           delay={0.5}
           duration={0.6}
           from="left"
           className="bg-light h-full w-full rounded-lg p-2"
         >
-          <div className="flex flex-col h-full justify-between">
+          <div className="flex flex-col h-full justify-center">
             <p className="text-dark font-comfortaa text-4xl xl:text-7xl mb-2">
               {t("common.item.title.one")}
             </p>
@@ -53,7 +53,7 @@ export const MainItems = ({
         </CompWithFramer>
       </div>
 
-      <div className="min-h-[600px] bg-lightShade my-0 md:my-0 col-span-10 md:col-span-5 lg:col-span-3 row-span-5 md:row-span-6 relative rounded-lg overflow-hidden">
+      <div className="min-h-[600px] md:min-h-[400px]  bg-lightShade my-0 md:my-0 col-span-10 md:col-span-5 lg:col-span-3 row-span-5 md:row-span-6 relative rounded-lg overflow-hidden">
         {activeEmployee && (
           <CompWithFramer
             delay={0.5}
@@ -129,7 +129,7 @@ export const MainItems = ({
           </CompWithFramer>
         )}
       </div>
-      <div className="bg-lightShade col-span-10 md:col-span-5 lg:col-span-7 row-span-1 md:row-span-4">
+      <div className="bg-lightShade col-span-10 md:col-span-5 lg:col-span-7 row-span-1 md:row-span-3">
         {services && (
           <CompWithFramer
             delay={0.5}
@@ -141,26 +141,27 @@ export const MainItems = ({
               {services?.map((service) => {
                 return (
                   <div
-                    className="h-full pb-2 px-2 md:mt-0 min-h-[400px] md:min-h-full w-[300px] md:w-[350px] lg:w-[400px] cursor-grab mr-2 relative z-40 rounded-lg flex items-end"
+                    className="pb-2 px-2 md:mt-0 h-[200px] md:min-h-full w-[300px] md:w-[350px] lg:w-[400px] cursor-grab mr-2 relative z-40 rounded-lg flex items-end"
                     key={service._id.toString()}
                   >
-                    <div className="flex p-2 pt-4 z-30 overflow-hidden w-full bg-dark/30 rounded-lg font-comfortaa leading-7  text-3xl text-light">
+                    <div className="flex h-full p-2 pt-4 z-30 overflow-hidden w-full shadow-md rounded-lg font-comfortaa">
                       <Link
                         key={service._id.toString()}
                         href={`/service/${service._id}`}
-                        className={`h-full ${styles.linkHover}`}
+                        className={`h-full w-full pointer-events-none  flex flex-col justify-center items-center`}
                       >
-                        <span>{t(service.label)}</span>
+                        <Image
+                          width={80}
+                          height={80}
+                          src={`/img/svg/${service.name}.svg`}
+                          alt="Service img"
+                          className=" pointer-events-none z-20"
+                        />
+                        <span className="text-2xl  xl:text-3xl font-comfortaa text-dark text-center break-words">
+                          {t(service.label)}
+                        </span>
                       </Link>
                     </div>
-
-                    <Image
-                      width={1000}
-                      height={1000}
-                      src={`/img${service.imgUrl}.jpg`}
-                      alt="Service img"
-                      className="w-full h-full object-cover rounded-lg pointer-events-none absolute top-0 z-20 left-0"
-                    />
                   </div>
                 );
               })}
@@ -168,6 +169,7 @@ export const MainItems = ({
           </CompWithFramer>
         )}
       </div>
+
       <div className="bg-lightShade md:mt-0  col-span-10 md:col-span-5 lg:col-span-7 row-span-1 ">
         <Link href="/service/6475fe5326bf43d0c8a70f64">
           <CompWithFramer
@@ -176,7 +178,7 @@ export const MainItems = ({
             from="left"
             className="h-full w-full rounded-lg bg-light p-2"
           >
-            <div className="h-full flex  items-center justify-center flex-col text-center text-dark">
+            <div className="h-full flex items-center justify-center flex-col text-center text-dark">
               <p className="text-2xl  xl:text-3xl font-comfortaa">
                 {t("common.service.inOra")}
               </p>

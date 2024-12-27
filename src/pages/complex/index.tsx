@@ -32,7 +32,7 @@ export const getStaticProps: GetStaticProps<IComplexesProps> = async ({
 
   const meta = {
     ...defaultMetaProps,
-    title: "ОРА - Комплексні обстеження",
+    title: 'МЦ "ОРА" - Комплексні обстеження',
     ogImage: `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
     ogUrl,
   };

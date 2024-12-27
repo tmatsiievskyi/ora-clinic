@@ -5,3 +5,5 @@ export interface ISubServiceContainerProps {
   subService: ISubServiceModel | null;
   groupedSubServices: IGroupedSubService[] | null;
 }
+
+export type TSortDirection = "asc" | "desc" | null;

@@ -7,7 +7,8 @@ const ServiceSchema = new Schema<IServiceModel>({
   shortDescription: { type: String },
   imgUrl: { type: String, required: true },
   employee: [{ type: Types.ObjectId, ref: "Employee", required: false }],
-  subService: [{ type: Types.ObjectId, ref: "SubService", required: false }],
+  subServices: [{ type: Types.ObjectId, ref: "SubService", required: false }],
+  mainItems: { type: [String], required: false },
   index: { type: Number, required: true },
 });
 

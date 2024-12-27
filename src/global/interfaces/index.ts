@@ -1,6 +1,6 @@
 import {
+  IFindAllSubservicesApiResp,
   IGroupedEmployees,
-  IGroupedSubService,
 } from "@/global/api/_interfaces";
 import {
   IComplexModel,
@@ -35,9 +35,4 @@ export interface IComplexProps {
 export interface IServiceProps {
   services: IServiceModel[] | null;
   service: IServiceModel | null;
-}
-
-export interface ISubServiceProps {
-  subService: ISubServiceModel | null;
-  groupedSubServices: IGroupedSubService[] | null;
 }

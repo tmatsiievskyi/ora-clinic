@@ -1,6 +1,7 @@
 import dbConnect from "./dbConnect";
 import Service from "../models/service-model";
 import Employee from "../models/employee-model";
+import SubService from "../models/subservice-model";
 import { IResp } from "./_interfaces";
 import { getErrorMessage } from "../utils";
 import { IServiceModel } from "../models/_interfaces";
@@ -30,10 +31,10 @@ export const getServiceById = async (
   try {
     await dbConnect();
 
-    const service = await Service.findById(id).populate({
-      path: "employee",
-      model: Employee,
-    });
+    const service = await Service.findById(id).populate([
+      { path: "employee" },
+      { path: "subServices", model: SubService },
+    ]);
 
     return {
       data: service,

@@ -27,8 +27,8 @@ export const navItems: INavItem[] = [
     href: "/price",
   },
 
-  {
-    title: "discount",
-    href: "/discount",
-  },
+  // {
+  //   title: "discount",
+  //   href: "/discount",
+  // },
 ];

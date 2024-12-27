@@ -1,4 +1,4 @@
 {
-  "buildCommand": "cp .npmrc.template .npmrc && yarn run build",
-  "installCommand": "cp .npmrc.template .npmrc && yarn install"
+  "buildCommand": "GITHUB_TOKEN=$GITHUB_TOKEN npm run build",
+  "installCommand": "GITHUB_TOKEN=$GITHUB_TOKEN npm install"
 }

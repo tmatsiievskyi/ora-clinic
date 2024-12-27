@@ -1,0 +1,4 @@
+{
+  "buildCommand": "cp .npmrc.template .npmrc && yarn run build",
+  "installCommand": "cp .npmrc.template .npmrc && yarn install"
+}

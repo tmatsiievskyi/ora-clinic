@@ -20,9 +20,9 @@ export const EmployeeComponent = ({
         src={imgUrl}
         alt="Doctor Image"
         priority
-        className={`w-[auto] "mx-2" h-[60px] object-cover object-top bg-gradient-to-br from-grey to-lightShade to-80% rounded-full`}
+        className={`w-[100px] "mx-2" h-[100px] object-cover object-top bg-gradient-to-br from-grey to-lightShade to-80% rounded-full`}
       />
-      <span className="font-comfortaa text-dark min-w-[200px]">
+      <span className="font-comfortaa text-lg text-dark min-w-[200px]">
         <p>{t(`${lastName}`)}</p>
         <p>
           {t(`${firstName}`)} {t(`${surname}`)}

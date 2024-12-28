@@ -11,7 +11,7 @@ module.exports = {
         primaryLight: "#d8b4fe",
         light: "#ffffff",
         lightShade: "#F4F6FF",
-        dark: "#475569",
+        dark: "rgb(71 85 105)",
         semiDarkTr: "rgba(38, 41, 47, 0.2)",
         grey: "#556669",
       },

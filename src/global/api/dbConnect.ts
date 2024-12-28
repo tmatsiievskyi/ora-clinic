@@ -1,6 +1,9 @@
 import mongoose, { Connection } from "mongoose";
 
 const MONGO_URI = process.env.MONGO_URI;
+// const MONGO_URI = process.env.LOCAL_MONGO_URI;
+
+console.log(MONGO_URI);
 
 mongoose.set("strictQuery", false);
 
@@ -26,6 +29,8 @@ async function dbConnect() {
   if (!cached.promise) {
     const opts = {
       bufferCommands: false,
+      // replicaSet: "rs0", //TODO: remove
+      dbName: "ORA",
     };
 
     cached.promise = mongoose.connect(MONGO_URI, opts).then((mongoose) => {

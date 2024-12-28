@@ -144,17 +144,16 @@ export const getStaticProps: GetStaticProps<IComplexProps> = async (
 
   const ogUrl = `https://oramedcentr.com.ua/complex/item/${complexId}`;
 
-  const locData = await translations._nextI18Next?.initialI18nStore[lng].common
-    .seo[complex.label];
+  const locDataTitle = await translations._nextI18Next?.initialI18nStore[lng]
+    .common[`seo.${complex.label}.title`];
+  const locDataDescription = await translations._nextI18Next?.initialI18nStore[
+    lng
+  ].common[`seo.${complex.label}.description`];
 
   const meta = {
     ...defaultMetaProps,
-    title: locData?.title
-      ? locData.title
-      : 'Комплексні "Комплексні Обстеження" в МЦ ОРА',
-    description: locData?.description
-      ? locData.description
-      : 'Комплексні "Комплексні Обстеження" в МЦ ОРА',
+    title: locDataTitle || '"Комплексні Обстеження" в МЦ ОРА',
+    description: locDataDescription || '"Комплексні Обстеження" в МЦ ОРА',
     ogImage: `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
     ogUrl,
   };

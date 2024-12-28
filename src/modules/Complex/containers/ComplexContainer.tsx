@@ -1,11 +1,9 @@
 import { IComplexContainerProps } from "./_interfaces";
 import { useTranslation } from "next-i18next";
-import { motion as m } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { PageTitle } from "@/components/PageTitle";
-import { LinkWithActive } from "@/UI/Link";
 
 export const ComplexContainer = ({
   groups,
@@ -17,47 +15,48 @@ export const ComplexContainer = ({
   } = useRouter();
 
   return (
-    <div className="h-full overflow-scroll no-scrollbar">
-      <div className="pt-2 px-2">
-        <PageTitle title="common.complex" className="w-[280px] md:w-[340px] " />
+    <div className="h-full overflow-scroll no-scrollbar bg-lightShade">
+      <div className="px-2 bg-light mb-2 rounded-lg h-[72px] flex items-center">
+        <PageTitle title="common.service" className="w-[280px] md:w-[340px] " />
       </div>
-      <div className="flex flex-col md:flex-row mt-2 px-2">
-        <m.div
-          initial={{ x: "100%", opacity: "0" }}
-          whileInView={{ x: "0%", opacity: "1" }}
-          viewport={{ once: true }}
-          transition={{ duration: "0.75", ease: "easeOut" }}
-          className="flex flex-col lg:flex-row max-w-[1500px] w-full ml-auto mr-auto"
-        >
-          <div className="px-2 md:px-0 mb-2 min-w-[150px]">
-            <ul className="mr-0 md:mr-4 grid grid-cols-3 lg:grid-cols-1">
-              <li
-                className={`text-dark mr-2 md:mr-0 font-comfortaa row-span-2`}
+      <div className="flex flex-col md:flex-row mt-2">
+        <div className="flex flex-col lg:flex-row  w-full">
+          <div className="lg:max-w-[300px] min-w-[250px] text-dark rounded-lg mb-2 lg:mb-0 lg:mr-2  bg-light">
+            <ul className=" grid grid-cols-3 lg:grid-cols-1 items-center justify-center">
+              <Link
+                href={"/complex"}
+                className="text-xl h-full md:h-auto lg:mb-1"
               >
-                <LinkWithActive
-                  href={"/complex"}
-                  i18nKey={"complex.category.all"}
-                  active={!group ? true : false}
-                  className="text-base"
-                />
-              </li>
+                <li
+                  className={`text-dark h-full flex items-center  justify-center px-1 md:px-3 py-1 text-center md:text-left md:mr-0 font-comfortaa col-span-1 ${
+                    !group ? "active" : ""
+                  } [&.active]:bg-primary [&.active]:text-white rounded-lg ease-in duration-300 hover:bg-primary/70 hover:text-white`}
+                >
+                  <span>{t("complex.category.all")}</span>
+                </li>
+              </Link>
               {groups &&
                 groups.map((item) => {
                   return (
-                    <li key={item}>
-                      <LinkWithActive
-                        href={`/complex/${item}`}
-                        i18nKey={`complex.category.${item}`}
-                        active={group === item ? true : false}
-                        className="text-base"
-                      />
-                    </li>
+                    <Link
+                      href={`/complex/${item}`}
+                      key={item}
+                      className="text-xl h-full md:h-auto  mb-1 md:px-0 ml-1 md:ml-0"
+                    >
+                      <li
+                        className={`text-center h-full flex items-center  justify-center text-dark md:text-left px-6 py-1 ${
+                          group === item ? "active" : ""
+                        } [&.active]:bg-primary [&.active]:text-white rounded-lg ease-in duration-300 hover:bg-primary/70 hover:text-white`}
+                      >
+                        <span>{t(`complex.category.${item}`)}</span>
+                      </li>
+                    </Link>
                   );
                 })}
             </ul>
           </div>
-          <div className="">
-            <div className=" grid gap-2 md:gap-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:lg:grid-cols-4">
+          <div>
+            <div className="bg-lightShade  flex-grow rounded-lg grid gap-2 md:gap-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:lg:grid-cols-4">
               {complexes &&
                 complexes.map((complex) => {
                   const { _id, imgUrl, label } = complex;
@@ -97,7 +96,7 @@ export const ComplexContainer = ({
                 })}
             </div>
           </div>
-        </m.div>
+        </div>
       </div>
     </div>
   );

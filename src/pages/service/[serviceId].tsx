@@ -56,9 +56,9 @@ export const getStaticProps: GetStaticProps<IServiceProps> = async (
     };
   }
 
-  const reqForDiscounts = await getAllService();
+  const reqForServices = await getAllService();
   const reqForService = await getServiceById(serviceId);
-  const { data: services } = reqForDiscounts;
+  const { data: services } = reqForServices;
   const { data: service } = reqForService;
 
   if (!service || !services) {
@@ -69,15 +69,16 @@ export const getStaticProps: GetStaticProps<IServiceProps> = async (
 
   const ogUrl = `https://oramedcentr.com.ua/service/${serviceId}`;
 
-  const locData = await translations._nextI18Next?.initialI18nStore[lng].common
-    .seo[service.label];
+  const locDataTitle = await translations._nextI18Next?.initialI18nStore[lng]
+    .common[`seo.${service.label}.title`];
+  const locDataDescription = await translations._nextI18Next?.initialI18nStore[
+    lng
+  ].common[`seo.${service.label}.description`];
 
   const meta = {
     ...defaultMetaProps,
-    title: locData?.title ? locData.title : "Послуги в МЦ ОРА",
-    description: locData?.description
-      ? locData.description
-      : "Послуги в МЦ ОРА",
+    title: locDataTitle || "Послуги в МЦ ОРА",
+    description: locDataDescription || "Послуги в МЦ ОРА",
     ogImage: `https://api.microlink.io/?url=${ogUrl}&screenshot=true&meta=false&embed=screenshot.url`,
     ogUrl,
   };

@@ -26,6 +26,8 @@
   "common.currency.grn": "грн.",
   "common.currency.usd": "$",
   "common.currency.euro": "€",
+  "common.items.perPage": "К-ть послуг на сторінці",
+  "common.noData": "Дані відсутні",
 
   "common.description": "Опис",
   "common.employees.inOra": "Лікарі у медичному центрі",
@@ -42,6 +44,7 @@
   "common.table.price": "Ціна",
   "common.item.title.one": "Вже 21 рік з Вами",
   "common.item.title.two": "Найбільший медичний центр у м. Дрогобич",
+  "common.pre": "від",
 
   "lab": "Лабораторія CSD",
   "complex": "Комплексні обстеження",
@@ -386,7 +389,7 @@
   "subService.deafologist.label.impedan": "Імпедансометрія",
   "subService.deafologist.label.timpedan": "Тимпанометрія",
   "subService.deafologist.label.consulting": "Консультація",
-  "subService.deafologist.label.consultingAudiogram": "Аудіограма+імпедансометрія+консультація",
+  "subService.deafologist.label.consultingAudiogram": "Аудіограма + імпедансометрія + консультація",
   "subService.deafologist.label.selecting": "Підбір слухового апарату",
   "subService.deafologist.label.freeSelecting": "Підбір при замовленні слухового апарату",
   "subService.deafologist.label.firstSettings": "Первинне налаштування слухового апарату (до 4 тижнів)",
@@ -732,7 +735,7 @@
   "subService.dentist.label.profGigOur": "Професійна гігієна ( для наших ортодонтичних пацієнтів, кожні 3-4 міс.)",
   "subService.dentist.label.profGigRep": "Повторна професійна гігієна ( 2-ий етап)",
   "subService.dentist.label.profGigRepDeep": "Глибока професійна гігієна ( 1,5 - 2 год.)",
-  "subService.dentist.label.profGigChild": "Дитяча професійна гігієна ( молочний прикус)",
+  "subService.dentist.label.profGigChild": "Дитяча професійна гігієна",
   "subService.dentist.label.profGigChildCh": "Дитяча професійна гігієна ( змінний прикус)",
   "subService.dentist.label.minGeo": "Мінеральна герметизація ( 1 зуб)",
   "subService.dentist.label.ftor": "Фторування зубів ( 2 щелепи)",
@@ -745,17 +748,17 @@
   "subService.dentist.label.surfAn": "Поверхневе знеболення ( гель)",
   "subService.dentist.label.medicSl": "Медикаментозний сон ( до 2-х год.)",
   "subService.dentist.label.consultGame": "Консультація - гра",
-  "subService.dentist.label.profGigMilk": "Професійна гігієна (молочний прикус)",
+  "subService.dentist.label.profGigMilk": "Професійна гігієна",
   "subService.dentist.label.profGigChang": "Професійна гігієна (змінний прикус)",
   "subService.dentist.label.germMilk": "Герметизація молочного зуба",
   "subService.dentist.label.germPerm": "Герметизація постійного зуба",
   "subService.dentist.label.cof": "Кофердам ( ізоляція від біорідин)",
   "subService.dentist.label.restPlomb": "Тимчасова пломба",
   "subService.dentist.label.removePlomb": "Зняття старої пломби",
-  "subService.dentist.label.restMilk1": "Реставрація молочного зуба ( І скл.)",
-  "subService.dentist.label.restMilk2": "Реставрація молочного зуба ( ІІ скл.)",
+  "subService.dentist.label.restMilk1": "Реставрація молочного зуба",
+  "subService.dentist.label.restMilk2": "Лікування кореневих каналів молочного зуба",
   "subService.dentist.label.restMilk3": "Реставрація молочного зуба (ІІІ скл.)",
-  "subService.dentist.label.restMilk4": "Реставрація молочного зуба (ІV скл.)",
+  "subService.dentist.label.restMilk4": "Реставрація ",
   "subService.dentist.label.firstAid": "Перша допомога при гострому болі (діагностика, знеболення )",
   "subService.dentist.label.devit": "Накладання девіталізуючої пасти",
   "subService.dentist.label.endoMilk": "Ендодонтія молочного зуба (різці та ікла)",
@@ -766,9 +769,9 @@
   "subService.dentist.label.tempPb": "Тимчасова пломба",
   "subService.dentist.label.removOldPb": "Зняття старої пломби",
   "subService.dentist.label.rest1": "Реставрація зуба І скл.",
-  "subService.dentist.label.rest2": "Реставрація зуба ІІ скл.",
+  "subService.dentist.label.rest2": "Реставрація фотополімером",
   "subService.dentist.label.rest3": "Реставрація зуба ІІІ скл. (відновлення контакту)",
-  "subService.dentist.label.rest4": "Реставрація зуба ІV скл. (відновлення 2х контактів)",
+  "subService.dentist.label.rest4": "Художня реставрація жувального зуба",
   "subService.dentist.label.rest5": "Реставрація зуба V скл. (сильно зруйнований зуб)",
   "subService.dentist.label.artRest": "Художня естетична реставрація переднього зуба",
   "subService.dentist.label.pac1": "Пакет І скл.: знеболення, кофердам, реставрація",
@@ -786,23 +789,23 @@
   "subService.dentist.label.endoGv": "Ендодонтичне лікування жувальних зубів",
   "subService.dentist.label.ukrTeath": "Укріплення зуба естетичним скловолоконним штифтом",
   "subService.dentist.label.restCor": "Реставрація зуба з підготовкою під коронку",
-  "subService.dentist.label.delOneEasy": "Видалення однокореневого зуба просте",
+  "subService.dentist.label.delOneEasy": "Видалення однокореневого зуба",
   "subService.dentist.label.delOneHard": "Видалення однокореневого зуба складне",
-  "subService.dentist.label.delMultEasy": "Видалення багатокореневого зуба просте",
+  "subService.dentist.label.delMultEasy": "Видалення багатокореневого зуба",
   "subService.dentist.label.delMultHard": "Видалення багатокореневого зуба складне",
-  "subService.dentist.label.delSmEasy": "Видалення зуба мудрості просте",
+  "subService.dentist.label.delSmEasy": "Видалення зуба мудрості",
   "subService.dentist.label.delSmHard": "Видалення зуба мудрості складне",
-  "subService.dentist.label.delSm1": "Видалення зуба мудрості атипове І скл.",
+  "subService.dentist.label.delSm1": "Видалення зуба мудрості атипове",
   "subService.dentist.label.delSm2": "Видалення зуба мудрості атипове 2 скл.",
   "subService.dentist.label.delSm3": "Видалення зуба мудрості атипове 3 скл.",
   "subService.dentist.label.delSmCont": "Видалення зуба мудрості, що знаходиться в безпосередньому контакті з нижньощелеповим каналом",
-  "subService.dentist.label.plOr": "Пластика ороантрального співустя",
+  "subService.dentist.label.plOr": "Пластика ясен навколо 1го зуба",
   "subService.dentist.label.plVzd": "Пластика вуздечок губ/язика",
   "subService.dentist.label.dec": "Декортикація кортикального шару",
   "subService.dentist.label.rez": "Резекція верхівки кореня (без вартості кісткового матеріалу)",
   "subService.dentist.label.corComp": "Тимчасова коронка з композиту (прямий метод)",
   "subService.dentist.label.corPl": "Тимчасова коронка пластмасова",
-  "subService.dentist.label.ironCor": "Металокерамічна коронка + фіксація",
+  "subService.dentist.label.ironCor": "Коронка на імплантант",
   "subService.dentist.label.cerCor": "Керамічна коронка + фіксація",
   "subService.dentist.label.circCor": "Цирконієва коронка + фіксація",
   "subService.dentist.label.cerVinCor": "Керамічний вінір + фіксація",
@@ -824,7 +827,7 @@
   "subService.dentist.label.fixStBr": "Перефіксація металевого брекета (поза плану лікування)",
   "subService.dentist.label.fixCerBr": "Перефіксація керамічного брекета (поза плану лікування)",
   "subService.dentist.label.fitDg": "Встановлення дуги поза плану лікування",
-  "subService.dentist.label.repEl": "Заміна еластичних елементів поза плану лікування",
+  "subService.dentist.label.repEl": "Елайнери",
   "subService.dentist.label.ela": "Еластики",
   "subService.dentist.label.zmPl": "Знімний пластинковий апарат на 1 щелепу станд. Гвинт",
   "subService.dentist.label.twin": "Twin block Кларка",
@@ -832,7 +835,7 @@
   "subService.dentist.label.fastPb": "Швидкий піднебінний розширювач",
   "subService.dentist.label.quad": "Quadhelix, bihellx",
   "subService.dentist.label.mse": "Апарат MSE",
-  "subService.dentist.label.childProt": "Дитячий знімний протез",
+  "subService.dentist.label.childProt": "Протез на 1 щелепу",
   "subService.dentist.label.litBrec": "Лігатурні брекети (1 зубний ряд)",
   "subService.dentist.label.samoBrec": "Самолігатурні брекети (1 зубний ряд)",
   "subService.dentist.label.litCer": "Лігатурні керамічні (1 зубний ряд)",
@@ -843,15 +846,19 @@
   "subService.dentist.label.deb": "Дебондинг брекетів з 1 щелепи",
   "subService.dentist.label.fixNz": "Фіксація незнімного дротяного ретейнера",
   "subService.dentist.label.zmCap": "Знімний каповий ретейнер",
-  "subService.dentist.label.megaGen": "Встановлення імплантанту MegaGen, Osstem (Корея)",
+  "subService.dentist.label.megaGen": "Встановлення імплантанту",
   "subService.dentist.label.globalD": "Встановлення імплантанту Global D   (Франція )",
   "subService.dentist.label.abMega": "Абатмент MegaGen, Osstem",
   "subService.dentist.label.abGlob": "Абатмент Global D",
-  "subService.dentist.label.stCer": "Металокерамічна коронка",
+  "subService.dentist.label.stCer": "Коронка на імплантант",
   "subService.dentist.label.curcCor": "Цирконієва коронка",
   "subService.dentist.label.sin": "Операція синус - ліфтинг",
-  "subService.dentist.label.upBone": "Нарощування кісткової тканини ( від рівня складності)",
-  "subService.dentist.label.upSoft": "Нарощування м’яких тканин ( від рівня складності )",
+  "subService.dentist.label.upBone": "Нарощування кісткової тканини",
+  "subService.dentist.label.upSoft": "Нарощування м’яких тканин",
+  "subService.dentist.label.consultTher": "Консультація терапевта",
+  "subService.dentist.label.consultOrtoped": "Консультація ортопеда",
+  "subService.dentist.label.xray": "Прицільна рентгендіагностика ( для наших пацієнтів)",
+  "subService.dentist.label.complexWhitening": "Комплекс офісне + домашнє відбілювання",
 
   "services.title.lab": "Лабораторія CSD",
   "services.title.complex": "Комплексні обстеження",
@@ -872,7 +879,7 @@
   "services.title.ent": "ЛОР",
   "services.title.oculist": "Окуліст",
   "services.title.psychotherapist": "Психотерапевт",
-  "services.title.deafologist": "Сурдологія",
+  "services.title.deafologist": "Сурдолог",
   "services.title.traumatologist": "Травматологія",
   "services.title.urologist": "Уролог",
   "services.title.ultrasound": "УЗД",
@@ -944,146 +951,205 @@
   "employee.title.traumatologist": "Травматолог",
   "employee.title.urologist": "Уролог",
 
-  "seo": {
-    "services.title.endo": {
-      "title": "Ендоскопія у м. Дрогобич. Медичний центр ОРА",
-      "description": "У МЦ ОРА ендоскопія з медичним сном та без. Високоточий апарат та тонкий зонд. Також проводимо: Уреазний тест, рН-метрія, видалення поліпів, біопсія"
-    },
-    "services.title.lab": {
-      "title": "Лабораторія CSD у м. Дрогобич. Медичний центр ОРА",
-      "description": "МЦ ОРА співпрацює з медичною лабораторією CSD, яка є однією з кращих та найсучасніших в Україні. В CSD lab доступно понад 1500 лабораторних досліджень."
-    },
-    "services.title.dentist": {
-      "title": "Стоматологія у м. Дрогобич. Медичний центр ОРА",
-      "description": "У МЦ ОРА надає всі види стоматологічних послуг. Імплантація, естетичні коронки, вініри, лікування під мікроскопом, встановлення брекетів"
-    },
-    "services.title.phlebologist": {
-      "title": "Флебологія у м. Дрогобич. Медичний центр ОРА",
-      "description": "У МЦ ОРА  можливе лазерне лікування варикозу за один день. Склероторапія, Ендовенозна лазерна коагуляція."
-    },
-    "services.title.familyDoctor": {
-      "title": "Сімейний лікар у м. Дрогобич. Медичний центр ОРА",
-      "description": "У МЦ ОРА при укладенні декларації з сімейним лікарем: Ви отримуєте знижку -20% на консультації у вузьких спеціалістів та на УЗД обстеження; безкоштовні: консультації в сімейного лікаря, здача загальних аналізів та вакцинація"
-    },
-    "services.title.neurologist": {
-      "title": "Невропатологія у м. Дрогобич. Медичний центр ОРА",
-      "description": "Невропатолог у МЦ ОРА надає наступні послуги: лікування головного болю, запаморочень, заїкань, порушення сну, наслідки інсульту, болю в спині. Блокади, Голкотерапія."
-    },
-    "services.title.traumatologist": {
-      "title": "Травматологія у м. Дрогобич. Медичний центр ОРА",
-      "description": "У МЦ ОРА проводиться лікування ушкоджень та патологій опорно-рухової системи. Нанесення гіпсу, Внутрішньо-суглобові ін'єкції під УЗД. Реабілітація"
-    },
-    "services.title.endocrinologist": {
-      "title": "Ендокринологія у м. Дрогобич. Медичний центр ОРА",
-      "description": "У МЦ ОРА проводять лікування дорослий та дитячий ендокринологи. Лікування цукрового діабету, патологій щитовидноії залози. УЗД, комплексні обстеження та аналізи."
-    },
-    "services.title.cardiologist": {
-      "title": "Кардіологія у м. Дрогобич. Медичний центр ОРА",
-      "description": "У МЦ ОРА приймає дорослий та дитячий кардіолог. Ехокардія, ЕКГ, Обстеження судин шиї -- доплерографія"
-    },
-    "services.title.ent": {
-      "title": "ЛОР у м. Дрогобич. Медичний центр ОРА",
-      "description": "Послуги ЛОРа У МЦ ОРА: Кріотерапія, Ендоскопія, Промивання мигдаликів, Імпендансометрія та Тимпанометрія"
-    },
-    "services.title.usd": {
-      "title": "УЗД Обстеження у м. Дрогобич. Медичний центр ОРА",
-      "description": "У МЦ ОРА Обстеження здійснюються всі види УЗД обстежень на найсучасному УЗД апараті. Технологія 3Д та 4Д. Еластографія."
-    },
-    "services.title.gynecologist": {
-      "title": "Гінекологія у м. Дрогобич. Медичний центр ОРА",
-      "description": "Професійні гінекологічні послуги в медичному центрі ОРА, м. Дрогобич. Комплексні обстеження, діагностика та лікування жіночих захворювань, підтримка репродуктивного здоров'я та індивідуальний підхід до кожної пацієнтки."
-    },
-    "services.title.allergist": {
-      "title": "Алергологія у м. Дрогобич. Медичний центр ОРА",
-      "description": "Комплексні послуги алерголога в медичному центрі ОРА, м. Дрогобич. Точна діагностика, ефективне лікування алергічних захворювань та індивідуальні програми підтримки для вашого здоров'я і комфорту."
-    },
-    "services.title.dermatologist": {
-      "title": "Дерматологія у м. Дрогобич. Медичний центр ОРА",
-      "description": "Кваліфіковані дерматологічні послуги в медичному центрі ОРА, м. Дрогобич. Діагностика та лікування захворювань шкіри, індивідуальні програми догляду та профілактика для здорової та красивої шкіри."
-    },
-    "services.title.cosmetology": {
-      "title": "Косметологія у м. Дрогобич. Медичний центр ОРА",
-      "description": "Сучасні косметологічні послуги в медичному центрі ОРА, м. Дрогобич. Професійний догляд за шкірою, омолоджувальні процедури та індивідуальні рішення для покращення вашої зовнішності та самопочуття."
-    },
-    "services.title.psychotherapist": {
-      "title": "Психотерапевт у м. Дрогобич. Медичний центр ОРА",
-      "description": "Професійна психотерапевтична допомога в медичному центрі ОРА, м. Дрогобич. Індивідуальні та групові консультації, підтримка в подоланні стресу, тривожності та особистісних проблем для поліпшення якості життя."
-    },
-    "services.title.deafologist": {
-      "title": "Сурдологія у м. Дрогобич. Медичний центр ОРА",
-      "description": "Отримайте якісні послуги сурдолога в медичному центрі ОРА, м. Дрогобич. Комплексне обстеження слуху, діагностика та індивідуальний підбір засобів корекції слуху для комфорту і якості життя."
-    },
-    "services.title.nutritionist": {
-      "title": "Дієтологія у м. Дрогобич. Медичний центр ОРА",
-      "description": "Професійні консультації з дієтології в медичному центрі ОРА, м. Дрогобич. Індивідуальні плани харчування, корекція ваги та підтримка здорового способу життя для досягнення ваших цілей у здоров'ї."
-    },
-    "services.title.oculist": {
-      "title": "Окуліст у м. Дрогобич. Медичний центр ОРА",
-      "description": "Професійні послуги окуліста в медичному центрі ОРА, м. Дрогобич. Комплексне обстеження, ефективне лікування та підбір окулярів"
-    },
-    "services.title.urologist": {
-      "title": "Уролог у м. Дрогобич. Медичний центр ОРА",
-      "description": "Зверніться до досвідченого уролога в медичному центрі ОРА, м. Дрогобич. Індивідуальний підхід, сучасні методи діагностики та лікування захворювань сечостатевої системи для вашого здоров'я та комфорту."
-    },
-    "services.title.gastro": {
-      "title": "Гастроентерологія у м. Дрогобич. Медичний центр ОРА",
-      "description": "Кваліфіковані гастроентерологічні послуги в медичному центрі ОРА, м. Дрогобич. Ефективна діагностика та лікування захворювань шлунково-кишкового тракту дорослих та дітей, індивідуальні програми терапії."
-    },
-    "services.title.childDoctor": {
-      "title": "Педіатрія у м. Дрогобич. Медичний центр ОРА",
-      "description": "Комплексні педіатричні послуги в медичному центрі ОРА, м. Дрогобич. Професійний догляд та лікування дитячих захворювань, профілактичні огляди та індивідуальний підхід для здоров'я та гармонійного розвитку вашої дитини."
-    },
-    "services.title.vertebrologist": {
-      "title": "Вертебролог у м. Дрогобич. Медичний центр ОРА",
-      "description": "Професійні послуги вертебролога в медичному центрі ОРА, м. Дрогобич. Діагностика та лікування захворювань хребта, ефективні методи терапії для зняття болю та покращення рухливості вашого тіла."
-    },
-    "complex.female30_optimal.label": {
-      "title": "Комлексні обстеження для жінок у м. Дрогобич. МЦ ОРА",
-      "description": "Щорічні обстеження для жінок різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, гінеколог, стоматолог та інше."
-    },
-    "complex.female30_full.label": {
-      "title": "Комлексні обстеження для жінок у м. Дрогобич. МЦ ОРА",
-      "description": "Щорічні обстеження для жінок різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, гінеколог, стоматолог та інше."
-    },
-    "complex.female40_optimal.label": {
-      "title": "Комлексні обстеження для жінок у м. Дрогобич. МЦ ОРА",
-      "description": "Щорічні обстеження для жінок різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, гінеколог, стоматолог та інше."
-    },
-    "complex.female40_full.label": {
-      "title": "Комлексні обстеження для жінок у м. Дрогобич. МЦ ОРА",
-      "description": "Щорічні обстеження для жінок різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, гінеколог, стоматолог та інше."
-    },
-    "complex.female40+_optimal.label": {
-      "title": "Комлексні обстеження для жінок у м. Дрогобич. МЦ ОРА",
-      "description": "Щорічні обстеження для жінок різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, гінеколог, стоматолог та інше."
-    },
-    "complex.female40+_full.label": {
-      "title": "Комлексні обстеження для жінок у м. Дрогобич. МЦ ОРА",
-      "description": "Щорічні обстеження для жінок різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, гінеколог, стоматолог та інше."
-    },
-    "complex.male30_optimal.label": {
-      "title": "Комлексні обстеження для чоловіків у м. Дрогобич. МЦ ОРА",
-      "description": "Щорічні обстеження для чоловіків різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, уролог, стоматолог та інше."
-    },
-    "complex.male30_full.label": {
-      "title": "Комлексні обстеження для чоловіків у м. Дрогобич. МЦ ОРА",
-      "description": "Щорічні обстеження для чоловіків різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, уролог, стоматолог та інше."
-    },
-    "complex.male40_optimal.label": {
-      "title": "Комлексні обстеження для чоловіків у м. Дрогобич. МЦ ОРА",
-      "description": "Щорічні обстеження для чоловіків різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, уролог, стоматолог та інше."
-    },
-    "complex.male40_full.label": {
-      "title": "Комлексні обстеження для чоловіків у м. Дрогобич. МЦ ОРА",
-      "description": "Щорічні обстеження для чоловіків різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, уролог, стоматолог та інше."
-    },
-    "complex.male40+_optimal.label": {
-      "title": "Комлексні обстеження для чоловіків у м. Дрогобич. МЦ ОРА",
-      "description": "Щорічні обстеження для чоловіків різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, уролог, стоматолог та інше."
-    },
-    "complex.male40+_full.label": {
-      "title": "Комлексні обстеження для чоловіків у м. Дрогобич. МЦ ОРА",
-      "description": "Щорічні обстеження для чоловіків різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, уролог, стоматолог та інше."
-    }
-  }
+  "seo.services.title.endo.title": "Ендоскопія у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.endo.description": "У МЦ ОРА ендоскопія з медичним сном та без. Високоточий апарат та тонкий зонд. Також проводимо: Уреазний тест, рН-метрія, видалення поліпів, біопсія",
+  "seo.services.title.lab.title": "Лабораторія CSD у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.lab.description": "МЦ ОРА співпрацює з медичною лабораторією CSD, яка є однією з кращих та найсучасніших в Україні. В CSD lab доступно понад 1500 лабораторних досліджень.",
+  "seo.services.title.dentist.title": "Стоматологія у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.dentist.description": "У МЦ ОРА надає всі види стоматологічних послуг. Імплантація, естетичні коронки, вініри, лікування під мікроскопом, встановлення брекетів",
+  "seo.services.title.phlebologist.title": "Флебологія у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.phlebologist.description": "У МЦ ОРА  можливе лазерне лікування варикозу за один день. Склероторапія, Ендовенозна лазерна коагуляція.",
+  "seo.services.title.familyDoctor.title": "Сімейний лікар у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.familyDoctor.description": "У МЦ ОРА при укладенні декларації з сімейним лікарем: Ви отримуєте знижку -20% на консультації у вузьких спеціалістів та на УЗД обстеження; безкоштовні: консультації в сімейного лікаря, здача загальних аналізів та вакцинація",
+  "seo.services.title.neurologist.title": "Невропатологія у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.neurologist.description": "Невропатолог у МЦ ОРА надає наступні послуги: лікування головного болю, запаморочень, заїкань, порушення сну, наслідки інсульту, болю в спині. Блокади, Голкотерапія.",
+  "seo.services.title.traumatologist.title": "Травматологія у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.traumatologist.description": "У МЦ ОРА проводиться лікування ушкоджень та патологій опорно-рухової системи. Нанесення гіпсу, Внутрішньо-суглобові ін'єкції під УЗД. Реабілітація",
+  "seo.services.title.endocrinologist.title": "Ендокринологія у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.endocrinologist.description": "У МЦ ОРА проводять лікування дорослий та дитячий ендокринологи. Лікування цукрового діабету, патологій щитовидноії залози. УЗД, комплексні обстеження та аналізи.",
+  "seo.services.title.cardiologist.title": "Кардіологія у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.cardiologist.description": "У МЦ ОРА приймає дорослий та дитячий кардіолог. Ехокардія, ЕКГ, Обстеження судин шиї -- доплерографія",
+  "seo.services.title.ent.title": "ЛОР у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.ent.description": "Послуги ЛОРа У МЦ ОРА: Кріотерапія, Ендоскопія, Промивання мигдаликів, Імпендансометрія та Тимпанометрія",
+  "seo.services.title.usd.title": "УЗД Обстеження у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.usd.description": "У МЦ ОРА Обстеження здійснюються всі види УЗД обстежень на найсучасному УЗД апараті. Технологія 3Д та 4Д. Еластографія.",
+  "seo.services.title.gynecologist.title": "Гінекологія у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.gynecologist.description": "Професійні гінекологічні послуги в медичному центрі ОРА, м. Дрогобич. Комплексні обстеження, діагностика та лікування жіночих захворювань, підтримка репродуктивного здоров'я та індивідуальний підхід до кожної пацієнтки.",
+  "seo.services.title.allergist.title": "Алергологія у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.allergist.description": "Комплексні послуги алерголога в медичному центрі ОРА, м. Дрогобич. Точна діагностика, ефективне лікування алергічних захворювань та індивідуальні програми підтримки для вашого здоров'я і комфорту.",
+  "seo.services.title.dermatologist.title": "Дерматологія у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.dermatologist.description": "Кваліфіковані дерматологічні послуги в медичному центрі ОРА, м. Дрогобич. Діагностика та лікування захворювань шкіри, індивідуальні програми догляду та профілактика для здорової та красивої шкіри.",
+  "seo.services.title.cosmetology.title": "Косметологія у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.cosmetology.description": "Сучасні косметологічні послуги в медичному центрі ОРА, м. Дрогобич. Професійний догляд за шкірою, омолоджувальні процедури та індивідуальні рішення для покращення вашої зовнішності та самопочуття.",
+  "seo.services.title.psychoterapist.title": "Психотерапевт у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.psychoterapist.description": "Професійна психотерапевтична допомога в медичному центрі ОРА, м. Дрогобич. Індивідуальні та групові консультації, підтримка в подоланні стресу, тривожності та особистісних проблем для поліпшення якості життя.",
+  "seo.services.title.deafologist.title": "Сурдологія у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.deafologist.description": "Отримайте якісні послуги сурдолога в медичному центрі ОРА, м. Дрогобич. Комплексне обстеження слуху, діагностика та індивідуальний підбір засобів корекції слуху для комфорту і якості життя.",
+  "seo.services.title.nutritionist.title": "Дієтологія у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.nutritionist.description": "Професійні консультації з дієтології в медичному центрі ОРА, м. Дрогобич. Індивідуальні плани харчування, корекція ваги та підтримка здорового способу життя для досягнення ваших цілей у здоров'ї.",
+  "seo.services.title.oculist.title": "Окуліст у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.oculist.description": "Професійні послуги окуліста в медичному центрі ОРА, м. Дрогобич. Комплексне обстеження, ефективне лікування та підбір окулярів",
+  "seo.services.title.urologist.title": "Уролог у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.urologist.description": "Зверніться до досвідченого уролога в медичному центрі ОРА, м. Дрогобич. Індивідуальний підхід, сучасні методи діагностики та лікування захворювань сечостатевої системи для вашого здоров'я та комфорту.",
+  "seo.services.title.gastro.title": "Гастроентерологія у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.gastro.description": "Кваліфіковані гастроентерологічні послуги в медичному центрі ОРА, м. Дрогобич. Ефективна діагностика та лікування захворювань шлунково-кишкового тракту дорослих та дітей, індивідуальні програми терапії.",
+  "seo.services.title.childDoctor.title": "Педіатрія у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.childDoctor.description": "Комплексні педіатричні послуги в медичному центрі ОРА, м. Дрогобич. Професійний догляд та лікування дитячих захворювань, профілактичні огляди та індивідуальний підхід для здоров'я та гармонійного розвитку вашої дитини.",
+  "seo.services.title.vertebrologist.title": "Вертебролог у м. Дрогобич. Медичний центр ОРА",
+  "seo.services.title.vertebrologist.description": "Професійні послуги вертебролога в медичному центрі ОРА, м. Дрогобич. Діагностика та лікування захворювань хребта, ефективні методи терапії для зняття болю та покращення рухливості вашого тіла.",
+  "seo.complex.female30_optimal.title": "Комлексні обстеження для жінок у м. Дрогобич. МЦ ОРА",
+  "seo.complex.female30_optimal.description": "Щорічні обстеження для жінок різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, гінеколог, стоматолог та інше.",
+  "seo.complex.female30_full.title": "Комлексні обстеження для жінок у м. Дрогобич. МЦ ОРА",
+  "seo.complex.female30_full.description": "Щорічні обстеження для жінок різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, гінеколог, стоматолог та інше.",
+  "seo.complex.female40_optimal.title": "Комлексні обстеження для жінок у м. Дрогобич. МЦ ОРА",
+  "seo.complex.female40_optimal.description": "Щорічні обстеження для жінок різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, гінеколог, стоматолог та інше.",
+  "seo.complex.female40_full.title": "Комлексні обстеження для жінок у м. Дрогобич. МЦ ОРА",
+  "seo.complex.female40_full.description": "Щорічні обстеження для жінок різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, гінеколог, стоматолог та інше.",
+  "seo.complex.female40+_optimal.title": "Комлексні обстеження для жінок у м. Дрогобич. МЦ ОРА",
+  "seo.complex.female40+_optimal.description": "Щорічні обстеження для жінок різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, гінеколог, стоматолог та інше.",
+  "seo.complex.female40+_full.title": "Комлексні обстеження для жінок у м. Дрогобич. МЦ ОРА",
+  "seo.complex.female40+_full.description.": "Щорічні обстеження для жінок різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, гінеколог, стоматолог та інше.",
+  "seo.complex.male30_optimal.title": "Комлексні обстеження для чоловіків у м. Дрогобич. МЦ ОРА",
+  "seo.complex.male30_optimal.description": "Щорічні обстеження для чоловіків різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, уролог, стоматолог та інше.",
+  "seo.complex.male30_full.title": "Комлексні обстеження для чоловіків у м. Дрогобич. МЦ ОРА",
+  "seo.complex.male30_full.description": "Щорічні обстеження для чоловіків різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, уролог, стоматолог та інше.",
+  "seo.complex.male40_optimal.title": "Комлексні обстеження для чоловіків у м. Дрогобич. МЦ ОРА",
+  "seo.complex.male40_optimal.description": "Щорічні обстеження для чоловіків різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, уролог, стоматолог та інше.",
+  "seo.complex.male40_full.title": "Комлексні обстеження для чоловіків у м. Дрогобич. МЦ ОРА",
+  "seo.complex.male40_full.description": "Щорічні обстеження для чоловіків різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, уролог, стоматолог та інше.",
+  "seo.complex.male40+_optimal.title": "Комлексні обстеження для чоловіків у м. Дрогобич. МЦ ОРА",
+  "seo.complex.male40+_optimal.description": "Щорічні обстеження для чоловіків різних вікових категорій. Всі необхідні лікарі в одному медцентрі. УЗД, уролог, стоматолог та інше.",
+  "seo.complex.male40+_full.title": "Комлексні обстеження для чоловіків у м. Дрогобич. МЦ ОРА",
+
+  "service.endo.mainItems.colonoscopy": "Колоноскопія",
+  "service.endo.mainItems.gastroscopy": "Гастроскопія",
+  "service.endo.mainItems.phMetr": "рН-метрія",
+  "service.endo.mainItems.polipRemove": "Видалення поліпів",
+  "service.endo.mainItems.strongotivRemove": "Видалення Стронготів",
+  "service.endo.mainItems.biopsy": "Біопсія",
+  "service.endo.mainItems.ureazTest": "Уреазний тест",
+
+  "service.phlebologist.mainItems.consultation": "Консультація",
+  "service.phlebologist.mainItems.usdy": "УЗД обстеження нижніх кінцівок",
+  "service.phlebologist.mainItems.scleroterapy": "Склеротерапія",
+  "service.phlebologist.mainItems.evlk": "ЕВЛК",
+
+  "service.familyDoctor.mainItems.declaration": "Укладання деклараціЇ",
+  "service.phlebologist.mainItems.docVisit": "Прийом лікаря",
+  "service.phlebologist.mainItems.analyAndRew": "Направлення на обстеження та аналіз",
+  "service.phlebologist.mainItems.vac": "Вакцинація",
+
+  "service.neurologist.mainItems.consultation": "Консультація",
+  "service.phlebologist.mainItems.holcoTerapy": "Голкотерапія",
+  "service.phlebologist.mainItems.blockNerv": "Блокада периферичного нерва",
+
+  "service.traumatologist.mainItems.consultation": "Консультація",
+  "service.traumatologist.mainItems.taiping": "Тайпування",
+  "service.traumatologist.mainItems.gipsy": "Накладання гіпсу",
+  "service.traumatologist.mainItems.injection": "Внутрішньо-суглобові ін'єкції (під контролем УЗД)",
+  "service.traumatologist.mainItems.planto": "Плантограафія",
+
+  "service.endocrinologist.mainItems.consultation": "Консультація",
+  "service.endocrinologist.mainItems.diabHealing": "Лікування цукрового діабету",
+  "service.endocrinologist.mainItems.usd": "Направлення на УЗД та аналізи",
+  "service.endocrinologist.mainItems.complexRewiev": "Комплексне ендокринологічне обстеження",
+
+  "service.cardiologist.mainItems.consultation": "Консультація",
+  "service.cardiologist.mainItems.cardiogram": "Кардіограма",
+  "service.cardiologist.mainItems.echoHearth": "ЕХО-серця",
+  "service.cardiologist.mainItems.reviewNeck": "Обстеження судин шиї",
+
+  "service.ent.mainItems.consult": "Консультація",
+  "service.ent.mainItems.cleanEarht": "Вимивання сірчаної кірки",
+  "service.ent.mainItems.produv": "Продування слухових труб",
+  "service.ent.mainItems.promiv": "Промивання лакун мигдаликів",
+  "service.ent.mainItems.delete": "Видалення сторонніх тіл: з носа, глотки, вуха",
+  "service.ent.mainItems.stop": "Зупинка носової кровотечі",
+  "service.ent.mainItems.emergency": "Невідкладна допомога при травмах",
+  "service.ent.mainItems.crio": "Обстеження судин шиї",
+  "service.ent.mainItems.endoscope": "Кріотерапія",
+  "service.ent.mainItems.timpano": "Тимпанометрія",
+  "service.ent.mainItems.impenda": "Імпедансометрія",
+
+  "service.usd.mainItems.complex": "Комплексні УЗД обстеження",
+  "service.usd.mainItems.single": "Окремі УЗД обстеження",
+
+  "service.gynecologist.mainItems.consult": "Консультація",
+  "service.gynecologist.mainItems.reviewChair": "Огляд на кріслі",
+  "service.gynecologist.mainItems.colcoscope": "Кольпоскопія",
+  "service.gynecologist.mainItems.boobsReview": "Огляд молочних залоз",
+  "service.gynecologist.mainItems.takeMaz": "Взяття гінекологічних мазків",
+  "service.gynecologist.mainItems.pregnency": "Ведення вагітності",
+  "service.gynecologist.mainItems.erozHela": "Лікування ерозій",
+
+  "service.allergist.mainItems.consult": "Консультація",
+  "service.allergist.mainItems.pulmo": "Пульмонологія",
+  "service.allergist.mainItems.alergoProb": "Алергопроби",
+  "service.allergist.mainItems.acit": "АСІТ",
+  "service.allergist.mainItems.spiro": "Спірографія",
+
+  "service.dermatologist.mainItems.consult": "Консультація",
+  "service.dermatologist.mainItems.dermatoscope": "Дерматоскопія",
+  "service.dermatologist.mainItems.retenoid": "лікування ретиноїдами",
+  "service.dermatologist.mainItems.radio": "Радіохвильове видалення папілом/кератом",
+  "service.dermatologist.mainItems.delete": "Видалення кондилом",
+  "service.dermatologist.mainItems.laser": "Лазерне видалення бородавок / гемангіом / судинних зірочок",
+  "service.dermatologist.mainItems.crio": "Кріодеструкція новотворів",
+  "service.dermatologist.mainItems.trih": "Трихологія",
+
+  "service.psychotherapist.mainItems.consult": "Прийом психотерапевта",
+  "service.psychotherapist.mainItems.consultPsy": "Прийомпсихолога",
+  "service.psychotherapist.mainItems.art": "Арт-терапія",
+  "service.psychotherapist.mainItems.correct": "Корекція медикаментозної терапії",
+
+  "service.deafologist.mainItems.consult": "Консультація",
+  "service.deafologist.mainItems.audio": "Аудіограма",
+  "service.deafologist.mainItems.imp": "Імпедансометрія",
+  "service.deafologist.mainItems.tym": "Тимпанометрія",
+  "service.deafologist.mainItems.pidbir": "Підбір слухового апарату",
+  "service.deafologist.mainItems.setting": "Налаштування слухового апарату",
+  "service.deafologist.mainItems.personla": "Індивідуальна вкладка",
+
+  "service.oculist.mainItems.consult": "Консультація",
+  "service.oculist.mainItems.pidbOc": "Підбір окулярів",
+  "service.oculist.mainItems.pidbCon": "Підбір контактних лінз",
+  "service.oculist.mainItems.exe": "Вправи від косини ",
+  "service.oculist.mainItems.delete": "Видалення стороннього тіла",
+  "service.oculist.mainItems.ref": "Рефрактометрія",
+
+  "service.urologist.mainItems.consult": "Консультація",
+  "service.urologist.mainItems.vener": "Лікування венеричних захворювань",
+  "service.urologist.mainItems.rect": "Ректальне обстеження простати",
+  "service.urologist.mainItems.massage": "Масаж простати",
+  "service.urologist.mainItems.zabir": "Забір Секрету",
+
+  "service.childDoctor.mainItems.dec": "Укладання декларації",
+  "service.childDoctor.mainItems.vac": "Вакцинація",
+  "service.childDoctor.mainItems.napr": "Направлення на обстеження та аналізи",
+
+  "service.dentist.mainItems.napr": "Консультація",
+  "service.dentist.mainItems.prof": "Профілактика",
+  "service.dentist.mainItems.white": "Відбілювання зубів",
+  "service.dentist.mainItems.unpain": "Медичний сон",
+  "service.dentist.mainItems.child": "Дитяча стоматологія",
+  "service.dentist.mainItems.terap": "Терапевтична стоматологія",
+  "service.dentist.mainItems.korin": "Лікування кореневих каналів (ендодонтія)",
+  "service.dentist.mainItems.orto": "Ортопедична стоматологія",
+  "service.dentist.mainItems.ortoDont": "Ортодонтія",
+  "service.dentist.mainItems.fixMet": "Фіксація металевих брекетів",
+  "service.dentist.mainItems.fixCer": "Фіксація керамічних брекетів",
+  "service.dentist.mainItems.surger": "Хірургічна стоматологія",
+  "service.dentist.mainItems.impl": "Імплантація",
+
+  "subCategory.dentist.consult": "Консультація та діагностика",
+  "subCategory.dentist.gigiena": "Профілактика для дорослих та дітей",
+  "subCategory.dentist.whitening": "Відбілювання зубів",
+  "subCategory.dentist.stopPain": "Знеболення",
+  "subCategory.dentist.childDentist": "Дитяча стоматологія",
+  "subCategory.dentist.rest": "Реставрація зубів",
+  "subCategory.dentist.endo": "Ендодонтія: лікування кореневих каналів",
+  "subCategory.dentist.orto": "Ортопедія: коронки та вініри, протези",
+  "subCategory.dentist.ortodontia": "Ортодонтія",
+  "subCategory.dentist.surg": "Хірургія",
+  "subCategory.dentist.impl": "Імплантація"
 }

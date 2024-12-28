@@ -71,7 +71,7 @@ export const MainInit = ({
           {/* <p className={`${styles.paragraph}`}>{t("common.about.shortDesc")}</p> */}
         </m.div>
 
-        {discounts && (
+        {/* {discounts && (
           <m.div
             variants={animVar}
             initial="hidden"
@@ -107,7 +107,7 @@ export const MainInit = ({
               })}
             </Slider>
           </m.div>
-        )}
+        )} */}
       </div>
 
       <Image

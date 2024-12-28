@@ -1,4 +1,4 @@
-import { TButtonProps } from "tm-ui/dist/components/Button/Button.comp";
+import { TButtonProps } from "../Button/Button.comp";
 
 export type TSelectOption = {
   value: string;

@@ -7,11 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-sitemap": "tsx src/global/utils/generateSitemap.ts",
-    "preinstall": "node -e \"require('fs').writeFileSync('.npmrc', `${require('fs').readFileSync('.npmrc')}\\nGITHUB_TOKEN=${process.env.GITHUB_TOKEN}\\n`)\""
+    "generate-sitemap": "tsx src/global/utils/generateSitemap.ts"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
+    "@radix-ui/react-slot": "^1.1.1",
     "@tanstack/react-query": "^5.62.7",
     "@tanstack/react-query-devtools": "^5.62.7",
     "@types/node": "18.16.1",
@@ -19,6 +19,7 @@
     "@types/react-dom": "18.2.1",
     "@vercel/analytics": "^1.1.3",
     "clsx": "^2.1.1",
+    "cva": "npm:class-variance-authority@^0.7.0",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.1",
     "fast-xml-parser": "^4.5.0",
@@ -34,7 +35,6 @@
     "swr": "^2.1.5",
     "tailwind-merge": "^2.5.5",
     "tailwindcss": "3.3.2",
-    "tm-ui": "npm:@tmatsiievskyi/react_ui@^0.0.22",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.2",
     "typescript": "5.0.4"

@@ -1,4 +1,0 @@
-{
-  "buildCommand": "GITHUB_TOKEN=$GITHUB_TOKEN npm run build",
-  "installCommand": "GITHUB_TOKEN=$GITHUB_TOKEN npm install"
-}

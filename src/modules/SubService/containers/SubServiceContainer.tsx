@@ -2,7 +2,6 @@ import { Fragment, ReactNode, useCallback, useState } from "react";
 import { useTranslation } from "next-i18next";
 import { PageTitle } from "@/components/PageTitle";
 import { WithTable } from "@/components/Table";
-import { Input } from "tm-ui";
 import { TTableColumn } from "@/components/Table/_types";
 import { ISubServiceModel } from "@/global/models/_interfaces";
 import {
@@ -20,6 +19,7 @@ import { WithSelect } from "@/components/Select";
 import { ESpinnerType, WithSpinner } from "@/components/Spinner";
 import { TSelectOption } from "@/components/Select/_interfaces";
 import { useSearchParams } from "next/navigation";
+import { Input } from "@/components/Input";
 
 const tableColumns: TTableColumn<ISubServiceModel>[] = [
   { key: "label", header: "common.table.service", sortable: false },
@@ -300,7 +300,7 @@ export const SubServiceContainer = () => {
               inputType="default"
               labelType="default"
               onChange={(e) => onSearch(e.target.value)}
-              placeholder={t("common.search")}
+              placeholder={t("common.search") || ""}
               value={searchValue}
               wrapperClassName=""
               wrapperType="default"

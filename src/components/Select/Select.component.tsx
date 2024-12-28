@@ -2,9 +2,9 @@ import { cnm } from "@/global/utils";
 
 // import { WithIcon } from 'components/Icon';
 import { useEffect, useRef, useState } from "react";
-import { Button } from "tm-ui";
 import { TSelectOption, TSelectProps } from "./_interfaces";
 import { ArrowRight } from "@/UI/Arrows";
+import { Button } from "../Button";
 
 export const SelectComponent = ({
   label,

@@ -79,11 +79,13 @@ export const ComplexContainer = ({
                             alt={"service image"}
                             quality="80"
                             priority={true}
+                            fill
                             className="w-full h-full object-cover rounded-lg absolute top-0 left-0 group-hover:scale-125 ease-in-out duration-1000"
                           />
                           <div
                             className="p-2 text-light font-comfortaa min-h-[25%] bg-dark/20 w-full rounded-lg 
-            relative z-10 flex flex-col justify-between group-hover:bg-primary/70 group-hover:min-h-[25%] ease-in-out duration-1000"
+            relative z-10 flex flex-col justify-between group-hover:bg-primary/70 
+            group-hover:min-h-[25%] ease-in-out duration-1000"
                           >
                             {label && (
                               <>

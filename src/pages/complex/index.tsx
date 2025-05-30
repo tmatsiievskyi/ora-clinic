@@ -22,8 +22,6 @@ export const getStaticProps: GetStaticProps<IComplexesProps> = async ({
   const { data: groups } = reqForGroups;
   const { data: complexes } = reqForAllComplexes;
 
-  console.log(groups);
-
   if (!groups || !complexes) {
     return {
       notFound: true,

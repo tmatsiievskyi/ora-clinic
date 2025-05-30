@@ -10,4 +10,5 @@ export interface IDisclosureProps {
   listItemClassNames?: string;
   showAdditionalText?: boolean;
   additionalText?: string;
+  additionalElement?: JSX.Element;
 }

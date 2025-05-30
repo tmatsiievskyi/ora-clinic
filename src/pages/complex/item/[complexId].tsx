@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import type {
   GetStaticProps,
   NextPage,
@@ -14,11 +15,26 @@ import {
   complexPriceRules,
 } from "@/global/utils";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { EGroup } from "@/global/models/_interfaces";
+
+const ComplexItemChildContainer = dynamic(
+  () =>
+    import("@/modules/Complex/containers/ComplexItemChildContainer").then(
+      (mod) => mod.ComplexItemChildContainer,
+    ),
+  {
+    ssr: false,
+  },
+);
 
 const ComplexItem: NextPage<IComplexProps> = ({ complex }) => {
   return (
     <PageWrapper>
-      <ComplexItemContainer complex={complex} />
+      {complex.group === EGroup.CHILDREN ? (
+        <ComplexItemChildContainer complex={complex} />
+      ) : (
+        <ComplexItemContainer complex={complex} />
+      )}
     </PageWrapper>
   );
 };

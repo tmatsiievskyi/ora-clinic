@@ -79,8 +79,8 @@ export const ComplexContainer = ({
                             alt={"service image"}
                             quality="80"
                             priority={true}
-                            fill
-                            className="w-full h-full object-cover rounded-lg absolute top-0 left-0 group-hover:scale-125 ease-in-out duration-1000"
+                            // fill
+                            className="w-full h-full object-cover rounded-lg object-center absolute top-0 left-0"
                           />
                           <div
                             className="p-2 text-light font-comfortaa min-h-[25%] bg-dark/20 w-full rounded-lg 

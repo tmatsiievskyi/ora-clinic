@@ -59,7 +59,7 @@ export interface IServiceModel extends MongoResult {
 export enum EGroup {
   male = "MALE",
   female = "FEMALE",
-  child = "CHILD",
+  CHILDREN = "children",
   mix = "MIX",
 }
 
@@ -92,6 +92,14 @@ export interface IComplexModel extends MongoResult {
   analyses: any;
   examination: any;
   consultations: any;
+  items?: {
+    label: string;
+    price: number;
+    priceFamilyDoctor: number;
+    services: {
+      label: string;
+    }[];
+  }[];
   // analyses: Types.ObjectId[] | ISubServiceModel[];
   // examination: Types.ObjectId[] | ISubServiceModel[];
   // consultations: Types.ObjectId[];

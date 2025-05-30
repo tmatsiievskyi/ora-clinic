@@ -16,6 +16,7 @@
   "complex.category.all": "All",
   "complex.category.male": "Male",
   "complex.category.female": "Female",
+  "example.with.html": "This is a <strong>bold</strong> text with a <a href='#'>link</a> and <em>italic</em> text.",
 
   "seo": {
     "services.title.endo": {

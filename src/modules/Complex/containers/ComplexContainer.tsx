@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { PageTitle } from "@/components/PageTitle";
+import { EGroup } from "@/global/models/_interfaces";
 
 export const ComplexContainer = ({
   groups,
@@ -59,7 +60,8 @@ export const ComplexContainer = ({
             <div className="bg-lightShade  flex-grow rounded-lg grid gap-2 md:gap-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:lg:grid-cols-4">
               {complexes &&
                 complexes.map((complex) => {
-                  const { _id, imgUrl, label } = complex;
+                  const { _id, imgUrl, label, shortDescription, group } =
+                    complex;
                   return (
                     <div
                       key={_id.toString()}
@@ -84,9 +86,16 @@ export const ComplexContainer = ({
             relative z-10 flex flex-col justify-between group-hover:bg-primary/70 group-hover:min-h-[25%] ease-in-out duration-1000"
                           >
                             {label && (
-                              <p className=" break-words font-comfortaa text-xl">
-                                {t(`${label}`)}
-                              </p>
+                              <>
+                                <p className=" break-words font-comfortaa text-xl">
+                                  {t(`${label}`)}
+                                </p>
+                                {group === EGroup.CHILDREN && (
+                                  <p className="break-words font-comfortaa text-sm">
+                                    {t(`${shortDescription}`)}
+                                  </p>
+                                )}
+                              </>
                             )}
                           </div>
                         </div>

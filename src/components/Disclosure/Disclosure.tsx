@@ -24,6 +24,7 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
   listItemClassNames,
   showAdditionalText,
   additionalText,
+  additionalElement,
 }) => {
   const { t } = useTranslation();
   const controls = useAnimationControls();
@@ -87,10 +88,13 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
                     static
                     className={`${listClassNames} overflow-hidden`}
                   >
-                    {items.map((item, index) => {
+                    {items?.map((item, index) => {
                       const { _id, label, price } = item;
                       return (
-                        <m.li key={_id} className={`${listItemClassNames}`}>
+                        <m.li
+                          key={_id || label}
+                          className={`${listItemClassNames}`}
+                        >
                           <m.span
                             key={_id + label}
                             initial={{ opacity: 0, x: "-100%" }}
@@ -145,6 +149,7 @@ export const CustomDisclosure: FC<IDisclosureProps> = ({
                         *{t(`${additionalText}`)}
                       </p>
                     )}
+                    {additionalElement ? additionalElement : null}
                   </Disclosure.Panel>
                 )}
               </AnimatePresence>

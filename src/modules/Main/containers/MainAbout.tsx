@@ -9,6 +9,7 @@ import csdImage from "../../../../public/img/partners/csd.png";
 import { CompWithFramer } from "@/components/CompWithFramer";
 import { Paragraph } from "@/UI/Paragraph";
 import { BadgeCheck } from "@/UI/BadgeCheck";
+import { ImageCarousel } from "@/components/ImageCarousel";
 
 export const MainAbout = () => {
   const { t } = useTranslation("common");
@@ -74,7 +75,8 @@ export const MainAbout = () => {
       <div className="bg-light flex-1 mt-2 rounded-lg p-2">
         <Title>{t("common.ourPratners")}</Title>
         <div className="flex h-full items-center justify-around pb-2">
-          <CompWithFramer from="opacity" delay={0.3} duration={1}>
+          <ImageCarousel />
+          {/* <CompWithFramer from="opacity" delay={0.3} duration={1}>
             <Image
               src={amritaImage}
               style={{
@@ -112,7 +114,7 @@ export const MainAbout = () => {
               }}
               alt="ora image"
             />
-          </CompWithFramer>
+          </CompWithFramer> */}
         </div>
       </div>
     </div>

@@ -8,4 +8,5 @@ export const dollarPrice = [
   "66661c904c6fc489c2abff77",
   "66661c2a4c6fc489c2abff75",
   "66661bdc4c6fc489c2abff71",
+  "6665d986519495a74ca6b91a",
 ];

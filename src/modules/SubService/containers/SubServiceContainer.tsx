@@ -225,6 +225,10 @@ export const SubServiceContainer = () => {
                                                     {t(subservice.priceSuffix)}
                                                   </span>
                                                 )}
+                                                <span className="ml-10">
+                                                  {" "}
+                                                  {subservice._id}
+                                                </span>
                                               </div>
                                             );
                                           }

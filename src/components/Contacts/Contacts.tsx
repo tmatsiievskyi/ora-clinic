@@ -73,7 +73,7 @@ export const Contacts = () => {
               м. Дрогобич,{" "}
               <span className=" inline-block">вул. Івана Франка, 4</span>
             </li>
-            <li className="mb-2 md:mb-1">Пн-Пт – з 9:00 до 18:00</li>
+            <li className="mb-2 md:mb-1">Пн-Пт – з 9:00 до 19:00</li>
             <li>Сб – з 9:00 до 14:00</li>
           </ul>
         </div>

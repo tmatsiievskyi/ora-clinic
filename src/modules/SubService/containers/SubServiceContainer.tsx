@@ -14,10 +14,17 @@ import { TSelectOption } from "@/components/Select/_interfaces";
 import { useSearchParams } from "next/navigation";
 import { Input } from "@/components/Input";
 import { Disclosure, Transition } from "@headlessui/react";
+import { Button } from "@/UI/Button";
+
 // import { ChevronUpIcon } from "@heroicons/react/20/solid";
 
-const tableColumns: TTableColumn<ISubServiceModel>[] = [
+const tableColumns: TTableColumn<any>[] = [
   { key: "label", header: "common.table.service", sortable: false },
+  {
+    key: "priceFamilyDoctor",
+    header: "common.table.priceFamilyDoctor",
+    sortable: false,
+  },
   { key: "price", header: "common.table.price", sortable: true },
 ];
 
@@ -25,6 +32,45 @@ const limitOptions = [
   { value: "25", label: "25" },
   { value: "50", label: "50" },
   { value: "3000", label: "3000" },
+];
+
+const discountLabels = [
+  "subService.allergist.label.allergyVisit",
+  "subService.allergist.label.secondVisit",
+  "subService.allergist.label.profReview",
+  "subService.cardiologist.label.firstVisit",
+  "subService.cardiologist.label.secondVisit",
+  "subService.cardiologist.label.profReview",
+  "subService.dermatologist.label.consult",
+  "subService.endocrinologist.label.firstVisit",
+  "subService.endocrinologist.label.secondVisit",
+  "subService.endocrinologist.label.profReview",
+  "subService.ent.label.firstVisit",
+  "subService.ent.label.secondVisit",
+  "subService.ent.label.profReview",
+  "subService.familyDoctor.label.firstConsulting",
+  "subService.familyDoctor.label.secondConsulting",
+  "subService.neurologist.label.firstVisit",
+  "subService.neurologist.label.secondVisit",
+  "subService.oculist.label.firstVisit",
+  "subService.oculist.label.secondVisit",
+  "subService.oculist.label.prefReview",
+  "subService.traumatologist.label.firstMeeting",
+  "subService.traumatologist.label.prof",
+  "subService.traumatologist.label.secondMeeting",
+  "subService.Urologist.label.firstConsult",
+  "subService.Urologist.label.secondConsult",
+  "subService.Urologist.label.proph",
+  "subService.cardiologist.label.cardio",
+  "subService.cardiologist.label.cardioWithDoctor",
+  "subService.anes.label.consult",
+  "subService.deafologist.label.firstMeeting",
+  "subService.deafologist.label.secondMeeting",
+  "subService.deafologist.label.prof",
+  "subService.dermatologist.label.onlineConsult",
+  "subService.dermatologist.label.secondConsult",
+  "subService.gastro.label.visitEndo",
+  "subService.gastro.label.visitEndoSecond",
 ];
 
 export const SubServiceContainer = () => {
@@ -71,6 +117,25 @@ export const SubServiceContainer = () => {
     setLimit(option);
   };
 
+  // {columns.map((column) => (
+  //   <div
+  //     className={cnm(
+  //       "p-2 text-left font-extrabold text-base text-dark cursor-pointer",
+  //     )}
+  //     key={column.key.toString()}
+  //     onClick={() => onSort(column)}
+  //   >
+  //     <span className="flex items-center">
+  //       <Translate
+  //         className=" text-md max-w-[250px]"
+  //         i18nKey={column.header}
+  //       />
+  //       {/* {getSortIcon(column)} */}
+  //       <span />
+  //     </span>
+  //   </div>
+  // ))}
+
   const renderTableHeader = useCallback(
     (
       columns: TTableColumn<ISubServiceModel>[],
@@ -78,21 +143,22 @@ export const SubServiceContainer = () => {
     ): ReactNode => {
       return (
         <div className={cnm("flex justify-between px-4")}>
-          {columns.map((column) => (
-            <div
-              className={cnm(
-                "p-2 text-left font-extrabold text-base text-dark cursor-pointer",
-              )}
-              key={column.key.toString()}
-              onClick={() => onSort(column)}
-            >
-              <span className="flex items-center">
-                <Translate className=" text-md" i18nKey={column.header} />
-                {/* {getSortIcon(column)} */}
-                <span />
-              </span>
+          <div className="flex items-center w-full">
+            <Translate
+              className=" text-md max-w-[250px]"
+              i18nKey="common.table.service"
+            />
+            <div className="flex items-center justify-end w-full">
+              <Translate
+                className=" text-md max-w-[250px]"
+                i18nKey="common.table.priceFamilyDoctor"
+              />
+              <Translate
+                className=" text-md max-w-[250px] ml-4"
+                i18nKey="common.table.price"
+              />
             </div>
-          ))}
+          </div>
         </div>
       );
     },
@@ -201,34 +267,63 @@ export const SubServiceContainer = () => {
                                           index < subServices.length - 1
                                             ? "border-b"
                                             : null
-                                        }  flex justify-between px-4 py-1 border-bkg-frg/10 border-solid`}
+                                        }  flex justify-between px-1 md:px-4 py-1 border-bkg-frg/10 border-solid`}
                                         key={subservice._id}
                                       >
                                         {columns.map((column) => {
+                                          // if (
+                                          //   column.key === "priceFamilyDoctor"
+                                          // ) {
+                                          //   return (
+                                          //     <div
+                                          //       className="text-dark text-sm md:text-base text-left"
+                                          //       key={column.key.toString()}
+                                          //     >
+                                          //       <p>asd</p>
+                                          //     </div>
+                                          //   );
+                                          // }
                                           if (column.key === "price") {
                                             return (
                                               <div
-                                                className="min-w-[120px] text-dark/90 text-right"
+                                                className="min-w-[240px] text-dark/90 text-right flex justify-end items-center"
                                                 key={column.key.toString()}
                                               >
-                                                {subservice.pricePrefix && (
+                                                <p className="mr-8">
+                                                  {discountLabels.includes(
+                                                    subservice.label,
+                                                  )
+                                                    ? `${
+                                                        subservice[column.key] *
+                                                        0.8
+                                                      } ${t(
+                                                        subservice.priceSuffix,
+                                                      )}`
+                                                    : "-"}
+                                                </p>
+                                                <span className="min-w-[60px]">
+                                                  {subservice.pricePrefix && (
+                                                    <span>
+                                                      {t(
+                                                        subservice.pricePrefix,
+                                                      )}
+                                                    </span>
+                                                  )}{" "}
                                                   <span>
-                                                    {t(subservice.pricePrefix)}
+                                                    {subservice[column.key]}
                                                   </span>
-                                                )}{" "}
-                                                <span>
-                                                  {subservice[column.key]}
-                                                </span>
-                                                {subservice.priceSuffix && (
-                                                  <span>
-                                                    {" "}
-                                                    {t(subservice.priceSuffix)}
-                                                  </span>
-                                                )}
-                                                {/* <span className="ml-10">
+                                                  {subservice.priceSuffix && (
+                                                    <span>
+                                                      {t(
+                                                        subservice.priceSuffix,
+                                                      )}
+                                                    </span>
+                                                  )}
+                                                  {/* <span className="ml-10">
                                                   {" "}
                                                   {subservice._id}
                                                 </span> */}
+                                                </span>
                                               </div>
                                             );
                                           }

@@ -612,6 +612,10 @@
   "subService.traumatologist.label.finger": "Накладання гіпсової пов'язки Зона долоні/пальця",
   "subService.traumatologist.label.hand": "Накладання гіпсової пов'язки Рука",
   "subService.traumatologist.label.leg": "Накладання гіпсової пов'язки Нога",
+  "subService.traumatologist.label.punchTherapy": "Ударно-хвильова терапія (1 суглоб)",
+  "subService.traumatologist.label.plasma1": "Плазмотерапія PRP (під контролем УЗД) - 1 суглоб",
+  "subService.traumatologist.label.plasma2": "Плазмотерапія PRP (під контролем УЗД) - 2 суглоби",
+
   "subService.traumatologist.label.tapeOne": "Тейп Категорія 1",
   "subService.traumatologist.label.tapeTwo": "Тейп Категорія 2",
   "subService.traumatologist.label.tapeThree": "Тейп Категорія 3",

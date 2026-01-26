@@ -271,6 +271,7 @@ export const SubServiceContainer = () => {
                                         key={subservice._id}
                                       >
                                         {columns.map((column) => {
+                                          // console.log(subservice);
                                           // if (
                                           //   column.key === "priceFamilyDoctor"
                                           // ) {

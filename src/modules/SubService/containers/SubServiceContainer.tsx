@@ -149,14 +149,14 @@ export const SubServiceContainer = () => {
               i18nKey="common.table.service"
             />
             <div className="flex items-center justify-end w-full">
-              <Translate
+              {/* <Translate
                 className=" text-md max-w-[250px]"
                 i18nKey="common.table.priceFamilyDoctor"
-              />
-              <Translate
+              /> */}
+              {/* <Translate
                 className=" text-md max-w-[250px] ml-4"
                 i18nKey="common.table.price"
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -285,6 +285,7 @@ export const SubServiceContainer = () => {
                                           //   );
                                           // }
                                           if (column.key === "price") {
+                                            return null; //  TODO: remove this to add price
                                             return (
                                               <div
                                                 className="min-w-[240px] text-dark/90 text-right flex justify-end items-center"
